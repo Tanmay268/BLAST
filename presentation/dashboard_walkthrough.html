@@ -566,9 +566,13 @@
           <tr><td class="hl">B2 — Severity</td><td>rank by raw technical badness only, no business context</td></tr>
           <tr><td class="hl">B3 — ITIL matrix</td><td>the impact × urgency grid many real ops teams already use</td></tr>
           <tr><td class="hl">B4 — PageRank</td><td>rank by how central the affected service is in the call graph</td></tr>
+          <tr><td class="hl">B5 — Betweenness</td><td>rank by how often the affected service sits on the shortest path between others</td></tr>
           <tr><td class="hl">B6 — Personalized PageRank</td><td>PageRank biased toward this scenario's affected services</td></tr>
-          <tr><td class="hl">B7 — Learned classifier</td><td>a gradient-boosted model trained on other incidents to predict priority</td></tr>
+          <tr><td class="hl">B7 — Learned classifier</td><td>a gradient-boosted model trained on other incidents to predict priority (pointwise: scores each incident alone)</td></tr>
           <tr><td class="hl">B9 — BLAST, independent</td><td>BLAST's own scoring model, with set-selection switched off</td></tr>
+          <tr><td class="hl">B10 — Pairwise ranker</td><td>trained directly on "does incident A outrank incident B", not on a standalone score</td></tr>
+          <tr><td class="hl">B11 — Closeness</td><td>rank by average network distance to every other service</td></tr>
+          <tr><td class="hl">B12 — Eigenvector</td><td>rank by connection to other well-connected services</td></tr>
         </tbody>
       </table>
     </div>
@@ -578,11 +582,13 @@
       Every comparison is classified using two checks at once: is the difference statistically real
       (a paired significance test, corrected for testing many comparisons at once), <em>and</em> is it
       large enough to matter (an effect-size floor). Only rows clearing both read
-      <span class="tag good">BLAST wins (real)</span>. A perhaps-surprising honest result: the plain
-      severity and ITIL baselines actually out-rank BLAST on pure ranking accuracy — traced to the
-      fact that, in this dataset, <em>how badly</em> a fault hits tracks its business cost almost as
-      well as <em>what</em> it hits does, which weakens the advantage of business-aware weighting
-      specifically on this benchmark.
+      <span class="tag good">BLAST wins (real)</span>. Two honest results worth pointing out live
+      side by side here: the plain severity and ITIL baselines actually out-rank BLAST on pure
+      ranking accuracy — traced to the fact that, in this dataset, <em>how badly</em> a fault hits
+      tracks its business cost almost as well as <em>what</em> it hits does, which weakens the
+      advantage of business-aware weighting — while the pure-topology baselines (B4/B5/B6/B11/B12)
+      all lose clearly to BLAST, since graph centrality alone doesn't predict business impact nearly
+      as well as severity does on this benchmark.
     </p>
   </section>
 
