@@ -1,0 +1,301 @@
+service,fault_type,capability_id,capability,n_reps,max_magnitude,value_per_min,weighted_max_magnitude
+ts-auth-service,cpu,ticket_reservation,Ticket Reservation,3,0.0,100.0,0.0
+ts-auth-service,cpu,payment_processing,Payment Processing,3,0.0,100.0,0.0
+ts-auth-service,cpu,user_authentication,User Authentication,3,0.9347536657591824,70.0,65.43275660314276
+ts-auth-service,cpu,trip_search,Trip Search,3,0.2880819050851293,60.0,17.28491430510776
+ts-auth-service,cpu,order_management,Order Management,3,0.8821594957522609,40.0,35.28637983009044
+ts-auth-service,cpu,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-auth-service,cpu,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-auth-service,cpu,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-auth-service,cpu,food_ordering,Food Ordering,3,0.0,15.0,0.0
+ts-auth-service,cpu,admin_configuration,Admin Configuration,3,0.2810359231411863,5.0,1.4051796157059315
+ts-auth-service,delay,ticket_reservation,Ticket Reservation,3,0.0,100.0,0.0
+ts-auth-service,delay,payment_processing,Payment Processing,3,0.0,100.0,0.0
+ts-auth-service,delay,user_authentication,User Authentication,3,1.0,70.0,70.0
+ts-auth-service,delay,trip_search,Trip Search,3,0.0,60.0,0.0
+ts-auth-service,delay,order_management,Order Management,3,0.96003996003996,40.0,38.4015984015984
+ts-auth-service,delay,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-auth-service,delay,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-auth-service,delay,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-auth-service,delay,food_ordering,Food Ordering,3,0.0,15.0,0.0
+ts-auth-service,delay,admin_configuration,Admin Configuration,3,0.0,5.0,0.0
+ts-auth-service,disk,ticket_reservation,Ticket Reservation,3,0.0,100.0,0.0
+ts-auth-service,disk,payment_processing,Payment Processing,3,0.0,100.0,0.0
+ts-auth-service,disk,user_authentication,User Authentication,3,0.857243420054292,70.0,60.00703940380044
+ts-auth-service,disk,trip_search,Trip Search,3,0.0,60.0,0.0
+ts-auth-service,disk,order_management,Order Management,3,0.952136752136752,40.0,38.08547008547008
+ts-auth-service,disk,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-auth-service,disk,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-auth-service,disk,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-auth-service,disk,food_ordering,Food Ordering,3,0.0,15.0,0.0
+ts-auth-service,disk,admin_configuration,Admin Configuration,3,0.0,5.0,0.0
+ts-auth-service,loss,ticket_reservation,Ticket Reservation,3,0.0,100.0,0.0
+ts-auth-service,loss,payment_processing,Payment Processing,3,0.0,100.0,0.0
+ts-auth-service,loss,user_authentication,User Authentication,3,0.1653049736641068,70.0,11.571348156487476
+ts-auth-service,loss,trip_search,Trip Search,3,0.2364828608587306,60.0,14.188971651523836
+ts-auth-service,loss,order_management,Order Management,3,0.911293525751357,40.0,36.45174103005428
+ts-auth-service,loss,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-auth-service,loss,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-auth-service,loss,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-auth-service,loss,food_ordering,Food Ordering,3,0.0,15.0,0.0
+ts-auth-service,loss,admin_configuration,Admin Configuration,3,0.0,5.0,0.0
+ts-auth-service,mem,ticket_reservation,Ticket Reservation,3,0.4455128205128205,100.0,44.55128205128205
+ts-auth-service,mem,payment_processing,Payment Processing,3,0.0,100.0,0.0
+ts-auth-service,mem,user_authentication,User Authentication,3,0.9446391177266876,70.0,66.12473824086814
+ts-auth-service,mem,trip_search,Trip Search,3,0.361754035438246,60.0,21.705242126294763
+ts-auth-service,mem,order_management,Order Management,3,0.9793111841304613,40.0,39.17244736521845
+ts-auth-service,mem,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-auth-service,mem,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-auth-service,mem,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-auth-service,mem,food_ordering,Food Ordering,3,0.0,15.0,0.0
+ts-auth-service,mem,admin_configuration,Admin Configuration,3,0.4254803675856307,5.0,2.1274018379281534
+ts-auth-service,socket,ticket_reservation,Ticket Reservation,3,0.4343501326259946,100.0,43.43501326259946
+ts-auth-service,socket,payment_processing,Payment Processing,3,0.0,100.0,0.0
+ts-auth-service,socket,user_authentication,User Authentication,3,0.9956678022171872,70.0,69.6967461552031
+ts-auth-service,socket,trip_search,Trip Search,3,0.2094960669775898,60.0,12.569764018655388
+ts-auth-service,socket,order_management,Order Management,3,0.946727898966705,40.0,37.869115958668196
+ts-auth-service,socket,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-auth-service,socket,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-auth-service,socket,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-auth-service,socket,food_ordering,Food Ordering,3,0.0,15.0,0.0
+ts-auth-service,socket,admin_configuration,Admin Configuration,3,0.0,5.0,0.0
+ts-order-service,cpu,ticket_reservation,Ticket Reservation,3,0.9906417112299466,100.0,99.06417112299467
+ts-order-service,cpu,payment_processing,Payment Processing,3,0.4676552363299351,100.0,46.765523632993514
+ts-order-service,cpu,user_authentication,User Authentication,3,0.0,70.0,0.0
+ts-order-service,cpu,trip_search,Trip Search,3,0.4833564493758668,60.0,29.001386962552008
+ts-order-service,cpu,order_management,Order Management,3,0.9993444772205836,40.0,39.97377908882334
+ts-order-service,cpu,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-order-service,cpu,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-order-service,cpu,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-order-service,cpu,food_ordering,Food Ordering,3,0.0,15.0,0.0
+ts-order-service,cpu,admin_configuration,Admin Configuration,3,0.0,5.0,0.0
+ts-order-service,delay,ticket_reservation,Ticket Reservation,3,1.0,100.0,100.0
+ts-order-service,delay,payment_processing,Payment Processing,3,0.585040650406504,100.0,58.5040650406504
+ts-order-service,delay,user_authentication,User Authentication,3,0.0,70.0,0.0
+ts-order-service,delay,trip_search,Trip Search,3,1.0,60.0,60.0
+ts-order-service,delay,order_management,Order Management,3,1.0,40.0,40.0
+ts-order-service,delay,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-order-service,delay,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-order-service,delay,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-order-service,delay,food_ordering,Food Ordering,3,0.0,15.0,0.0
+ts-order-service,delay,admin_configuration,Admin Configuration,3,0.0,5.0,0.0
+ts-order-service,disk,ticket_reservation,Ticket Reservation,3,0.578125,100.0,57.8125
+ts-order-service,disk,payment_processing,Payment Processing,3,0.0,100.0,0.0
+ts-order-service,disk,user_authentication,User Authentication,3,0.0,70.0,0.0
+ts-order-service,disk,trip_search,Trip Search,3,0.3169230769230768,60.0,19.01538461538461
+ts-order-service,disk,order_management,Order Management,3,0.7756862745098039,40.0,31.027450980392153
+ts-order-service,disk,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-order-service,disk,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-order-service,disk,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-order-service,disk,food_ordering,Food Ordering,3,0.0,15.0,0.0
+ts-order-service,disk,admin_configuration,Admin Configuration,3,0.2966182048040455,5.0,1.4830910240202275
+ts-order-service,loss,ticket_reservation,Ticket Reservation,3,0.8954451345755694,100.0,89.54451345755695
+ts-order-service,loss,payment_processing,Payment Processing,3,0.0,100.0,0.0
+ts-order-service,loss,user_authentication,User Authentication,3,0.0,70.0,0.0
+ts-order-service,loss,trip_search,Trip Search,3,0.5197735114571354,60.0,31.186410687428122
+ts-order-service,loss,order_management,Order Management,3,0.8297029702970298,40.0,33.18811881188119
+ts-order-service,loss,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-order-service,loss,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-order-service,loss,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-order-service,loss,food_ordering,Food Ordering,3,0.0,15.0,0.0
+ts-order-service,loss,admin_configuration,Admin Configuration,3,0.0,5.0,0.0
+ts-order-service,mem,ticket_reservation,Ticket Reservation,3,0.979328165374677,100.0,97.9328165374677
+ts-order-service,mem,payment_processing,Payment Processing,3,0.3615819209039548,100.0,36.15819209039548
+ts-order-service,mem,user_authentication,User Authentication,3,0.0,70.0,0.0
+ts-order-service,mem,trip_search,Trip Search,3,0.6409919152592904,60.0,38.45951491555743
+ts-order-service,mem,order_management,Order Management,3,1.0,40.0,40.0
+ts-order-service,mem,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-order-service,mem,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-order-service,mem,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-order-service,mem,food_ordering,Food Ordering,3,0.0,15.0,0.0
+ts-order-service,mem,admin_configuration,Admin Configuration,3,0.3419546636937942,5.0,1.709773318468971
+ts-order-service,socket,ticket_reservation,Ticket Reservation,3,0.9939148073022313,100.0,99.39148073022312
+ts-order-service,socket,payment_processing,Payment Processing,3,0.7694361027694361,100.0,76.9436102769436
+ts-order-service,socket,user_authentication,User Authentication,3,0.0,70.0,0.0
+ts-order-service,socket,trip_search,Trip Search,3,0.9667327605199384,60.0,58.0039656311963
+ts-order-service,socket,order_management,Order Management,3,0.997067986072934,40.0,39.88271944291736
+ts-order-service,socket,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-order-service,socket,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-order-service,socket,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-order-service,socket,food_ordering,Food Ordering,3,0.2126131221719456,15.0,3.189196832579184
+ts-order-service,socket,admin_configuration,Admin Configuration,3,0.2485562485562484,5.0,1.242781242781242
+ts-route-service,cpu,ticket_reservation,Ticket Reservation,3,0.927950310559006,100.0,92.7950310559006
+ts-route-service,cpu,payment_processing,Payment Processing,3,0.0,100.0,0.0
+ts-route-service,cpu,user_authentication,User Authentication,3,0.0,70.0,0.0
+ts-route-service,cpu,trip_search,Trip Search,3,0.9714298564481908,60.0,58.28579138689145
+ts-route-service,cpu,order_management,Order Management,3,0.9237961664329126,40.0,36.95184665731651
+ts-route-service,cpu,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-route-service,cpu,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-route-service,cpu,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-route-service,cpu,food_ordering,Food Ordering,3,0.7126134996171096,15.0,10.689202494256644
+ts-route-service,cpu,admin_configuration,Admin Configuration,3,0.9998343685300206,5.0,4.999171842650103
+ts-route-service,delay,ticket_reservation,Ticket Reservation,3,1.0,100.0,100.0
+ts-route-service,delay,payment_processing,Payment Processing,3,0.0,100.0,0.0
+ts-route-service,delay,user_authentication,User Authentication,3,0.0,70.0,0.0
+ts-route-service,delay,trip_search,Trip Search,3,1.0,60.0,60.0
+ts-route-service,delay,order_management,Order Management,3,0.8687642866747345,40.0,34.75057146698938
+ts-route-service,delay,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-route-service,delay,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-route-service,delay,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-route-service,delay,food_ordering,Food Ordering,3,1.0,15.0,15.0
+ts-route-service,delay,admin_configuration,Admin Configuration,3,1.0,5.0,5.0
+ts-route-service,disk,ticket_reservation,Ticket Reservation,3,0.608819345661451,100.0,60.881934566145105
+ts-route-service,disk,payment_processing,Payment Processing,3,0.0,100.0,0.0
+ts-route-service,disk,user_authentication,User Authentication,3,0.0,70.0,0.0
+ts-route-service,disk,trip_search,Trip Search,3,0.6910322009771861,60.0,41.46193205863116
+ts-route-service,disk,order_management,Order Management,3,0.9647058823529412,40.0,38.588235294117645
+ts-route-service,disk,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-route-service,disk,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-route-service,disk,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-route-service,disk,food_ordering,Food Ordering,3,0.3772456010828104,15.0,5.658684016242156
+ts-route-service,disk,admin_configuration,Admin Configuration,3,0.5635635635635636,5.0,2.817817817817818
+ts-route-service,loss,ticket_reservation,Ticket Reservation,3,0.8622159090909092,100.0,86.22159090909092
+ts-route-service,loss,payment_processing,Payment Processing,3,0.0,100.0,0.0
+ts-route-service,loss,user_authentication,User Authentication,3,0.0,70.0,0.0
+ts-route-service,loss,trip_search,Trip Search,3,0.732003487862863,60.0,43.920209271771775
+ts-route-service,loss,order_management,Order Management,3,0.8886831275720164,40.0,35.547325102880656
+ts-route-service,loss,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-route-service,loss,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-route-service,loss,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-route-service,loss,food_ordering,Food Ordering,3,0.2803869558433454,15.0,4.20580433765018
+ts-route-service,loss,admin_configuration,Admin Configuration,3,0.860632183908046,5.0,4.30316091954023
+ts-route-service,mem,ticket_reservation,Ticket Reservation,3,0.966547192353644,100.0,96.6547192353644
+ts-route-service,mem,payment_processing,Payment Processing,3,0.0,100.0,0.0
+ts-route-service,mem,user_authentication,User Authentication,3,0.0,70.0,0.0
+ts-route-service,mem,trip_search,Trip Search,3,0.999713826654806,60.0,59.98282959928836
+ts-route-service,mem,order_management,Order Management,3,0.9234822451317296,40.0,36.93928980526918
+ts-route-service,mem,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-route-service,mem,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-route-service,mem,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-route-service,mem,food_ordering,Food Ordering,3,0.8647201630034249,15.0,12.970802445051374
+ts-route-service,mem,admin_configuration,Admin Configuration,3,0.999836038694868,5.0,4.9991801934743405
+ts-route-service,socket,ticket_reservation,Ticket Reservation,3,1.0,100.0,100.0
+ts-route-service,socket,payment_processing,Payment Processing,3,0.0,100.0,0.0
+ts-route-service,socket,user_authentication,User Authentication,3,0.0,70.0,0.0
+ts-route-service,socket,trip_search,Trip Search,3,0.9948115747507248,60.0,59.688694485043484
+ts-route-service,socket,order_management,Order Management,3,0.9689720748673808,40.0,38.758882994695234
+ts-route-service,socket,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-route-service,socket,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-route-service,socket,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-route-service,socket,food_ordering,Food Ordering,3,0.940652914337125,15.0,14.109793715056874
+ts-route-service,socket,admin_configuration,Admin Configuration,3,1.0,5.0,5.0
+ts-train-service,cpu,ticket_reservation,Ticket Reservation,3,0.9821428571428572,100.0,98.21428571428572
+ts-train-service,cpu,payment_processing,Payment Processing,3,0.0,100.0,0.0
+ts-train-service,cpu,user_authentication,User Authentication,3,0.0,70.0,0.0
+ts-train-service,cpu,trip_search,Trip Search,3,0.8288960175028826,60.0,49.73376105017295
+ts-train-service,cpu,order_management,Order Management,3,0.9591041869522884,40.0,38.36416747809154
+ts-train-service,cpu,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-train-service,cpu,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-train-service,cpu,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-train-service,cpu,food_ordering,Food Ordering,3,0.0,15.0,0.0
+ts-train-service,cpu,admin_configuration,Admin Configuration,3,1.0,5.0,5.0
+ts-train-service,delay,ticket_reservation,Ticket Reservation,3,1.0,100.0,100.0
+ts-train-service,delay,payment_processing,Payment Processing,3,0.0,100.0,0.0
+ts-train-service,delay,user_authentication,User Authentication,3,0.0,70.0,0.0
+ts-train-service,delay,trip_search,Trip Search,3,1.0,60.0,60.0
+ts-train-service,delay,order_management,Order Management,3,0.8195138195138194,40.0,32.780552780552775
+ts-train-service,delay,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-train-service,delay,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-train-service,delay,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-train-service,delay,food_ordering,Food Ordering,3,0.0,15.0,0.0
+ts-train-service,delay,admin_configuration,Admin Configuration,3,1.0,5.0,5.0
+ts-train-service,disk,ticket_reservation,Ticket Reservation,3,0.9411764705882352,100.0,94.11764705882352
+ts-train-service,disk,payment_processing,Payment Processing,3,0.0,100.0,0.0
+ts-train-service,disk,user_authentication,User Authentication,3,0.0,70.0,0.0
+ts-train-service,disk,trip_search,Trip Search,3,0.6928779566496919,60.0,41.57267739898151
+ts-train-service,disk,order_management,Order Management,3,0.933830382106244,40.0,37.353215284249764
+ts-train-service,disk,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-train-service,disk,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-train-service,disk,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-train-service,disk,food_ordering,Food Ordering,3,0.172917581211589,15.0,2.593763718173835
+ts-train-service,disk,admin_configuration,Admin Configuration,3,0.8903508771929824,5.0,4.451754385964913
+ts-train-service,loss,ticket_reservation,Ticket Reservation,3,0.932867132867133,100.0,93.2867132867133
+ts-train-service,loss,payment_processing,Payment Processing,3,0.0,100.0,0.0
+ts-train-service,loss,user_authentication,User Authentication,3,0.0,70.0,0.0
+ts-train-service,loss,trip_search,Trip Search,3,0.726503406154569,60.0,43.59020436927414
+ts-train-service,loss,order_management,Order Management,3,0.8658709860755898,40.0,34.634839443023594
+ts-train-service,loss,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-train-service,loss,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-train-service,loss,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-train-service,loss,food_ordering,Food Ordering,3,0.1731891843991271,15.0,2.5978377659869065
+ts-train-service,loss,admin_configuration,Admin Configuration,3,0.9617893755824792,5.0,4.808946877912396
+ts-train-service,mem,ticket_reservation,Ticket Reservation,3,0.9454545454545455,100.0,94.54545454545456
+ts-train-service,mem,payment_processing,Payment Processing,3,0.0,100.0,0.0
+ts-train-service,mem,user_authentication,User Authentication,3,0.0,70.0,0.0
+ts-train-service,mem,trip_search,Trip Search,3,0.904159536234188,60.0,54.24957217405128
+ts-train-service,mem,order_management,Order Management,3,0.9728813559322034,40.0,38.91525423728814
+ts-train-service,mem,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-train-service,mem,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-train-service,mem,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-train-service,mem,food_ordering,Food Ordering,3,0.0,15.0,0.0
+ts-train-service,mem,admin_configuration,Admin Configuration,3,0.988105352591334,5.0,4.9405267629566705
+ts-train-service,socket,ticket_reservation,Ticket Reservation,3,0.916701374427322,100.0,91.6701374427322
+ts-train-service,socket,payment_processing,Payment Processing,3,0.0,100.0,0.0
+ts-train-service,socket,user_authentication,User Authentication,3,0.0,70.0,0.0
+ts-train-service,socket,trip_search,Trip Search,3,0.8287803532008831,60.0,49.72682119205298
+ts-train-service,socket,order_management,Order Management,3,0.9694189602446484,40.0,38.776758409785934
+ts-train-service,socket,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-train-service,socket,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-train-service,socket,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-train-service,socket,food_ordering,Food Ordering,3,0.0,15.0,0.0
+ts-train-service,socket,admin_configuration,Admin Configuration,3,0.9790647790647792,5.0,4.895323895323896
+ts-travel-service,cpu,ticket_reservation,Ticket Reservation,3,0.999031007751938,100.0,99.90310077519379
+ts-travel-service,cpu,payment_processing,Payment Processing,3,0.0,100.0,0.0
+ts-travel-service,cpu,user_authentication,User Authentication,3,0.0,70.0,0.0
+ts-travel-service,cpu,trip_search,Trip Search,3,0.6713596366732899,60.0,40.28157820039739
+ts-travel-service,cpu,order_management,Order Management,3,0.9682432432432432,40.0,38.729729729729726
+ts-travel-service,cpu,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-travel-service,cpu,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-travel-service,cpu,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-travel-service,cpu,food_ordering,Food Ordering,3,0.7187100711329786,15.0,10.780651066994679
+ts-travel-service,cpu,admin_configuration,Admin Configuration,3,1.0,5.0,5.0
+ts-travel-service,delay,ticket_reservation,Ticket Reservation,3,1.0,100.0,100.0
+ts-travel-service,delay,payment_processing,Payment Processing,3,0.294876660341556,100.0,29.487666034155602
+ts-travel-service,delay,user_authentication,User Authentication,3,0.0,70.0,0.0
+ts-travel-service,delay,trip_search,Trip Search,3,1.0,60.0,60.0
+ts-travel-service,delay,order_management,Order Management,3,0.8512585812356979,40.0,34.05034324942791
+ts-travel-service,delay,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-travel-service,delay,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-travel-service,delay,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-travel-service,delay,food_ordering,Food Ordering,3,1.0,15.0,15.0
+ts-travel-service,delay,admin_configuration,Admin Configuration,3,1.0,5.0,5.0
+ts-travel-service,disk,ticket_reservation,Ticket Reservation,3,0.4339393939393938,100.0,43.39393939393938
+ts-travel-service,disk,payment_processing,Payment Processing,3,0.0,100.0,0.0
+ts-travel-service,disk,user_authentication,User Authentication,3,0.0,70.0,0.0
+ts-travel-service,disk,trip_search,Trip Search,3,0.3993539518900344,60.0,23.961237113402063
+ts-travel-service,disk,order_management,Order Management,3,0.7980769230769231,40.0,31.923076923076927
+ts-travel-service,disk,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-travel-service,disk,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-travel-service,disk,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-travel-service,disk,food_ordering,Food Ordering,3,0.2797175141242938,15.0,4.195762711864407
+ts-travel-service,disk,admin_configuration,Admin Configuration,3,0.3841018475392019,5.0,1.9205092376960096
+ts-travel-service,loss,ticket_reservation,Ticket Reservation,3,0.9722222222222224,100.0,97.22222222222224
+ts-travel-service,loss,payment_processing,Payment Processing,3,0.0,100.0,0.0
+ts-travel-service,loss,user_authentication,User Authentication,3,0.0,70.0,0.0
+ts-travel-service,loss,trip_search,Trip Search,3,0.8238866396761133,60.0,49.4331983805668
+ts-travel-service,loss,order_management,Order Management,3,0.8773284870513403,40.0,35.09313948205361
+ts-travel-service,loss,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-travel-service,loss,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-travel-service,loss,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-travel-service,loss,food_ordering,Food Ordering,3,0.2324234904880067,15.0,3.4863523573201007
+ts-travel-service,loss,admin_configuration,Admin Configuration,3,0.7206394428616651,5.0,3.6031972143083255
+ts-travel-service,mem,ticket_reservation,Ticket Reservation,3,1.0,100.0,100.0
+ts-travel-service,mem,payment_processing,Payment Processing,3,0.0,100.0,0.0
+ts-travel-service,mem,user_authentication,User Authentication,3,0.0,70.0,0.0
+ts-travel-service,mem,trip_search,Trip Search,3,0.9039891145625912,60.0,54.23934687375547
+ts-travel-service,mem,order_management,Order Management,3,0.927115987460815,40.0,37.0846394984326
+ts-travel-service,mem,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-travel-service,mem,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-travel-service,mem,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-travel-service,mem,food_ordering,Food Ordering,3,0.8315729522626074,15.0,12.47359428393911
+ts-travel-service,mem,admin_configuration,Admin Configuration,3,0.9992371071101618,5.0,4.996185535550809
+ts-travel-service,socket,ticket_reservation,Ticket Reservation,3,0.9827586206896552,100.0,98.27586206896552
+ts-travel-service,socket,payment_processing,Payment Processing,3,0.0,100.0,0.0
+ts-travel-service,socket,user_authentication,User Authentication,3,0.0,70.0,0.0
+ts-travel-service,socket,trip_search,Trip Search,3,0.9367236467236468,60.0,56.20341880341881
+ts-travel-service,socket,order_management,Order Management,3,0.9631687242798356,40.0,38.52674897119342
+ts-travel-service,socket,baggage_consignment,Baggage Consignment,3,0.0,30.0,0.0
+ts-travel-service,socket,travel_insurance,Travel Insurance / Assurance,3,0.0,25.0,0.0
+ts-travel-service,socket,contact_management,Contact Management,3,0.0,20.0,0.0
+ts-travel-service,socket,food_ordering,Food Ordering,3,0.8606738470035902,15.0,12.910107705053854
+ts-travel-service,socket,admin_configuration,Admin Configuration,3,0.992979242979243,5.0,4.964896214896215

@@ -94,15 +94,15 @@
     </p>
 
     <div class="rollup">
-      <div class="cell"><span class="num good">44</span><span class="lbl">Fulfilled</span></div>
-      <div class="cell"><span class="num warn">17</span><span class="lbl">Partial / in progress</span></div>
+      <div class="cell"><span class="num good">45</span><span class="lbl">Fulfilled</span></div>
+      <div class="cell"><span class="num warn">16</span><span class="lbl">Partial</span></div>
       <div class="cell"><span class="num neutral">24</span><span class="lbl">Deliberately descoped</span></div>
       <div class="cell"><span class="num bad">7</span><span class="lbl">Not yet done</span></div>
     </div>
 
     <div class="legend">
       <span><span class="tag good">Fulfilled</span> built, run, verified</span>
-      <span><span class="tag warn">Partial</span> some but not all of the requirement, or actively in progress</span>
+      <span><span class="tag warn">Partial</span> some but not all of the requirement</span>
       <span><span class="tag neutral">Descoped</span> a considered decision, recorded as an ADR — not a shortfall</span>
       <span><span class="tag bad">Not done</span> genuinely outstanding, no plan yet or blocked on the user</span>
     </div>
@@ -133,7 +133,7 @@
         <tbody>
           <tr><td class="item">Publish a research paper</td><td><span class="tag bad">Not done</span></td><td class="note">Not started — every underlying result and decision is written up and paper-ready</td><td class="evidence">context/03_RESEARCH_DESIGN.md §10</td></tr>
           <tr><td class="item">Build a working prototype</td><td><span class="tag good">Fulfilled</span></td><td class="note">Full pipeline + live public dashboard</td><td class="evidence">blastops.streamlit.app</td></tr>
-          <tr><td class="item">Demonstrate novelty over AIOps systems</td><td><span class="tag warn">Partial</span></td><td class="note">Ranking-accuracy gain is real AND robust — survives a 5-model value-weight sensitivity sweep, including uniform and adversarial-inverted weights; business-loss gain isn't proven yet, and a follow-up sweep found the same null result across all 5 weight models too, ruling out "wrong weights" as the explanation</td><td class="evidence">ADR-019, ADR-020, value_model_sweep.csv</td></tr>
+          <tr><td class="item">Demonstrate novelty over AIOps systems</td><td><span class="tag warn">Partial</span></td><td class="note">On Online Boutique, the ranking-accuracy gain is real and robust to value-weight choice (survives a 5-model sweep, including uniform and adversarial-inverted). It does NOT replicate on Train Ticket — B9 beats BLAST there instead, traced to even more homogeneous capability footprints. The honest claim is now conditional (depends on footprint heterogeneity), not a flat "BLAST wins" — which is itself the more publishable, falsifiable finding</td><td class="evidence">ADR-019, ADR-020, ADR-021, value_model_sweep.csv</td></tr>
           <tr><td class="item">Solve a practical DevOps/SRE problem</td><td><span class="tag warn">Partial</span></td><td class="note">Solved on a benchmark; not validated with real engineers — the study instrument is now drafted and ready, running it needs the user to recruit participants</td><td class="evidence">RQ5, below; human_study_instrument.md</td></tr>
           <tr><td class="item">Contains a novel algorithm/framework</td><td><span class="tag good">Fulfilled</span></td><td class="note">Submodular greedy set-selection over probabilistic capability coverage</td><td class="evidence">ADR-011, ADR-016</td></tr>
           <tr><td class="item">Contains an actual implementation</td><td><span class="tag good">Fulfilled</span></td><td class="note">30+ pipeline scripts + dashboard, all runnable end to end, plus a second full system (Train Ticket) added this pass</td><td class="evidence">scripts/pipeline/</td></tr>
@@ -336,7 +336,7 @@
         <tbody>
           <tr><td class="item">Online Boutique (RE2-OB)</td><td><span class="tag good">Used</span></td><td class="note">90 cases — 5 services × 6 fault types × 3 repetitions</td></tr>
           <tr><td class="item">Google Microservices Demo</td><td><span class="tag good">Fulfilled — correction</span></td><td class="note">This is not a separate system: "Online Boutique" IS Google's open-source microservices demo (formerly "Hipster Shop"), same codebase. Listing it as a separate unfulfilled item in the first version of this table was a mistake, corrected here, not a new build.</td></tr>
-          <tr><td class="item">Train Ticket (RE2-TT)</td><td><span class="tag warn">In progress</span></td><td class="note">Verified viable (90/90 cases have trace data, same schema as Online Boutique) and being built now: business overlay, journey-typing generalisation, service graph, and full evaluation harness all written and running against a live 90-case download at the time of this table update.</td></tr>
+          <tr><td class="item">Train Ticket (RE2-TT)</td><td><span class="tag good">Fulfilled</span></td><td class="note"><strong>Important finding, not a clean replication:</strong> on Train Ticket, BLAST's NDCG@5 advantage from Online Boutique (ADR-019) does not hold — B9 (independent scoring) significantly and practically BEATS BLAST here (Cliff's δ=-0.280, opposite direction). Diagnosed: Train Ticket's capability footprints are even more homogeneous than Online Boutique's (11 distinct patterns across 30 incident types, one covering 43%), the same mechanism ADR-019 identified, more severe. This answers ADR-019's open question — footprint homogeneity looks like a property of RCAEval's methodology, not one demo app. See ADR-021.</td></tr>
           <tr><td class="item">Sock Shop (RE2-SS)</td><td><span class="tag neutral">Descoped — not viable</span></td><td class="note">Checked directly against the dataset before assuming anything: 0 of 90 Sock Shop cases have ANY trace data (logs + metrics only). This project's entire methodology is trace-based (ADR-009) — there is no viable path to using Sock Shop without a fundamentally different, metrics/logs-based attribution approach, which is out of scope. Not a build gap; a hard data-availability fact.</td></tr>
           <tr><td class="item">DeathStarBench, OpenTelemetry Demo</td><td><span class="tag neutral">Descoped this pass</span></td><td class="note">Different benchmark frameworks entirely — no RCAEval-style pre-injected fault corpus with ground-truth timing, meaning the whole download/distill/evaluate pipeline would need rebuilding from scratch for a new data format. Low tractability relative to Train Ticket, which reuses everything already built. Not pursued while a same-family system (Train Ticket) is available and unfinished.</td></tr>
           <tr><td class="item">Synthetic clusters</td><td><span class="tag warn">Different form</span></td><td class="note">A synthetic simulation (not a K8s cluster) was used for the heterogeneity sweep, ADR-020</td></tr>

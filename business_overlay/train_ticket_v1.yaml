@@ -142,4 +142,17 @@ capabilities:
 #   up as "no capability mapped" in the pipeline output and
 #   need this file updated, the same self-correcting pattern
 #   used for Online Boutique's overlay.
+#
+# - Confirmed after the full 90-case run: 7 operations have no
+#   capability mapping (GET /error, an alternate
+#   /contactservice/contacts/{id}/ path, and 5 internal
+#   Repository-layer calls -- OrderRepository.findById,
+#   RouteRepository.findById/save, TripRepository.findByTripId,
+#   UserRepository.findByUsername -- which occasionally surface
+#   as their own orphaned root traces, the same broken-context-
+#   propagation pattern documented for Online Boutique's
+#   checkoutservice->currencyservice Convert calls). Combined
+#   traffic: 43 requests out of 563,677 total (0.008%) --
+#   negligible, left unmapped rather than patched for a
+#   vanishingly small edge case.
 # ------------------------------------------------------

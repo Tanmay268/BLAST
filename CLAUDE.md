@@ -293,17 +293,29 @@ Per the requirements matrix, built or reclassified everything not excluded by th
 - **Human study instrument** (`results/data/human_study_instrument.md`): 12 real k=5 scenarios
   from the actual corpus, consent text, blind-comparison questions, analysis plan. Cannot
   collect real responses — needs the user to recruit 10-20 SREs, possibly IRB.
-- **Cross-system expansion — Train Ticket (RE2-TT), in progress.** Verified Sock Shop (RE2-SS)
-  is not viable at all (0/90 cases have any trace data — logs+metrics only); Train Ticket has
-  traces for all 90 cases and is being built now: `business_overlay/train_ticket_v1.yaml` (10
-  capabilities, grounded in observed operations), `blast_journey_lib.py` generalized for reuse
-  (caught a real issue before it caused silent data loss: Train Ticket's root spans have
-  `methodName == NA` for every case, unlike Online Boutique where only wrapper roots lack it —
-  fixed to fall back to `operationName`), full `re2tt_*` pipeline scripts reusing every shared
-  library and baseline function from the Online Boutique scripts (no logic duplication). 90-case
-  download/distill running; downstream capability model, ground-truth scenarios, and evaluation
-  not yet run as of this note — check `results/data/re2tt_evaluation_statistics.csv` for whether
-  the cross-system Gate 4 pattern matches Online Boutique's before citing anything about it.
+- **Cross-system expansion — Train Ticket (RE2-TT), DONE. Important finding: the NDCG@5
+  advantage does NOT replicate — read ADR-021 before citing anything cross-system.** Verified
+  Sock Shop (RE2-SS) is not viable at all (0/90 cases have any trace data — logs+metrics only);
+  Train Ticket has traces for all 90 cases and was built end to end:
+  `business_overlay/train_ticket_v1.yaml` (10 capabilities, grounded in observed operations),
+  `blast_journey_lib.py` generalized for reuse (caught a real issue before it caused silent data
+  loss: Train Ticket's root spans have `methodName == NA` for every case, unlike Online Boutique
+  where only wrapper roots lack it — fixed to fall back to `operationName`), full `re2tt_*`
+  pipeline scripts reusing every shared library and baseline function from the Online Boutique
+  scripts (no logic duplication), 90/90 cases processed cleanly (0 failures, 0 exclusions).
+  **Result: on Train Ticket, B9 (independent scoring) significantly and practically BEATS BLAST
+  on NDCG@5** (BLAST 0.906 vs B9 0.952, Cliff's δ=-0.280 — the opposite direction from Online
+  Boutique's ADR-019 finding); CBL shows no significant difference either way. Diagnosed, not
+  just reported: Spearman ρ=0.703 between GT_loss and raw technical magnitude (same mechanism as
+  ADR-019's ρ=0.939), and Train Ticket's capability footprints are *even more* homogeneous than
+  Online Boutique's — only 11 distinct footprint patterns across 30 incident types, one pattern
+  covering 43% of all types. **This answers the question ADR-019 left open** (is footprint
+  homogeneity a property of Online Boutique, or of RCAEval's methodology generally?) — it looks
+  like the latter, across two different applications now. See ADR-021 for the full diagnosis and
+  what it means for the paper's central claim (needs a more conditional framing: set-selection's
+  ranking-accuracy advantage is inconsistent across systems, and that inconsistency itself
+  correlates with footprint homogeneity — a stronger, more falsifiable finding than either
+  system's result alone).
 
 **Reclassified in the requirements matrix, not built (with reasons — see the matrix for full
 text):** Endpoint/Datastore graph nodes (functional equivalent already exists via the overlay),

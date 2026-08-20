@@ -1,0 +1,31 @@
+service,fault_type,capabilities_covered,capability_list
+ts-auth-service,cpu,4,Admin Configuration;Order Management;Trip Search;User Authentication
+ts-auth-service,delay,2,Order Management;User Authentication
+ts-auth-service,disk,2,Order Management;User Authentication
+ts-auth-service,loss,3,Order Management;Trip Search;User Authentication
+ts-auth-service,mem,5,Admin Configuration;Order Management;Ticket Reservation;Trip Search;User Authentication
+ts-auth-service,socket,4,Order Management;Ticket Reservation;Trip Search;User Authentication
+ts-order-service,cpu,4,Order Management;Payment Processing;Ticket Reservation;Trip Search
+ts-order-service,delay,4,Order Management;Payment Processing;Ticket Reservation;Trip Search
+ts-order-service,disk,4,Admin Configuration;Order Management;Ticket Reservation;Trip Search
+ts-order-service,loss,3,Order Management;Ticket Reservation;Trip Search
+ts-order-service,mem,5,Admin Configuration;Order Management;Payment Processing;Ticket Reservation;Trip Search
+ts-order-service,socket,6,Admin Configuration;Food Ordering;Order Management;Payment Processing;Ticket Reservation;Trip Search
+ts-route-service,cpu,5,Admin Configuration;Food Ordering;Order Management;Ticket Reservation;Trip Search
+ts-route-service,delay,5,Admin Configuration;Food Ordering;Order Management;Ticket Reservation;Trip Search
+ts-route-service,disk,5,Admin Configuration;Food Ordering;Order Management;Ticket Reservation;Trip Search
+ts-route-service,loss,5,Admin Configuration;Food Ordering;Order Management;Ticket Reservation;Trip Search
+ts-route-service,mem,5,Admin Configuration;Food Ordering;Order Management;Ticket Reservation;Trip Search
+ts-route-service,socket,5,Admin Configuration;Food Ordering;Order Management;Ticket Reservation;Trip Search
+ts-train-service,cpu,4,Admin Configuration;Order Management;Ticket Reservation;Trip Search
+ts-train-service,delay,4,Admin Configuration;Order Management;Ticket Reservation;Trip Search
+ts-train-service,disk,5,Admin Configuration;Food Ordering;Order Management;Ticket Reservation;Trip Search
+ts-train-service,loss,5,Admin Configuration;Food Ordering;Order Management;Ticket Reservation;Trip Search
+ts-train-service,mem,4,Admin Configuration;Order Management;Ticket Reservation;Trip Search
+ts-train-service,socket,4,Admin Configuration;Order Management;Ticket Reservation;Trip Search
+ts-travel-service,cpu,5,Admin Configuration;Food Ordering;Order Management;Ticket Reservation;Trip Search
+ts-travel-service,delay,6,Admin Configuration;Food Ordering;Order Management;Payment Processing;Ticket Reservation;Trip Search
+ts-travel-service,disk,5,Admin Configuration;Food Ordering;Order Management;Ticket Reservation;Trip Search
+ts-travel-service,loss,5,Admin Configuration;Food Ordering;Order Management;Ticket Reservation;Trip Search
+ts-travel-service,mem,5,Admin Configuration;Food Ordering;Order Management;Ticket Reservation;Trip Search
+ts-travel-service,socket,5,Admin Configuration;Food Ordering;Order Management;Ticket Reservation;Trip Search

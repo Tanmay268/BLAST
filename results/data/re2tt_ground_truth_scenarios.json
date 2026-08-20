@@ -1,0 +1,3242 @@
+[
+  {
+    "scenario_id": "re2tt_scenario_k3_001",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-train-service_socket_3",
+      "re2tt_ts-travel-service_mem_3"
+    ],
+    "incident_types": [
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-train-service_cpu_2": 181.4051018646732,
+      "re2tt_ts-train-service_socket_3": 98.33130132716471,
+      "re2tt_ts-travel-service_mem_3": 145.1790467338437
+    },
+    "oracle_order": [
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-travel-service_mem_3",
+      "re2tt_ts-train-service_socket_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_002",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-travel-service_delay_3"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-train-service::cpu",
+      "ts-travel-service::delay"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_3": 98.04085872950861,
+      "re2tt_ts-train-service_cpu_2": 181.4051018646732,
+      "re2tt_ts-travel-service_delay_3": 237.6638029075397
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-train-service_cpu_2"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_003",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-order-service_cpu_2",
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-travel-service_mem_3"
+    ],
+    "incident_types": [
+      "ts-order-service::cpu",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-order-service_cpu_2": 185.59591970512702,
+      "re2tt_ts-travel-service_delay_2": 213.79865874685163,
+      "re2tt_ts-travel-service_mem_3": 145.1790467338437
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-order-service_cpu_2",
+      "re2tt_ts-travel-service_mem_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_004",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-travel-service_mem_3"
+    ],
+    "incident_types": [
+      "ts-order-service::delay",
+      "ts-train-service::cpu",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-order-service_delay_2": 98.00324675324674,
+      "re2tt_ts-train-service_cpu_3": 185.69025271230117,
+      "re2tt_ts-travel-service_mem_3": 145.1790467338437
+    },
+    "oracle_order": [
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-travel-service_mem_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_005",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_2",
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-route-service_disk_3"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-order-service::cpu",
+      "ts-route-service::disk"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_2": 118.15215525130067,
+      "re2tt_ts-order-service_cpu_3": 212.51728209661204,
+      "re2tt_ts-route-service_disk_3": 33.49581924924391
+    },
+    "oracle_order": [
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-auth-service_cpu_2",
+      "re2tt_ts-route-service_disk_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_006",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-train-service_socket_2"
+    ],
+    "incident_types": [
+      "ts-order-service::delay",
+      "ts-route-service::loss",
+      "ts-train-service::socket"
+    ],
+    "gt_loss": {
+      "re2tt_ts-order-service_delay_3": 98.09541119449655,
+      "re2tt_ts-route-service_loss_1": 107.34731978077546,
+      "re2tt_ts-train-service_socket_2": 176.90125888779676
+    },
+    "oracle_order": [
+      "re2tt_ts-train-service_socket_2",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-route-service_loss_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_007",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-travel-service_mem_2"
+    ],
+    "incident_types": [
+      "ts-train-service::cpu",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-train-service_cpu_3": 185.69025271230117,
+      "re2tt_ts-travel-service_delay_2": 213.79865874685163,
+      "re2tt_ts-travel-service_mem_2": 201.39032435332496
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-travel-service_mem_2"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_008",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-travel-service_delay_3"
+    ],
+    "incident_types": [
+      "ts-auth-service::socket",
+      "ts-route-service::disk",
+      "ts-travel-service::delay"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_socket_3": 89.40211444484106,
+      "re2tt_ts-route-service_disk_1": 125.10304368367781,
+      "re2tt_ts-travel-service_delay_3": 237.6638029075397
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-route-service_disk_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_009",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-train-service_cpu_3"
+    ],
+    "incident_types": [
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-train-service::cpu"
+    ],
+    "gt_loss": {
+      "re2tt_ts-order-service_cpu_3": 212.51728209661204,
+      "re2tt_ts-order-service_delay_2": 98.00324675324674,
+      "re2tt_ts-train-service_cpu_3": 185.69025271230117
+    },
+    "oracle_order": [
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-order-service_delay_2"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_010",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-order-service_cpu_2",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-route-service_loss_2"
+    ],
+    "incident_types": [
+      "ts-order-service::cpu",
+      "ts-route-service::disk",
+      "ts-route-service::loss"
+    ],
+    "gt_loss": {
+      "re2tt_ts-order-service_cpu_2": 185.59591970512702,
+      "re2tt_ts-route-service_disk_3": 33.49581924924391,
+      "re2tt_ts-route-service_loss_2": 173.705067104257
+    },
+    "oracle_order": [
+      "re2tt_ts-order-service_cpu_2",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-route-service_disk_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_011",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-travel-service_mem_2"
+    ],
+    "incident_types": [
+      "ts-auth-service::socket",
+      "ts-route-service::disk",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_socket_1": 148.1258671041308,
+      "re2tt_ts-route-service_disk_3": 33.49581924924391,
+      "re2tt_ts-travel-service_mem_2": 201.39032435332496
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_mem_2",
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-route-service_disk_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_012",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-train-service_socket_2"
+    ],
+    "incident_types": [
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-train-service::socket"
+    ],
+    "gt_loss": {
+      "re2tt_ts-order-service_delay_3": 98.09541119449655,
+      "re2tt_ts-route-service_disk_3": 33.49581924924391,
+      "re2tt_ts-train-service_socket_2": 176.90125888779676
+    },
+    "oracle_order": [
+      "re2tt_ts-train-service_socket_2",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-route-service_disk_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_013",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-train-service_cpu_1"
+    ],
+    "incident_types": [
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-train-service::cpu"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_socket_2": 113.80731167625189,
+      "re2tt_ts-order-service_cpu_1": 38.6,
+      "re2tt_ts-train-service_cpu_1": 178.18142643882211
+    },
+    "oracle_order": [
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-order-service_cpu_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_014",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-travel-service_mem_3"
+    ],
+    "incident_types": [
+      "ts-route-service::disk",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-route-service_disk_2": 88.46930054795466,
+      "re2tt_ts-travel-service_delay_3": 237.6638029075397,
+      "re2tt_ts-travel-service_mem_3": 145.1790467338437
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-travel-service_mem_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_015",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-order-service_delay_1",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-train-service_socket_2"
+    ],
+    "incident_types": [
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-train-service::socket"
+    ],
+    "gt_loss": {
+      "re2tt_ts-order-service_delay_1": 250.0,
+      "re2tt_ts-route-service_disk_2": 88.46930054795466,
+      "re2tt_ts-train-service_socket_2": 176.90125888779676
+    },
+    "oracle_order": [
+      "re2tt_ts-order-service_delay_1",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-train-service_socket_2"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_016",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-train-service_socket_1"
+    ],
+    "incident_types": [
+      "ts-auth-service::socket",
+      "ts-route-service::loss",
+      "ts-train-service::socket"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_socket_1": 148.1258671041308,
+      "re2tt_ts-route-service_loss_1": 107.34731978077546,
+      "re2tt_ts-train-service_socket_1": 0
+    },
+    "oracle_order": [
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-train-service_socket_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_017",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-route-service_disk_2"
+    ],
+    "incident_types": [
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-route-service::disk"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_socket_1": 148.1258671041308,
+      "re2tt_ts-order-service_cpu_1": 38.6,
+      "re2tt_ts-route-service_disk_2": 88.46930054795466
+    },
+    "oracle_order": [
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-order-service_cpu_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_018",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-travel-service_mem_1"
+    ],
+    "incident_types": [
+      "ts-order-service::delay",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-order-service_delay_2": 98.00324675324674,
+      "re2tt_ts-travel-service_delay_3": 237.6638029075397,
+      "re2tt_ts-travel-service_mem_1": 204.19858364999763
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-travel-service_mem_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_019",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-travel-service_mem_2"
+    ],
+    "incident_types": [
+      "ts-route-service::disk",
+      "ts-train-service::cpu",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-route-service_disk_2": 88.46930054795466,
+      "re2tt_ts-train-service_cpu_1": 178.18142643882211,
+      "re2tt_ts-travel-service_mem_2": 201.39032435332496
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_mem_2",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-train-service_cpu_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_020",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-train-service_socket_3"
+    ],
+    "incident_types": [
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-train-service::socket"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_socket_1": 148.1258671041308,
+      "re2tt_ts-order-service_cpu_1": 38.6,
+      "re2tt_ts-train-service_socket_3": 98.33130132716471
+    },
+    "oracle_order": [
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-train-service_socket_3",
+      "re2tt_ts-order-service_cpu_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_021",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-train-service_cpu_3"
+    ],
+    "incident_types": [
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu"
+    ],
+    "gt_loss": {
+      "re2tt_ts-route-service_disk_1": 125.10304368367781,
+      "re2tt_ts-route-service_loss_2": 173.705067104257,
+      "re2tt_ts-train-service_cpu_3": 185.69025271230117
+    },
+    "oracle_order": [
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-route-service_loss_2"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_022",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-order-service_delay_1",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-travel-service_mem_3"
+    ],
+    "incident_types": [
+      "ts-order-service::delay",
+      "ts-train-service::cpu",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-order-service_delay_1": 250.0,
+      "re2tt_ts-train-service_cpu_2": 181.4051018646732,
+      "re2tt_ts-travel-service_mem_3": 145.1790467338437
+    },
+    "oracle_order": [
+      "re2tt_ts-order-service_delay_1",
+      "re2tt_ts-travel-service_mem_3",
+      "re2tt_ts-train-service_cpu_2"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_023",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-order-service_delay_3"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::delay"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_3": 98.04085872950861,
+      "re2tt_ts-auth-service_socket_3": 89.40211444484106,
+      "re2tt_ts-order-service_delay_3": 98.09541119449655
+    },
+    "oracle_order": [
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-auth-service_cpu_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_024",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-travel-service_mem_2"
+    ],
+    "incident_types": [
+      "ts-order-service::delay",
+      "ts-train-service::cpu",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-order-service_delay_3": 98.09541119449655,
+      "re2tt_ts-train-service_cpu_1": 178.18142643882211,
+      "re2tt_ts-travel-service_mem_2": 201.39032435332496
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_mem_2",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-train-service_cpu_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_025",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-train-service_socket_2"
+    ],
+    "incident_types": [
+      "ts-order-service::delay",
+      "ts-train-service::cpu",
+      "ts-train-service::socket"
+    ],
+    "gt_loss": {
+      "re2tt_ts-order-service_delay_3": 98.09541119449655,
+      "re2tt_ts-train-service_cpu_3": 185.69025271230117,
+      "re2tt_ts-train-service_socket_2": 176.90125888779676
+    },
+    "oracle_order": [
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-train-service_socket_2"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_026",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-train-service_socket_3",
+      "re2tt_ts-travel-service_mem_3"
+    ],
+    "incident_types": [
+      "ts-route-service::disk",
+      "ts-train-service::socket",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-route-service_disk_1": 125.10304368367781,
+      "re2tt_ts-train-service_socket_3": 98.33130132716471,
+      "re2tt_ts-travel-service_mem_3": 145.1790467338437
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_mem_3",
+      "re2tt_ts-train-service_socket_3",
+      "re2tt_ts-route-service_disk_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_027",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-order-service_cpu_2",
+      "re2tt_ts-travel-service_delay_1"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-order-service::cpu",
+      "ts-travel-service::delay"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_3": 98.04085872950861,
+      "re2tt_ts-order-service_cpu_2": 185.59591970512702,
+      "re2tt_ts-travel-service_delay_1": 206.26039864920517
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-order-service_cpu_2"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_028",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-travel-service_delay_3"
+    ],
+    "incident_types": [
+      "ts-auth-service::socket",
+      "ts-order-service::delay",
+      "ts-travel-service::delay"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_socket_3": 89.40211444484106,
+      "re2tt_ts-order-service_delay_3": 98.09541119449655,
+      "re2tt_ts-travel-service_delay_3": 237.6638029075397
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-order-service_delay_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_029",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-train-service_socket_2"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-order-service::delay",
+      "ts-train-service::socket"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_3": 98.04085872950861,
+      "re2tt_ts-order-service_delay_3": 98.09541119449655,
+      "re2tt_ts-train-service_socket_2": 176.90125888779676
+    },
+    "oracle_order": [
+      "re2tt_ts-train-service_socket_2",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-auth-service_cpu_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k3_030",
+    "k": 3,
+    "incident_ids": [
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-travel-service_mem_3"
+    ],
+    "incident_types": [
+      "ts-auth-service::socket",
+      "ts-train-service::cpu",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_socket_2": 113.80731167625189,
+      "re2tt_ts-train-service_cpu_2": 181.4051018646732,
+      "re2tt_ts-travel-service_mem_3": 145.1790467338437
+    },
+    "oracle_order": [
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-travel-service_mem_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_001",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-travel-service_delay_1"
+    ],
+    "incident_types": [
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-travel-service::delay"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_socket_3": 89.40211444484106,
+      "re2tt_ts-order-service_cpu_3": 212.51728209661204,
+      "re2tt_ts-order-service_delay_3": 98.09541119449655,
+      "re2tt_ts-route-service_disk_2": 88.46930054795466,
+      "re2tt_ts-travel-service_delay_1": 206.26039864920517
+    },
+    "oracle_order": [
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-route-service_disk_2"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_002",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-order-service_cpu_2",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-route-service_loss_2"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::loss"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_3": 98.04085872950861,
+      "re2tt_ts-auth-service_socket_3": 89.40211444484106,
+      "re2tt_ts-order-service_cpu_2": 185.59591970512702,
+      "re2tt_ts-order-service_delay_3": 98.09541119449655,
+      "re2tt_ts-route-service_loss_2": 173.705067104257
+    },
+    "oracle_order": [
+      "re2tt_ts-order-service_cpu_2",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-auth-service_cpu_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_003",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-train-service_socket_3",
+      "re2tt_ts-travel-service_delay_2"
+    ],
+    "incident_types": [
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::loss",
+      "ts-train-service::socket",
+      "ts-travel-service::delay"
+    ],
+    "gt_loss": {
+      "re2tt_ts-order-service_cpu_1": 38.6,
+      "re2tt_ts-order-service_delay_3": 98.09541119449655,
+      "re2tt_ts-route-service_loss_2": 173.705067104257,
+      "re2tt_ts-train-service_socket_3": 98.33130132716471,
+      "re2tt_ts-travel-service_delay_2": 213.79865874685163
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-train-service_socket_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_004",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-order-service_cpu_2",
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-travel-service_mem_3"
+    ],
+    "incident_types": [
+      "ts-order-service::cpu",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-order-service_cpu_2": 185.59591970512702,
+      "re2tt_ts-route-service_disk_1": 125.10304368367781,
+      "re2tt_ts-route-service_loss_3": 52.21519124831149,
+      "re2tt_ts-travel-service_delay_2": 213.79865874685163,
+      "re2tt_ts-travel-service_mem_3": 145.1790467338437
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-order-service_cpu_2",
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-travel-service_mem_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_005",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-travel-service_mem_3"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-train-service::cpu",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_1": 65.43275660314276,
+      "re2tt_ts-auth-service_socket_2": 113.80731167625189,
+      "re2tt_ts-train-service_cpu_1": 178.18142643882211,
+      "re2tt_ts-travel-service_delay_1": 206.26039864920517,
+      "re2tt_ts-travel-service_mem_3": 145.1790467338437
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-travel-service_mem_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_006",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-travel-service_delay_3"
+    ],
+    "incident_types": [
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-travel-service::delay"
+    ],
+    "gt_loss": {
+      "re2tt_ts-order-service_delay_3": 98.09541119449655,
+      "re2tt_ts-route-service_disk_3": 33.49581924924391,
+      "re2tt_ts-route-service_loss_3": 52.21519124831149,
+      "re2tt_ts-train-service_cpu_2": 181.4051018646732,
+      "re2tt_ts-travel-service_delay_3": 237.6638029075397
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-train-service_cpu_2"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_007",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-order-service_cpu_2",
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-travel-service_mem_2"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-route-service::disk",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_1": 65.43275660314276,
+      "re2tt_ts-auth-service_socket_1": 148.1258671041308,
+      "re2tt_ts-order-service_cpu_2": 185.59591970512702,
+      "re2tt_ts-route-service_disk_1": 125.10304368367781,
+      "re2tt_ts-travel-service_mem_2": 201.39032435332496
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_mem_2",
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-order-service_cpu_2",
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-route-service_disk_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_008",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-order-service_cpu_2",
+      "re2tt_ts-order-service_delay_1",
+      "re2tt_ts-train-service_socket_3",
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-travel-service_mem_2"
+    ],
+    "incident_types": [
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-order-service_cpu_2": 185.59591970512702,
+      "re2tt_ts-order-service_delay_1": 250.0,
+      "re2tt_ts-train-service_socket_3": 98.33130132716471,
+      "re2tt_ts-travel-service_delay_3": 237.6638029075397,
+      "re2tt_ts-travel-service_mem_2": 201.39032435332496
+    },
+    "oracle_order": [
+      "re2tt_ts-order-service_delay_1",
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-order-service_cpu_2",
+      "re2tt_ts-train-service_socket_3",
+      "re2tt_ts-travel-service_mem_2"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_009",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_2",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-order-service_cpu_2",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-train-service_socket_1"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-route-service::loss",
+      "ts-train-service::socket"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_2": 118.15215525130067,
+      "re2tt_ts-auth-service_socket_2": 113.80731167625189,
+      "re2tt_ts-order-service_cpu_2": 185.59591970512702,
+      "re2tt_ts-route-service_loss_3": 52.21519124831149,
+      "re2tt_ts-train-service_socket_1": 0
+    },
+    "oracle_order": [
+      "re2tt_ts-order-service_cpu_2",
+      "re2tt_ts-auth-service_cpu_2",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-train-service_socket_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_010",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-travel-service_delay_3"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-travel-service::delay"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_1": 65.43275660314276,
+      "re2tt_ts-auth-service_socket_2": 113.80731167625189,
+      "re2tt_ts-route-service_loss_1": 107.34731978077546,
+      "re2tt_ts-train-service_cpu_2": 181.4051018646732,
+      "re2tt_ts-travel-service_delay_3": 237.6638029075397
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-route-service_loss_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_011",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-travel-service_delay_1"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-train-service::cpu",
+      "ts-travel-service::delay"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_3": 98.04085872950861,
+      "re2tt_ts-order-service_delay_3": 98.09541119449655,
+      "re2tt_ts-route-service_disk_2": 88.46930054795466,
+      "re2tt_ts-train-service_cpu_1": 178.18142643882211,
+      "re2tt_ts-travel-service_delay_1": 206.26039864920517
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-train-service_cpu_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_012",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-travel-service_mem_3"
+    ],
+    "incident_types": [
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_socket_3": 89.40211444484106,
+      "re2tt_ts-order-service_cpu_1": 38.6,
+      "re2tt_ts-order-service_delay_2": 98.00324675324674,
+      "re2tt_ts-travel-service_delay_3": 237.6638029075397,
+      "re2tt_ts-travel-service_mem_3": 145.1790467338437
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-travel-service_mem_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_013",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-travel-service_mem_1"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_1": 65.43275660314276,
+      "re2tt_ts-route-service_loss_2": 173.705067104257,
+      "re2tt_ts-train-service_cpu_2": 181.4051018646732,
+      "re2tt_ts-travel-service_delay_2": 213.79865874685163,
+      "re2tt_ts-travel-service_mem_1": 204.19858364999763
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-travel-service_mem_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_014",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_mem_1"
+    ],
+    "incident_types": [
+      "ts-auth-service::socket",
+      "ts-route-service::disk",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_socket_3": 89.40211444484106,
+      "re2tt_ts-route-service_disk_3": 33.49581924924391,
+      "re2tt_ts-train-service_cpu_2": 181.4051018646732,
+      "re2tt_ts-train-service_socket_1": 0,
+      "re2tt_ts-travel-service_mem_1": 204.19858364999763
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_mem_1",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-train-service_socket_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_015",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-train-service_socket_2",
+      "re2tt_ts-travel-service_delay_2"
+    ],
+    "incident_types": [
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay"
+    ],
+    "gt_loss": {
+      "re2tt_ts-order-service_cpu_1": 38.6,
+      "re2tt_ts-order-service_delay_2": 98.00324675324674,
+      "re2tt_ts-train-service_cpu_1": 178.18142643882211,
+      "re2tt_ts-train-service_socket_2": 176.90125888779676,
+      "re2tt_ts-travel-service_delay_2": 213.79865874685163
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-train-service_socket_2"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_016",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-train-service_socket_3",
+      "re2tt_ts-travel-service_mem_2"
+    ],
+    "incident_types": [
+      "ts-auth-service::socket",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-train-service::socket",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_socket_3": 89.40211444484106,
+      "re2tt_ts-order-service_delay_2": 98.00324675324674,
+      "re2tt_ts-route-service_disk_1": 125.10304368367781,
+      "re2tt_ts-train-service_socket_3": 98.33130132716471,
+      "re2tt_ts-travel-service_mem_2": 201.39032435332496
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_mem_2",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-train-service_socket_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_017",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-order-service_delay_1",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_mem_1"
+    ],
+    "incident_types": [
+      "ts-auth-service::socket",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-train-service::socket",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_socket_1": 148.1258671041308,
+      "re2tt_ts-order-service_delay_1": 250.0,
+      "re2tt_ts-route-service_disk_3": 33.49581924924391,
+      "re2tt_ts-train-service_socket_1": 0,
+      "re2tt_ts-travel-service_mem_1": 204.19858364999763
+    },
+    "oracle_order": [
+      "re2tt_ts-order-service_delay_1",
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-travel-service_mem_1",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-train-service_socket_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_018",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-travel-service_delay_2"
+    ],
+    "incident_types": [
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-route-service::disk",
+      "ts-train-service::cpu",
+      "ts-travel-service::delay"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_socket_3": 89.40211444484106,
+      "re2tt_ts-order-service_cpu_1": 38.6,
+      "re2tt_ts-route-service_disk_2": 88.46930054795466,
+      "re2tt_ts-train-service_cpu_1": 178.18142643882211,
+      "re2tt_ts-travel-service_delay_2": 213.79865874685163
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-train-service_cpu_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_019",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-travel-service_mem_3"
+    ],
+    "incident_types": [
+      "ts-order-service::delay",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-order-service_delay_2": 98.00324675324674,
+      "re2tt_ts-train-service_cpu_1": 178.18142643882211,
+      "re2tt_ts-train-service_socket_1": 0,
+      "re2tt_ts-travel-service_delay_2": 213.79865874685163,
+      "re2tt_ts-travel-service_mem_3": 145.1790467338437
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_mem_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_020",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-train-service_socket_3",
+      "re2tt_ts-travel-service_delay_2"
+    ],
+    "incident_types": [
+      "ts-auth-service::socket",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-train-service::socket",
+      "ts-travel-service::delay"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_socket_2": 113.80731167625189,
+      "re2tt_ts-order-service_delay_2": 98.00324675324674,
+      "re2tt_ts-route-service_disk_3": 33.49581924924391,
+      "re2tt_ts-train-service_socket_3": 98.33130132716471,
+      "re2tt_ts-travel-service_delay_2": 213.79865874685163
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-train-service_socket_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_021",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-order-service_delay_1",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-route-service_loss_1"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_3": 98.04085872950861,
+      "re2tt_ts-order-service_cpu_1": 38.6,
+      "re2tt_ts-order-service_delay_1": 250.0,
+      "re2tt_ts-route-service_disk_3": 33.49581924924391,
+      "re2tt_ts-route-service_loss_1": 107.34731978077546
+    },
+    "oracle_order": [
+      "re2tt_ts-order-service_delay_1",
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-route-service_disk_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_022",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-travel-service_mem_1"
+    ],
+    "incident_types": [
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-route-service_disk_2": 88.46930054795466,
+      "re2tt_ts-route-service_loss_2": 173.705067104257,
+      "re2tt_ts-train-service_cpu_1": 178.18142643882211,
+      "re2tt_ts-travel-service_delay_1": 206.26039864920517,
+      "re2tt_ts-travel-service_mem_1": 204.19858364999763
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-travel-service_mem_1",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-train-service_cpu_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_023",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-travel-service_mem_2"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-route-service::loss",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_1": 65.43275660314276,
+      "re2tt_ts-auth-service_socket_3": 89.40211444484106,
+      "re2tt_ts-route-service_loss_1": 107.34731978077546,
+      "re2tt_ts-travel-service_delay_1": 206.26039864920517,
+      "re2tt_ts-travel-service_mem_2": 201.39032435332496
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-travel-service_mem_2",
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-route-service_loss_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_024",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_2",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_delay_1"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-route-service::disk",
+      "ts-train-service::socket",
+      "ts-travel-service::delay"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_2": 118.15215525130067,
+      "re2tt_ts-auth-service_socket_2": 113.80731167625189,
+      "re2tt_ts-route-service_disk_2": 88.46930054795466,
+      "re2tt_ts-train-service_socket_1": 0,
+      "re2tt_ts-travel-service_delay_1": 206.26039864920517
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-auth-service_cpu_2",
+      "re2tt_ts-train-service_socket_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_025",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-train-service_socket_3",
+      "re2tt_ts-travel-service_mem_1"
+    ],
+    "incident_types": [
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-route-service_disk_1": 125.10304368367781,
+      "re2tt_ts-route-service_loss_1": 107.34731978077546,
+      "re2tt_ts-train-service_cpu_2": 181.4051018646732,
+      "re2tt_ts-train-service_socket_3": 98.33130132716471,
+      "re2tt_ts-travel-service_mem_1": 204.19858364999763
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_mem_1",
+      "re2tt_ts-train-service_socket_3",
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-train-service_cpu_2"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_026",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-travel-service_mem_2"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-order-service::cpu",
+      "ts-route-service::loss",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_1": 65.43275660314276,
+      "re2tt_ts-order-service_cpu_1": 38.6,
+      "re2tt_ts-route-service_loss_3": 52.21519124831149,
+      "re2tt_ts-travel-service_delay_1": 206.26039864920517,
+      "re2tt_ts-travel-service_mem_2": 201.39032435332496
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-travel-service_mem_2",
+      "re2tt_ts-route-service_loss_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_027",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_2",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-travel-service_mem_2"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-route-service::loss",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_2": 118.15215525130067,
+      "re2tt_ts-auth-service_socket_2": 113.80731167625189,
+      "re2tt_ts-order-service_cpu_1": 38.6,
+      "re2tt_ts-route-service_loss_3": 52.21519124831149,
+      "re2tt_ts-travel-service_mem_2": 201.39032435332496
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_mem_2",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-auth-service_cpu_2",
+      "re2tt_ts-route-service_loss_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_028",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-train-service_socket_2"
+    ],
+    "incident_types": [
+      "ts-order-service::cpu",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket"
+    ],
+    "gt_loss": {
+      "re2tt_ts-order-service_cpu_3": 212.51728209661204,
+      "re2tt_ts-route-service_disk_1": 125.10304368367781,
+      "re2tt_ts-route-service_loss_1": 107.34731978077546,
+      "re2tt_ts-train-service_cpu_2": 181.4051018646732,
+      "re2tt_ts-train-service_socket_2": 176.90125888779676
+    },
+    "oracle_order": [
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-train-service_socket_2"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_029",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-travel-service_mem_2"
+    ],
+    "incident_types": [
+      "ts-auth-service::socket",
+      "ts-order-service::delay",
+      "ts-route-service::loss",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_socket_1": 148.1258671041308,
+      "re2tt_ts-order-service_delay_2": 98.00324675324674,
+      "re2tt_ts-route-service_loss_2": 173.705067104257,
+      "re2tt_ts-travel-service_delay_2": 213.79865874685163,
+      "re2tt_ts-travel-service_mem_2": 201.39032435332496
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-travel-service_mem_2"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k5_030",
+    "k": 5,
+    "incident_ids": [
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-travel-service_mem_2"
+    ],
+    "incident_types": [
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-order-service_delay_2": 98.00324675324674,
+      "re2tt_ts-route-service_disk_2": 88.46930054795466,
+      "re2tt_ts-route-service_loss_3": 52.21519124831149,
+      "re2tt_ts-travel-service_delay_2": 213.79865874685163,
+      "re2tt_ts-travel-service_mem_2": 201.39032435332496
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-travel-service_mem_2"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_001",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-train-service_socket_3",
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-travel-service_mem_1"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_1": 65.43275660314276,
+      "re2tt_ts-auth-service_socket_2": 113.80731167625189,
+      "re2tt_ts-order-service_cpu_3": 212.51728209661204,
+      "re2tt_ts-order-service_delay_2": 98.00324675324674,
+      "re2tt_ts-route-service_disk_2": 88.46930054795466,
+      "re2tt_ts-route-service_loss_2": 173.705067104257,
+      "re2tt_ts-train-service_cpu_3": 185.69025271230117,
+      "re2tt_ts-train-service_socket_3": 98.33130132716471,
+      "re2tt_ts-travel-service_delay_3": 237.6638029075397,
+      "re2tt_ts-travel-service_mem_1": 204.19858364999763
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-train-service_socket_3",
+      "re2tt_ts-travel-service_mem_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_002",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-train-service_socket_2",
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-travel-service_mem_3"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_1": 65.43275660314276,
+      "re2tt_ts-auth-service_socket_3": 89.40211444484106,
+      "re2tt_ts-order-service_cpu_1": 38.6,
+      "re2tt_ts-order-service_delay_3": 98.09541119449655,
+      "re2tt_ts-route-service_disk_1": 125.10304368367781,
+      "re2tt_ts-route-service_loss_3": 52.21519124831149,
+      "re2tt_ts-train-service_cpu_2": 181.4051018646732,
+      "re2tt_ts-train-service_socket_2": 176.90125888779676,
+      "re2tt_ts-travel-service_delay_3": 237.6638029075397,
+      "re2tt_ts-travel-service_mem_3": 145.1790467338437
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-train-service_socket_2",
+      "re2tt_ts-travel-service_mem_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_003",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-train-service_socket_3",
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-travel-service_mem_2"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_1": 65.43275660314276,
+      "re2tt_ts-auth-service_socket_2": 113.80731167625189,
+      "re2tt_ts-order-service_cpu_3": 212.51728209661204,
+      "re2tt_ts-order-service_delay_3": 98.09541119449655,
+      "re2tt_ts-route-service_disk_1": 125.10304368367781,
+      "re2tt_ts-route-service_loss_3": 52.21519124831149,
+      "re2tt_ts-train-service_cpu_3": 185.69025271230117,
+      "re2tt_ts-train-service_socket_3": 98.33130132716471,
+      "re2tt_ts-travel-service_delay_1": 206.26039864920517,
+      "re2tt_ts-travel-service_mem_2": 201.39032435332496
+    },
+    "oracle_order": [
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-travel-service_mem_2",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-train-service_socket_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_004",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_2",
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-order-service_cpu_2",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-travel-service_mem_1"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_2": 118.15215525130067,
+      "re2tt_ts-auth-service_socket_1": 148.1258671041308,
+      "re2tt_ts-order-service_cpu_2": 185.59591970512702,
+      "re2tt_ts-order-service_delay_3": 98.09541119449655,
+      "re2tt_ts-route-service_disk_3": 33.49581924924391,
+      "re2tt_ts-route-service_loss_1": 107.34731978077546,
+      "re2tt_ts-train-service_cpu_3": 185.69025271230117,
+      "re2tt_ts-train-service_socket_1": 0,
+      "re2tt_ts-travel-service_delay_1": 206.26039864920517,
+      "re2tt_ts-travel-service_mem_1": 204.19858364999763
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-order-service_cpu_2",
+      "re2tt_ts-travel-service_mem_1",
+      "re2tt_ts-auth-service_cpu_2",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-train-service_socket_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_005",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-order-service_delay_1",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-train-service_socket_2",
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-travel-service_mem_1"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_3": 98.04085872950861,
+      "re2tt_ts-auth-service_socket_3": 89.40211444484106,
+      "re2tt_ts-order-service_cpu_3": 212.51728209661204,
+      "re2tt_ts-order-service_delay_1": 250.0,
+      "re2tt_ts-route-service_disk_3": 33.49581924924391,
+      "re2tt_ts-route-service_loss_1": 107.34731978077546,
+      "re2tt_ts-train-service_cpu_1": 178.18142643882211,
+      "re2tt_ts-train-service_socket_2": 176.90125888779676,
+      "re2tt_ts-travel-service_delay_2": 213.79865874685163,
+      "re2tt_ts-travel-service_mem_1": 204.19858364999763
+    },
+    "oracle_order": [
+      "re2tt_ts-order-service_delay_1",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-train-service_socket_2",
+      "re2tt_ts-travel-service_mem_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_006",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-train-service_socket_3",
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-travel-service_mem_3"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_1": 65.43275660314276,
+      "re2tt_ts-auth-service_socket_2": 113.80731167625189,
+      "re2tt_ts-order-service_cpu_1": 38.6,
+      "re2tt_ts-order-service_delay_2": 98.00324675324674,
+      "re2tt_ts-route-service_disk_2": 88.46930054795466,
+      "re2tt_ts-route-service_loss_3": 52.21519124831149,
+      "re2tt_ts-train-service_cpu_3": 185.69025271230117,
+      "re2tt_ts-train-service_socket_3": 98.33130132716471,
+      "re2tt_ts-travel-service_delay_2": 213.79865874685163,
+      "re2tt_ts-travel-service_mem_3": 145.1790467338437
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-train-service_socket_3",
+      "re2tt_ts-travel-service_mem_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_007",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-order-service_cpu_2",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-travel-service_mem_1"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_1": 65.43275660314276,
+      "re2tt_ts-auth-service_socket_2": 113.80731167625189,
+      "re2tt_ts-order-service_cpu_2": 185.59591970512702,
+      "re2tt_ts-order-service_delay_3": 98.09541119449655,
+      "re2tt_ts-route-service_disk_2": 88.46930054795466,
+      "re2tt_ts-route-service_loss_2": 173.705067104257,
+      "re2tt_ts-train-service_cpu_2": 181.4051018646732,
+      "re2tt_ts-train-service_socket_1": 0,
+      "re2tt_ts-travel-service_delay_1": 206.26039864920517,
+      "re2tt_ts-travel-service_mem_1": 204.19858364999763
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-order-service_cpu_2",
+      "re2tt_ts-travel-service_mem_1",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-train-service_socket_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_008",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-travel-service_mem_3"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_3": 98.04085872950861,
+      "re2tt_ts-auth-service_socket_3": 89.40211444484106,
+      "re2tt_ts-order-service_cpu_3": 212.51728209661204,
+      "re2tt_ts-order-service_delay_2": 98.00324675324674,
+      "re2tt_ts-route-service_disk_1": 125.10304368367781,
+      "re2tt_ts-route-service_loss_2": 173.705067104257,
+      "re2tt_ts-train-service_cpu_3": 185.69025271230117,
+      "re2tt_ts-train-service_socket_1": 0,
+      "re2tt_ts-travel-service_delay_1": 206.26039864920517,
+      "re2tt_ts-travel-service_mem_3": 145.1790467338437
+    },
+    "oracle_order": [
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_mem_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_009",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-travel-service_mem_3"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_1": 65.43275660314276,
+      "re2tt_ts-auth-service_socket_1": 148.1258671041308,
+      "re2tt_ts-order-service_cpu_1": 38.6,
+      "re2tt_ts-order-service_delay_3": 98.09541119449655,
+      "re2tt_ts-route-service_disk_3": 33.49581924924391,
+      "re2tt_ts-route-service_loss_3": 52.21519124831149,
+      "re2tt_ts-train-service_cpu_2": 181.4051018646732,
+      "re2tt_ts-train-service_socket_1": 0,
+      "re2tt_ts-travel-service_delay_1": 206.26039864920517,
+      "re2tt_ts-travel-service_mem_3": 145.1790467338437
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_mem_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_010",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-train-service_socket_3",
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-travel-service_mem_3"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_1": 65.43275660314276,
+      "re2tt_ts-auth-service_socket_2": 113.80731167625189,
+      "re2tt_ts-order-service_cpu_3": 212.51728209661204,
+      "re2tt_ts-order-service_delay_2": 98.00324675324674,
+      "re2tt_ts-route-service_disk_3": 33.49581924924391,
+      "re2tt_ts-route-service_loss_1": 107.34731978077546,
+      "re2tt_ts-train-service_cpu_3": 185.69025271230117,
+      "re2tt_ts-train-service_socket_3": 98.33130132716471,
+      "re2tt_ts-travel-service_delay_3": 237.6638029075397,
+      "re2tt_ts-travel-service_mem_3": 145.1790467338437
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-train-service_socket_3",
+      "re2tt_ts-travel-service_mem_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_011",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_2",
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-order-service_cpu_2",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-train-service_socket_2",
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-travel-service_mem_2"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_2": 118.15215525130067,
+      "re2tt_ts-auth-service_socket_1": 148.1258671041308,
+      "re2tt_ts-order-service_cpu_2": 185.59591970512702,
+      "re2tt_ts-order-service_delay_2": 98.00324675324674,
+      "re2tt_ts-route-service_disk_1": 125.10304368367781,
+      "re2tt_ts-route-service_loss_3": 52.21519124831149,
+      "re2tt_ts-train-service_cpu_2": 181.4051018646732,
+      "re2tt_ts-train-service_socket_2": 176.90125888779676,
+      "re2tt_ts-travel-service_delay_3": 237.6638029075397,
+      "re2tt_ts-travel-service_mem_2": 201.39032435332496
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-auth-service_cpu_2",
+      "re2tt_ts-order-service_cpu_2",
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-train-service_socket_2",
+      "re2tt_ts-travel-service_mem_2"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_012",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-order-service_delay_1",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-travel-service_mem_2"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_1": 65.43275660314276,
+      "re2tt_ts-auth-service_socket_3": 89.40211444484106,
+      "re2tt_ts-order-service_cpu_3": 212.51728209661204,
+      "re2tt_ts-order-service_delay_1": 250.0,
+      "re2tt_ts-route-service_disk_2": 88.46930054795466,
+      "re2tt_ts-route-service_loss_2": 173.705067104257,
+      "re2tt_ts-train-service_cpu_1": 178.18142643882211,
+      "re2tt_ts-train-service_socket_1": 0,
+      "re2tt_ts-travel-service_delay_2": 213.79865874685163,
+      "re2tt_ts-travel-service_mem_2": 201.39032435332496
+    },
+    "oracle_order": [
+      "re2tt_ts-order-service_delay_1",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_mem_2"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_013",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-travel-service_mem_2"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_1": 65.43275660314276,
+      "re2tt_ts-auth-service_socket_2": 113.80731167625189,
+      "re2tt_ts-order-service_cpu_3": 212.51728209661204,
+      "re2tt_ts-order-service_delay_2": 98.00324675324674,
+      "re2tt_ts-route-service_disk_3": 33.49581924924391,
+      "re2tt_ts-route-service_loss_1": 107.34731978077546,
+      "re2tt_ts-train-service_cpu_1": 178.18142643882211,
+      "re2tt_ts-train-service_socket_1": 0,
+      "re2tt_ts-travel-service_delay_1": 206.26039864920517,
+      "re2tt_ts-travel-service_mem_2": 201.39032435332496
+    },
+    "oracle_order": [
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-travel-service_mem_2",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-train-service_socket_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_014",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_2",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-order-service_cpu_2",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-travel-service_mem_1"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_2": 118.15215525130067,
+      "re2tt_ts-auth-service_socket_2": 113.80731167625189,
+      "re2tt_ts-order-service_cpu_2": 185.59591970512702,
+      "re2tt_ts-order-service_delay_2": 98.00324675324674,
+      "re2tt_ts-route-service_disk_1": 125.10304368367781,
+      "re2tt_ts-route-service_loss_3": 52.21519124831149,
+      "re2tt_ts-train-service_cpu_1": 178.18142643882211,
+      "re2tt_ts-train-service_socket_1": 0,
+      "re2tt_ts-travel-service_delay_2": 213.79865874685163,
+      "re2tt_ts-travel-service_mem_1": 204.19858364999763
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-auth-service_cpu_2",
+      "re2tt_ts-order-service_cpu_2",
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_mem_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_015",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-train-service_socket_2",
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-travel-service_mem_3"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_3": 98.04085872950861,
+      "re2tt_ts-auth-service_socket_1": 148.1258671041308,
+      "re2tt_ts-order-service_cpu_3": 212.51728209661204,
+      "re2tt_ts-order-service_delay_3": 98.09541119449655,
+      "re2tt_ts-route-service_disk_3": 33.49581924924391,
+      "re2tt_ts-route-service_loss_3": 52.21519124831149,
+      "re2tt_ts-train-service_cpu_3": 185.69025271230117,
+      "re2tt_ts-train-service_socket_2": 176.90125888779676,
+      "re2tt_ts-travel-service_delay_1": 206.26039864920517,
+      "re2tt_ts-travel-service_mem_3": 145.1790467338437
+    },
+    "oracle_order": [
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-train-service_socket_2",
+      "re2tt_ts-travel-service_mem_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_016",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-order-service_delay_1",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-train-service_socket_2",
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-travel-service_mem_1"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_1": 65.43275660314276,
+      "re2tt_ts-auth-service_socket_1": 148.1258671041308,
+      "re2tt_ts-order-service_cpu_3": 212.51728209661204,
+      "re2tt_ts-order-service_delay_1": 250.0,
+      "re2tt_ts-route-service_disk_3": 33.49581924924391,
+      "re2tt_ts-route-service_loss_1": 107.34731978077546,
+      "re2tt_ts-train-service_cpu_3": 185.69025271230117,
+      "re2tt_ts-train-service_socket_2": 176.90125888779676,
+      "re2tt_ts-travel-service_delay_1": 206.26039864920517,
+      "re2tt_ts-travel-service_mem_1": 204.19858364999763
+    },
+    "oracle_order": [
+      "re2tt_ts-order-service_delay_1",
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-train-service_socket_2",
+      "re2tt_ts-travel-service_mem_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_017",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-train-service_socket_3",
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-travel-service_mem_3"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_1": 65.43275660314276,
+      "re2tt_ts-auth-service_socket_3": 89.40211444484106,
+      "re2tt_ts-order-service_cpu_1": 38.6,
+      "re2tt_ts-order-service_delay_2": 98.00324675324674,
+      "re2tt_ts-route-service_disk_2": 88.46930054795466,
+      "re2tt_ts-route-service_loss_2": 173.705067104257,
+      "re2tt_ts-train-service_cpu_2": 181.4051018646732,
+      "re2tt_ts-train-service_socket_3": 98.33130132716471,
+      "re2tt_ts-travel-service_delay_2": 213.79865874685163,
+      "re2tt_ts-travel-service_mem_3": 145.1790467338437
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-train-service_socket_3",
+      "re2tt_ts-travel-service_mem_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_018",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-train-service_socket_2",
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-travel-service_mem_2"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_1": 65.43275660314276,
+      "re2tt_ts-auth-service_socket_1": 148.1258671041308,
+      "re2tt_ts-order-service_cpu_3": 212.51728209661204,
+      "re2tt_ts-order-service_delay_2": 98.00324675324674,
+      "re2tt_ts-route-service_disk_2": 88.46930054795466,
+      "re2tt_ts-route-service_loss_2": 173.705067104257,
+      "re2tt_ts-train-service_cpu_3": 185.69025271230117,
+      "re2tt_ts-train-service_socket_2": 176.90125888779676,
+      "re2tt_ts-travel-service_delay_3": 237.6638029075397,
+      "re2tt_ts-travel-service_mem_2": 201.39032435332496
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-train-service_socket_2",
+      "re2tt_ts-travel-service_mem_2"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_019",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-travel-service_mem_2"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_3": 98.04085872950861,
+      "re2tt_ts-auth-service_socket_3": 89.40211444484106,
+      "re2tt_ts-order-service_cpu_3": 212.51728209661204,
+      "re2tt_ts-order-service_delay_3": 98.09541119449655,
+      "re2tt_ts-route-service_disk_2": 88.46930054795466,
+      "re2tt_ts-route-service_loss_3": 52.21519124831149,
+      "re2tt_ts-train-service_cpu_2": 181.4051018646732,
+      "re2tt_ts-train-service_socket_1": 0,
+      "re2tt_ts-travel-service_delay_1": 206.26039864920517,
+      "re2tt_ts-travel-service_mem_2": 201.39032435332496
+    },
+    "oracle_order": [
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-travel-service_mem_2",
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-train-service_socket_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_020",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_2",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-order-service_delay_1",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-train-service_socket_2",
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-travel-service_mem_1"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_2": 118.15215525130067,
+      "re2tt_ts-auth-service_socket_3": 89.40211444484106,
+      "re2tt_ts-order-service_cpu_1": 38.6,
+      "re2tt_ts-order-service_delay_1": 250.0,
+      "re2tt_ts-route-service_disk_2": 88.46930054795466,
+      "re2tt_ts-route-service_loss_2": 173.705067104257,
+      "re2tt_ts-train-service_cpu_2": 181.4051018646732,
+      "re2tt_ts-train-service_socket_2": 176.90125888779676,
+      "re2tt_ts-travel-service_delay_3": 237.6638029075397,
+      "re2tt_ts-travel-service_mem_1": 204.19858364999763
+    },
+    "oracle_order": [
+      "re2tt_ts-order-service_delay_1",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-auth-service_cpu_2",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-train-service_socket_2",
+      "re2tt_ts-travel-service_mem_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_021",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-train-service_socket_2",
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-travel-service_mem_2"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_3": 98.04085872950861,
+      "re2tt_ts-auth-service_socket_3": 89.40211444484106,
+      "re2tt_ts-order-service_cpu_3": 212.51728209661204,
+      "re2tt_ts-order-service_delay_3": 98.09541119449655,
+      "re2tt_ts-route-service_disk_1": 125.10304368367781,
+      "re2tt_ts-route-service_loss_1": 107.34731978077546,
+      "re2tt_ts-train-service_cpu_3": 185.69025271230117,
+      "re2tt_ts-train-service_socket_2": 176.90125888779676,
+      "re2tt_ts-travel-service_delay_1": 206.26039864920517,
+      "re2tt_ts-travel-service_mem_2": 201.39032435332496
+    },
+    "oracle_order": [
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-travel-service_mem_2",
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-train-service_socket_2"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_022",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-travel-service_mem_3"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_1": 65.43275660314276,
+      "re2tt_ts-auth-service_socket_2": 113.80731167625189,
+      "re2tt_ts-order-service_cpu_1": 38.6,
+      "re2tt_ts-order-service_delay_3": 98.09541119449655,
+      "re2tt_ts-route-service_disk_3": 33.49581924924391,
+      "re2tt_ts-route-service_loss_3": 52.21519124831149,
+      "re2tt_ts-train-service_cpu_1": 178.18142643882211,
+      "re2tt_ts-train-service_socket_1": 0,
+      "re2tt_ts-travel-service_delay_2": 213.79865874685163,
+      "re2tt_ts-travel-service_mem_3": 145.1790467338437
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_mem_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_023",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-travel-service_mem_3"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_1": 65.43275660314276,
+      "re2tt_ts-auth-service_socket_1": 148.1258671041308,
+      "re2tt_ts-order-service_cpu_1": 38.6,
+      "re2tt_ts-order-service_delay_2": 98.00324675324674,
+      "re2tt_ts-route-service_disk_2": 88.46930054795466,
+      "re2tt_ts-route-service_loss_1": 107.34731978077546,
+      "re2tt_ts-train-service_cpu_1": 178.18142643882211,
+      "re2tt_ts-train-service_socket_1": 0,
+      "re2tt_ts-travel-service_delay_1": 206.26039864920517,
+      "re2tt_ts-travel-service_mem_3": 145.1790467338437
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_1",
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_mem_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_024",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-travel-service_mem_2"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_3": 98.04085872950861,
+      "re2tt_ts-auth-service_socket_1": 148.1258671041308,
+      "re2tt_ts-order-service_cpu_1": 38.6,
+      "re2tt_ts-order-service_delay_3": 98.09541119449655,
+      "re2tt_ts-route-service_disk_1": 125.10304368367781,
+      "re2tt_ts-route-service_loss_3": 52.21519124831149,
+      "re2tt_ts-train-service_cpu_2": 181.4051018646732,
+      "re2tt_ts-train-service_socket_1": 0,
+      "re2tt_ts-travel-service_delay_3": 237.6638029075397,
+      "re2tt_ts-travel-service_mem_2": 201.39032435332496
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-auth-service_socket_1",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-route-service_loss_3",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_mem_2"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_025",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-travel-service_mem_1"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_1": 65.43275660314276,
+      "re2tt_ts-auth-service_socket_2": 113.80731167625189,
+      "re2tt_ts-order-service_cpu_1": 38.6,
+      "re2tt_ts-order-service_delay_3": 98.09541119449655,
+      "re2tt_ts-route-service_disk_1": 125.10304368367781,
+      "re2tt_ts-route-service_loss_1": 107.34731978077546,
+      "re2tt_ts-train-service_cpu_3": 185.69025271230117,
+      "re2tt_ts-train-service_socket_1": 0,
+      "re2tt_ts-travel-service_delay_3": 237.6638029075397,
+      "re2tt_ts-travel-service_mem_1": 204.19858364999763
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-order-service_delay_3",
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-order-service_cpu_1",
+      "re2tt_ts-route-service_disk_1",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_mem_1"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_026",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-order-service_cpu_2",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-travel-service_mem_3"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_3": 98.04085872950861,
+      "re2tt_ts-auth-service_socket_2": 113.80731167625189,
+      "re2tt_ts-order-service_cpu_2": 185.59591970512702,
+      "re2tt_ts-order-service_delay_2": 98.00324675324674,
+      "re2tt_ts-route-service_disk_3": 33.49581924924391,
+      "re2tt_ts-route-service_loss_2": 173.705067104257,
+      "re2tt_ts-train-service_cpu_1": 178.18142643882211,
+      "re2tt_ts-train-service_socket_1": 0,
+      "re2tt_ts-travel-service_delay_2": 213.79865874685163,
+      "re2tt_ts-travel-service_mem_3": 145.1790467338437
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-order-service_cpu_2",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_mem_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_027",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-order-service_cpu_2",
+      "re2tt_ts-order-service_delay_1",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-train-service_socket_2",
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-travel-service_mem_2"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_3": 98.04085872950861,
+      "re2tt_ts-auth-service_socket_3": 89.40211444484106,
+      "re2tt_ts-order-service_cpu_2": 185.59591970512702,
+      "re2tt_ts-order-service_delay_1": 250.0,
+      "re2tt_ts-route-service_disk_2": 88.46930054795466,
+      "re2tt_ts-route-service_loss_2": 173.705067104257,
+      "re2tt_ts-train-service_cpu_2": 181.4051018646732,
+      "re2tt_ts-train-service_socket_2": 176.90125888779676,
+      "re2tt_ts-travel-service_delay_3": 237.6638029075397,
+      "re2tt_ts-travel-service_mem_2": 201.39032435332496
+    },
+    "oracle_order": [
+      "re2tt_ts-order-service_delay_1",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-order-service_cpu_2",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-train-service_socket_2",
+      "re2tt_ts-travel-service_mem_2"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_028",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-train-service_socket_3",
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-travel-service_mem_3"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_3": 98.04085872950861,
+      "re2tt_ts-auth-service_socket_3": 89.40211444484106,
+      "re2tt_ts-order-service_cpu_3": 212.51728209661204,
+      "re2tt_ts-order-service_delay_2": 98.00324675324674,
+      "re2tt_ts-route-service_disk_3": 33.49581924924391,
+      "re2tt_ts-route-service_loss_2": 173.705067104257,
+      "re2tt_ts-train-service_cpu_1": 178.18142643882211,
+      "re2tt_ts-train-service_socket_3": 98.33130132716471,
+      "re2tt_ts-travel-service_delay_2": 213.79865874685163,
+      "re2tt_ts-travel-service_mem_3": 145.1790467338437
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-route-service_disk_3",
+      "re2tt_ts-route-service_loss_2",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-train-service_socket_3",
+      "re2tt_ts-travel-service_mem_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_029",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_2",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-travel-service_mem_3"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_2": 118.15215525130067,
+      "re2tt_ts-auth-service_socket_3": 89.40211444484106,
+      "re2tt_ts-order-service_cpu_3": 212.51728209661204,
+      "re2tt_ts-order-service_delay_2": 98.00324675324674,
+      "re2tt_ts-route-service_disk_2": 88.46930054795466,
+      "re2tt_ts-route-service_loss_1": 107.34731978077546,
+      "re2tt_ts-train-service_cpu_1": 178.18142643882211,
+      "re2tt_ts-train-service_socket_1": 0,
+      "re2tt_ts-travel-service_delay_3": 237.6638029075397,
+      "re2tt_ts-travel-service_mem_3": 145.1790467338437
+    },
+    "oracle_order": [
+      "re2tt_ts-travel-service_delay_3",
+      "re2tt_ts-auth-service_cpu_2",
+      "re2tt_ts-order-service_delay_2",
+      "re2tt_ts-auth-service_socket_3",
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-train-service_socket_1",
+      "re2tt_ts-travel-service_mem_3"
+    ]
+  },
+  {
+    "scenario_id": "re2tt_scenario_k10_030",
+    "k": 10,
+    "incident_ids": [
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-order-service_delay_1",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-train-service_socket_3",
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-travel-service_mem_3"
+    ],
+    "incident_types": [
+      "ts-auth-service::cpu",
+      "ts-auth-service::socket",
+      "ts-order-service::cpu",
+      "ts-order-service::delay",
+      "ts-route-service::disk",
+      "ts-route-service::loss",
+      "ts-train-service::cpu",
+      "ts-train-service::socket",
+      "ts-travel-service::delay",
+      "ts-travel-service::mem"
+    ],
+    "gt_loss": {
+      "re2tt_ts-auth-service_cpu_3": 98.04085872950861,
+      "re2tt_ts-auth-service_socket_2": 113.80731167625189,
+      "re2tt_ts-order-service_cpu_3": 212.51728209661204,
+      "re2tt_ts-order-service_delay_1": 250.0,
+      "re2tt_ts-route-service_disk_2": 88.46930054795466,
+      "re2tt_ts-route-service_loss_1": 107.34731978077546,
+      "re2tt_ts-train-service_cpu_3": 185.69025271230117,
+      "re2tt_ts-train-service_socket_3": 98.33130132716471,
+      "re2tt_ts-travel-service_delay_2": 213.79865874685163,
+      "re2tt_ts-travel-service_mem_3": 145.1790467338437
+    },
+    "oracle_order": [
+      "re2tt_ts-order-service_delay_1",
+      "re2tt_ts-auth-service_socket_2",
+      "re2tt_ts-travel-service_delay_2",
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-order-service_cpu_3",
+      "re2tt_ts-route-service_disk_2",
+      "re2tt_ts-route-service_loss_1",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-train-service_socket_3",
+      "re2tt_ts-travel-service_mem_3"
+    ]
+  }
+]

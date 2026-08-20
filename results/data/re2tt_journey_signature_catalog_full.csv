@@ -1,0 +1,23 @@
+journey_type_id,journey_label,signature_str,n_traces
+direct::POST /api/v1/users/login,POST /api/v1/users/login (direct),POST /api/v1/users/login,169891
+direct::POST /api/v1/travel2service/trips/left,POST /api/v1/travel2service/trips/left (direct),POST /api/v1/travel2service/trips/left,155838
+direct::POST /api/v1/travelservice/trips/left,POST /api/v1/travelservice/trips/left (direct),POST /api/v1/travelservice/trips/left,45226
+direct::GET /api/v1/foodservice/foods/{date}/{startStation}/{endStation}/{tripId},GET /api/v1/foodservice/foods/{date}/{startStation}/{endStation}/{tripId} (direct),GET /api/v1/foodservice/foods/{date}/{startStation}/{endStation}/{tripId},42884
+direct::GET /api/v1/adminbasicservice/adminbasic/prices,GET /api/v1/adminbasicservice/adminbasic/prices (direct),GET /api/v1/adminbasicservice/adminbasic/prices,19534
+direct::GET /api/v1/adminbasicservice/adminbasic/configs,GET /api/v1/adminbasicservice/adminbasic/configs (direct),GET /api/v1/adminbasicservice/adminbasic/configs,19533
+direct::GET /api/v1/admintravelservice/admintravel,GET /api/v1/admintravelservice/admintravel (direct),GET /api/v1/admintravelservice/admintravel,19503
+direct::POST /api/v1/orderservice/order/refresh,POST /api/v1/orderservice/order/refresh (direct),POST /api/v1/orderservice/order/refresh,16569
+direct::GET /api/v1/assuranceservice/assurances/types,GET /api/v1/assuranceservice/assurances/types (direct),GET /api/v1/assuranceservice/assurances/types,13679
+direct::PUT /api/v1/consignservice/consigns,PUT /api/v1/consignservice/consigns (direct),PUT /api/v1/consignservice/consigns,13651
+direct::POST /api/v1/inside_pay_service/inside_payment,POST /api/v1/inside_pay_service/inside_payment (direct),POST /api/v1/inside_pay_service/inside_payment,13585
+direct::GET /api/v1/contactservice/contacts/account/{accountId},GET /api/v1/contactservice/contacts/account/{accountId} (direct),GET /api/v1/contactservice/contacts/account/{accountId},11547
+direct::POST /api/v1/orderOtherService/orderOther/refresh,POST /api/v1/orderOtherService/orderOther/refresh (direct),POST /api/v1/orderOtherService/orderOther/refresh,10656
+direct::POST /api/v1/preserveservice/preserve,POST /api/v1/preserveservice/preserve (direct),POST /api/v1/preserveservice/preserve,6954
+direct::POST /api/v1/preserveotherservice/preserveOther,POST /api/v1/preserveotherservice/preserveOther (direct),POST /api/v1/preserveotherservice/preserveOther,4584
+direct::RouteRepository.findById,RouteRepository.findById (direct),RouteRepository.findById,10
+direct::RouteRepository.save,RouteRepository.save (direct),RouteRepository.save,10
+direct::GET /api/v1/contactservice/contacts/{id}/,GET /api/v1/contactservice/contacts/{id}/ (direct),GET /api/v1/contactservice/contacts/{id}/,9
+direct::TripRepository.findByTripId,TripRepository.findByTripId (direct),TripRepository.findByTripId,5
+direct::GET /error,GET /error (direct),GET /error,4
+direct::OrderRepository.findById,OrderRepository.findById (direct),OrderRepository.findById,3
+direct::UserRepository.findByUsername,UserRepository.findByUsername (direct),UserRepository.findByUsername,2
