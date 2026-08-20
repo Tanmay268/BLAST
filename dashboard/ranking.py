@@ -36,6 +36,7 @@ def blast_greedy_order(incident_ids, id_to_type, type_probabilities, weights):
     remaining = list(incident_ids)
     selected = []
     steps = []
+    covered_so_far = set()
 
     while remaining:
         current = F(selected)
@@ -44,7 +45,17 @@ def blast_greedy_order(incident_ids, id_to_type, type_probabilities, weights):
         winner, gain = gains[0]
         selected.append(winner)
         remaining.remove(winner)
-        steps.append({"incident": winner, "marginal_gain": gain, "cumulative_F": F(selected)})
+
+        winner_caps = set(type_probabilities.get(id_to_type[winner], {}).keys())
+        newly_covered = winner_caps - covered_so_far
+        covered_so_far |= winner_caps
+
+        steps.append({
+            "incident": winner,
+            "marginal_gain": gain,
+            "cumulative_F": F(selected),
+            "newly_covered_capabilities": newly_covered,
+        })
 
     return selected, steps
 
