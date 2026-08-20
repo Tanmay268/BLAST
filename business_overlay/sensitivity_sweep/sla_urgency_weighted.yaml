@@ -1,0 +1,61 @@
+version: 2
+system: online-boutique
+value_model: sla_urgency_weighted
+note: 'A second DECLARED alternative assumption (no real SLA data exists for this
+  project -- see the requirements matrix''s ''SLA Violation Risk: not modeled'' entry):
+  weights response urgency instead of revenue-criticality. Payment/order-placement
+  capabilities rank highest here for the same reason a real SLA would (financial-transaction
+  correctness is time-critical), but browsing/recommendation capabilities rank lower
+  than in the revenue model, since urgency and revenue-contribution are not the same
+  axis.'
+capabilities:
+- id: order_placement
+  display: Order Placement
+  value_per_min: 90.0
+  realised_by:
+  - PlaceOrder
+- id: payment_processing
+  display: Payment Processing
+  value_per_min: 100.0
+  realised_by:
+  - Charge
+- id: currency_conversion
+  display: Currency Conversion
+  value_per_min: 35.0
+  realised_by:
+  - Convert
+  - GetSupportedCurrencies
+- id: cart_management
+  display: Cart Management
+  value_per_min: 40.0
+  realised_by:
+  - AddItem
+  - GetCart
+  - EmptyCart
+- id: shipping
+  display: Shipping
+  value_per_min: 30.0
+  realised_by:
+  - GetQuote
+  - ShipOrder
+- id: order_confirmation
+  display: Order Confirmation
+  value_per_min: 20.0
+  realised_by:
+  - SendOrderConfirmation
+- id: product_browsing
+  display: Product Browsing
+  value_per_min: 15.0
+  realised_by:
+  - GetProduct
+  - ListProducts
+- id: product_recommendations
+  display: Product Recommendations
+  value_per_min: 8.0
+  realised_by:
+  - ListRecommendations
+- id: advertisement_retrieval
+  display: Advertisement Retrieval
+  value_per_min: 5.0
+  realised_by:
+  - GetAds

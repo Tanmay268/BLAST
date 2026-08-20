@@ -1,0 +1,58 @@
+version: 2
+system: online-boutique
+value_model: adversarial_inverted
+note: "revenue_weighted's ranking mechanically reversed (highest <-> lowest) -- 03_RESEARCH_DESIGN.md\
+  \ \xA73.3's suggested 5th model, a stress test: if BLAST's advantage (where it exists)\
+  \ survives even under a value model chosen to be maximally wrong, that is strong\
+  \ evidence the advantage isn't an artifact of the weights."
+capabilities:
+- id: order_placement
+  display: Order Placement
+  value_per_min: 5.0
+  realised_by:
+  - PlaceOrder
+- id: payment_processing
+  display: Payment Processing
+  value_per_min: 5.0
+  realised_by:
+  - Charge
+- id: currency_conversion
+  display: Currency Conversion
+  value_per_min: 45.0
+  realised_by:
+  - Convert
+  - GetSupportedCurrencies
+- id: cart_management
+  display: Cart Management
+  value_per_min: 55.0
+  realised_by:
+  - AddItem
+  - GetCart
+  - EmptyCart
+- id: shipping
+  display: Shipping
+  value_per_min: 65.0
+  realised_by:
+  - GetQuote
+  - ShipOrder
+- id: order_confirmation
+  display: Order Confirmation
+  value_per_min: 80.0
+  realised_by:
+  - SendOrderConfirmation
+- id: product_browsing
+  display: Product Browsing
+  value_per_min: 85.0
+  realised_by:
+  - GetProduct
+  - ListProducts
+- id: product_recommendations
+  display: Product Recommendations
+  value_per_min: 95.0
+  realised_by:
+  - ListRecommendations
+- id: advertisement_retrieval
+  display: Advertisement Retrieval
+  value_per_min: 100.0
+  realised_by:
+  - GetAds

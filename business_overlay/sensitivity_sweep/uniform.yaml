@@ -1,0 +1,56 @@
+version: 2
+system: online-boutique
+value_model: uniform
+note: Every capability weighted equally -- the sensitivity sweep's explicit null model,
+  per 03_RESEARCH_DESIGN.md A6.
+capabilities:
+- id: order_placement
+  display: Order Placement
+  value_per_min: 1.0
+  realised_by:
+  - PlaceOrder
+- id: payment_processing
+  display: Payment Processing
+  value_per_min: 1.0
+  realised_by:
+  - Charge
+- id: currency_conversion
+  display: Currency Conversion
+  value_per_min: 1.0
+  realised_by:
+  - Convert
+  - GetSupportedCurrencies
+- id: cart_management
+  display: Cart Management
+  value_per_min: 1.0
+  realised_by:
+  - AddItem
+  - GetCart
+  - EmptyCart
+- id: shipping
+  display: Shipping
+  value_per_min: 1.0
+  realised_by:
+  - GetQuote
+  - ShipOrder
+- id: order_confirmation
+  display: Order Confirmation
+  value_per_min: 1.0
+  realised_by:
+  - SendOrderConfirmation
+- id: product_browsing
+  display: Product Browsing
+  value_per_min: 1.0
+  realised_by:
+  - GetProduct
+  - ListProducts
+- id: product_recommendations
+  display: Product Recommendations
+  value_per_min: 1.0
+  realised_by:
+  - ListRecommendations
+- id: advertisement_retrieval
+  display: Advertisement Retrieval
+  value_per_min: 1.0
+  realised_by:
+  - GetAds
