@@ -1,0 +1,66 @@
+version: 1
+system: train-ticket
+seed: 20260820
+split_unit: (service, fault_type)
+train:
+- service: ts-auth-service
+  fault_type: delay
+- service: ts-auth-service
+  fault_type: disk
+- service: ts-auth-service
+  fault_type: loss
+- service: ts-auth-service
+  fault_type: mem
+- service: ts-order-service
+  fault_type: disk
+- service: ts-order-service
+  fault_type: loss
+- service: ts-order-service
+  fault_type: mem
+- service: ts-order-service
+  fault_type: socket
+- service: ts-route-service
+  fault_type: cpu
+- service: ts-route-service
+  fault_type: delay
+- service: ts-route-service
+  fault_type: mem
+- service: ts-route-service
+  fault_type: socket
+- service: ts-train-service
+  fault_type: delay
+- service: ts-train-service
+  fault_type: disk
+- service: ts-train-service
+  fault_type: loss
+- service: ts-train-service
+  fault_type: mem
+- service: ts-travel-service
+  fault_type: cpu
+- service: ts-travel-service
+  fault_type: disk
+- service: ts-travel-service
+  fault_type: loss
+- service: ts-travel-service
+  fault_type: socket
+test:
+- service: ts-auth-service
+  fault_type: cpu
+- service: ts-auth-service
+  fault_type: socket
+- service: ts-order-service
+  fault_type: cpu
+- service: ts-order-service
+  fault_type: delay
+- service: ts-route-service
+  fault_type: disk
+- service: ts-route-service
+  fault_type: loss
+- service: ts-train-service
+  fault_type: cpu
+- service: ts-train-service
+  fault_type: socket
+- service: ts-travel-service
+  fault_type: delay
+- service: ts-travel-service
+  fault_type: mem

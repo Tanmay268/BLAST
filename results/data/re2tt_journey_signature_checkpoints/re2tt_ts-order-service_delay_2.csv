@@ -1,0 +1,13 @@
+case,journey_type_id,journey_label,signature_str,n_traces
+re2tt_ts-order-service_delay_2,direct::GET /api/v1/adminbasicservice/adminbasic/configs,GET /api/v1/adminbasicservice/adminbasic/configs (direct),GET /api/v1/adminbasicservice/adminbasic/configs,226
+re2tt_ts-order-service_delay_2,direct::GET /api/v1/adminbasicservice/adminbasic/prices,GET /api/v1/adminbasicservice/adminbasic/prices (direct),GET /api/v1/adminbasicservice/adminbasic/prices,226
+re2tt_ts-order-service_delay_2,direct::GET /api/v1/admintravelservice/admintravel,GET /api/v1/admintravelservice/admintravel (direct),GET /api/v1/admintravelservice/admintravel,227
+re2tt_ts-order-service_delay_2,direct::GET /api/v1/assuranceservice/assurances/types,GET /api/v1/assuranceservice/assurances/types (direct),GET /api/v1/assuranceservice/assurances/types,177
+re2tt_ts-order-service_delay_2,direct::GET /api/v1/foodservice/foods/{date}/{startStation}/{endStation}/{tripId},GET /api/v1/foodservice/foods/{date}/{startStation}/{endStation}/{tripId} (direct),GET /api/v1/foodservice/foods/{date}/{startStation}/{endStation}/{tripId},413
+re2tt_ts-order-service_delay_2,direct::POST /api/v1/inside_pay_service/inside_payment,POST /api/v1/inside_pay_service/inside_payment (direct),POST /api/v1/inside_pay_service/inside_payment,157
+re2tt_ts-order-service_delay_2,direct::POST /api/v1/orderOtherService/orderOther/refresh,POST /api/v1/orderOtherService/orderOther/refresh (direct),POST /api/v1/orderOtherService/orderOther/refresh,116
+re2tt_ts-order-service_delay_2,direct::POST /api/v1/orderservice/order/refresh,POST /api/v1/orderservice/order/refresh (direct),POST /api/v1/orderservice/order/refresh,216
+re2tt_ts-order-service_delay_2,direct::POST /api/v1/travel2service/trips/left,POST /api/v1/travel2service/trips/left (direct),POST /api/v1/travel2service/trips/left,1964
+re2tt_ts-order-service_delay_2,direct::POST /api/v1/travelservice/trips/left,POST /api/v1/travelservice/trips/left (direct),POST /api/v1/travelservice/trips/left,503
+re2tt_ts-order-service_delay_2,direct::POST /api/v1/users/login,POST /api/v1/users/login (direct),POST /api/v1/users/login,2117
+re2tt_ts-order-service_delay_2,direct::PUT /api/v1/consignservice/consigns,PUT /api/v1/consignservice/consigns (direct),PUT /api/v1/consignservice/consigns,175
