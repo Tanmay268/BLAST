@@ -10,7 +10,7 @@ from sklearn.ensemble import HistGradientBoostingRegressor
 from sklearn.preprocessing import OneHotEncoder
 
 from blast_eval_lib import (
-    ndcg_at_k, kendalls_tau, mrr, precision_at_k,
+    ndcg_at_k, kendalls_tau, mrr, precision_at_k, average_precision,
     simulate_cumulative_loss, normalized_aulc,
     cliffs_delta, paired_wilcoxon, holm_bonferroni,
 )
@@ -189,6 +189,78 @@ def build_case_gt_loss(case_mag, weights):
 # actually generalises across incident types)
 # ======================================================
 
+FEATURE_COLS_NUMERIC = [
+    "max_p95_ratio", "max_impairment_magnitude",
+    "n_impaired_journeys", "n_journey_types", "n_capabilities_covered",
+]
+FEATURE_COLS_CATEGORICAL = ["target_service", "fault_type"]
+
+
+def fit_b10_pairwise_ranker(features, gt_loss_by_case, split):
+    """B10 -- Learning-to-Rank / pairwise ranking
+    (context/source/PROJECT_CONTEXT.pdf p.9), filling the gap
+    flagged against B7's pointwise regression: trains a classifier
+    directly on 'does incident A outrank incident B', on ALL
+    ordered pairs of TRAIN-split cases, then at scoring time ranks
+    a scenario's incidents by their total pairwise win count
+    (a Copeland-style aggregation) -- never on TEST-split pairs."""
+
+    train_types = {(t["service"], t["fault_type"]) for t in split["train"]}
+
+    train_rows = features[
+        features.apply(lambda r: (r["target_service"], r["fault_type"]) in train_types, axis=1)
+    ].copy()
+
+    train_rows["label"] = train_rows["case"].map(gt_loss_by_case)
+    train_rows = train_rows.dropna(subset=["label"])
+
+    encoder = OneHotEncoder(handle_unknown="ignore", sparse_output=False)
+    encoder.fit(train_rows[FEATURE_COLS_CATEGORICAL])
+
+    def row_vector(row):
+        cat = encoder.transform(row[FEATURE_COLS_CATEGORICAL].to_frame().T)[0]
+        num = row[FEATURE_COLS_NUMERIC].to_numpy(dtype=float)
+        return np.concatenate([num, cat])
+
+    rows = train_rows.set_index("case")
+    vectors = {case: row_vector(rows.loc[case]) for case in rows.index}
+
+    X_pairs, y_pairs = [], []
+
+    cases = list(rows.index)
+    for i in cases:
+        for j in cases:
+            if i == j:
+                continue
+            if gt_loss_by_case[i] == gt_loss_by_case[j]:
+                continue
+            X_pairs.append(np.concatenate([vectors[i], vectors[j]]))
+            y_pairs.append(1 if gt_loss_by_case[i] > gt_loss_by_case[j] else 0)
+
+    from sklearn.linear_model import LogisticRegression
+    model = LogisticRegression(max_iter=1000, random_state=SEED)
+    model.fit(np.array(X_pairs), np.array(y_pairs))
+
+    print(f"B10 pairwise ranker fit on {len(cases)} TRAIN cases, {len(X_pairs)} ordered pairs")
+
+    def predict_order(incident_ids, features_df):
+        rows_scored = features_df.set_index("case")
+        vecs = {i: row_vector(rows_scored.loc[i]) for i in incident_ids}
+
+        wins = {i: 0.0 for i in incident_ids}
+        for i in incident_ids:
+            for j in incident_ids:
+                if i == j:
+                    continue
+                x = np.concatenate([vecs[i], vecs[j]]).reshape(1, -1)
+                p_i_beats_j = model.predict_proba(x)[0][1]
+                wins[i] += p_i_beats_j
+
+        return sorted(incident_ids, key=lambda i: (-wins[i], i))
+
+    return predict_order
+
+
 def fit_b7_classifier(features, gt_loss_by_case, split):
 
     train_types = {(t["service"], t["fault_type"]) for t in split["train"]}
@@ -315,6 +387,21 @@ def b6_personalized_pagerank(incident_ids, type_of_case, G):
     return rank_by_score(incident_ids, score, tie_break_seed=6)
 
 
+def b5_betweenness(incident_ids, type_of_case, centrality_scores):
+    score = {i: centrality_scores.get(type_of_case[i][0], 0.0) for i in incident_ids}
+    return rank_by_score(incident_ids, score, tie_break_seed=5)
+
+
+def b11_closeness(incident_ids, type_of_case, centrality_scores):
+    score = {i: centrality_scores.get(type_of_case[i][0], 0.0) for i in incident_ids}
+    return rank_by_score(incident_ids, score, tie_break_seed=11)
+
+
+def b12_eigenvector(incident_ids, type_of_case, centrality_scores):
+    score = {i: centrality_scores.get(type_of_case[i][0], 0.0) for i in incident_ids}
+    return rank_by_score(incident_ids, score, tie_break_seed=12)
+
+
 def b7_classifier(incident_ids, b7_predict, features):
     preds = b7_predict(incident_ids, features)
     return rank_by_score(incident_ids, preds, tie_break_seed=7)
@@ -389,11 +476,20 @@ def main():
     }
 
     pagerank_scores = nx.pagerank(G)
+    betweenness_scores = nx.betweenness_centrality(G)
+    closeness_scores = nx.closeness_centrality(G)
+    try:
+        eigenvector_scores = nx.eigenvector_centrality(G, max_iter=1000)
+    except nx.PowerIterationFailedConvergence:
+        eigenvector_scores = {n: 0.0 for n in G.nodes()}
 
     b7_predict = fit_b7_classifier(features_df, gt_loss_by_case, split)
+    b10_predict_order = fit_b10_pairwise_ranker(features_df, gt_loss_by_case, split)
 
     METHODS = ["BLAST", "B1_random", "B2_severity", "B3_itil",
-               "B4_pagerank", "B6_ppr", "B7_classifier", "B9_independent"]
+               "B4_pagerank", "B5_betweenness", "B6_ppr",
+               "B7_classifier", "B9_independent", "B10_pairwise",
+               "B11_closeness", "B12_eigenvector"]
 
     # ----------------------------------------------------
     # Per-scenario evaluation
@@ -417,9 +513,13 @@ def main():
             "B2_severity": b2_severity(incident_ids, features_by_case),
             "B3_itil": b3_itil(incident_ids, features_by_case),
             "B4_pagerank": b4_pagerank(incident_ids, type_of_case, pagerank_scores),
+            "B5_betweenness": b5_betweenness(incident_ids, type_of_case, betweenness_scores),
             "B6_ppr": b6_personalized_pagerank(incident_ids, type_of_case, G),
             "B7_classifier": b7_classifier(incident_ids, b7_predict, features_df),
             "B9_independent": b9_blast_independent(incident_ids, type_of_case, type_probabilities, weights),
+            "B10_pairwise": b10_predict_order(incident_ids, features_df),
+            "B11_closeness": b11_closeness(incident_ids, type_of_case, closeness_scores),
+            "B12_eigenvector": b12_eigenvector(incident_ids, type_of_case, eigenvector_scores),
         }
 
         # Oracle and worst-case (reverse of oracle) CBL, for AULC normalisation
@@ -444,6 +544,7 @@ def main():
                 "kendalls_tau": kendalls_tau(order, oracle),
                 "mrr": mrr(order, oracle),
                 "precision_at_3": precision_at_k(order, oracle, min(3, k)),
+                "map": average_precision(order, oracle, k),
             }
 
             for kk in NDCG_KS:
@@ -459,7 +560,7 @@ def main():
     # ----------------------------------------------------
 
     metric_cols = ["cbl", "aulc_normalized", "kendalls_tau", "mrr",
-                    "precision_at_3"] + [f"ndcg_{k}" for k in NDCG_KS]
+                    "precision_at_3", "map"] + [f"ndcg_{k}" for k in NDCG_KS]
 
     aggregate = (
         per_scenario

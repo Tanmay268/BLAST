@@ -89,6 +89,33 @@ def precision_at_k(ordered_ids, ground_truth_order, k):
     return len(top_k_candidate & top_k_truth) / len(top_k_truth)
 
 
+def average_precision(ordered_ids, ground_truth_order, k):
+    """Standard Average Precision: mean of Precision@rank taken at
+    each position in the candidate order where that item is one of
+    the ground truth's top-k ("relevant"). Rewards relevant items
+    appearing EARLY, not just being present somewhere in the top-k
+    (which is all precision_at_k checks) -- the brief's requested
+    'MAP' metric (03_RESEARCH_DESIGN.md never specified this one;
+    added directly against context/source/PROJECT_CONTEXT.pdf p.12)."""
+
+    relevant = set(ground_truth_order[:k])
+    if not relevant:
+        return np.nan
+
+    hits = 0
+    precisions = []
+
+    for rank, incident in enumerate(ordered_ids, start=1):
+        if incident in relevant:
+            hits += 1
+            precisions.append(hits / rank)
+
+    if not precisions:
+        return 0.0
+
+    return sum(precisions) / len(relevant)
+
+
 # ------------------------------------------------------
 # Decision quality: sequential-repair simulation
 # ------------------------------------------------------
