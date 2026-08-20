@@ -382,6 +382,143 @@
         broken right now" — BLAST's only job is deciding the order to fix them in.
       </p>
     </div>
+
+    <h3>How the score is actually calculated, step by step</h3>
+    <p>
+      Everything the dashboard shows — the ranked queue, the capability chips, the "expected coverage"
+      numbers — comes out of one pipeline. It has four stages. The first two turn raw data into a
+      number for each (incident, capability) pair; the last two turn those numbers into an order.
+    </p>
+
+    <h3>Stage 1 — from traces to "does this incident touch this capability?"</h3>
+    <p>
+      Every case in the dataset is a set of distributed traces: real request paths recorded while a
+      fault was injected into one service. BLAST walks each trace's parent-child span tree and cuts it
+      into <strong>journeys</strong> — the distinct request patterns a user actually triggers (e.g. "add
+      to cart", "place order"). Each journey is then typed against the business overlay YAML, which
+      says which journeys realise which business capability (see section 04 for the mechanics). This
+      is the only place real trace data enters the model — nothing past this point is invented.
+    </p>
+
+    <h3>Stage 2 — from "touched" to a probability, <code>p(c | i)</code></h3>
+    <p>
+      For every (service, fault type) pair, the pipeline has 3 repeated trial runs. Some journeys
+      touching capability <code>c</code> are measurably impaired in a run (via the significance test
+      described in section 04); some aren't. Instead of using the raw fraction — which would report a
+      false, over-confident 100% or 0% off just 3 trials — BLAST applies <strong>Beta(1,1) Bayesian
+      smoothing</strong>:
+    </p>
+    <div class="callout">
+      <p><code>p(c | i) = (times capability c was impaired + 1) / (number of trial runs + 2)</code></p>
+    </div>
+    <p>
+      This is the number stored in <code>incident_capability_probabilities.csv</code> and it is what
+      the "confidence" and capability chips in the Ranked Queue are built from. It answers exactly one
+      question: <em>if incident i is left unfixed, how likely is capability c to be impaired?</em>
+    </p>
+
+    <h3>Stage 3 — turning probabilities into one score for a whole set of incidents</h3>
+    <p>
+      This is the actual novel piece. Say several incidents are open at once — a candidate set
+      <code>S</code>. BLAST does not add up each incident's individual severity. It asks: across all
+      of <code>S</code>, what business value is at risk in total, accounting for the fact that two
+      incidents hitting the <em>same</em> capability shouldn't count that capability's value twice?
+    </p>
+    <div class="callout">
+      <p>
+        <code>F(S) = Σ<sub>c</sub> w<sub>c</sub> · P(c impaired | S)</code>,
+        &nbsp;where&nbsp;
+        <code>P(c impaired | S) = 1 − Π<sub>i∈S</sub> (1 − p(c | i))</code>
+      </p>
+    </div>
+    <p>
+      <code>w<sub>c</sub></code> is the capability's declared business weight from the overlay YAML
+      (never a currency figure — a relative unit, per ADR-002). The inner product term is standard
+      "probability at least one thing causes it" math: if two incidents each have a 40% chance of
+      knocking out the same capability, the chance <em>at least one</em> does is <code>1 − 0.6 × 0.6 =
+      64%</code> — higher than either alone, but nowhere near double-counted 80%.
+    </p>
+
+    <h3>A real worked example, using two actual incident types from the Online Boutique corpus</h3>
+    <p>
+      Take two real rows from <code>incident_capability_probabilities.csv</code>:
+    </p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Incident</th><th>Capabilities touched (all at p = 0.4)</th><th>Standalone F({i})</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>A — checkoutservice / cpu</td>
+            <td>Order Placement, Currency Conversion, Cart Management, Product Browsing, Product Recommendations, Advertisement Retrieval</td>
+            <td>98.0</td>
+          </tr>
+          <tr>
+            <td>B — emailservice / socket</td>
+            <td>Order Placement, Currency Conversion, Product Browsing, Product Recommendations</td>
+            <td>76.0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      Notice B's capability list is a strict subset of A's — every capability B threatens, A already
+      threatens too, at the same 40% probability. That overlap is exactly the case naive scoring
+      (B9) gets wrong.
+    </p>
+    <p><strong>Step 1 — greedy picks the first incident.</strong></p>
+    <p>
+      With nothing selected yet, the "marginal gain" of adding an incident is just its standalone
+      score: A contributes 98.0, B contributes 76.0. A wins, so A is ranked #1. (So far this matches
+      B9 exactly — with nothing selected yet, there's no overlap to account for.)
+    </p>
+    <p><strong>Step 2 — greedy picks the second incident, and this is where it diverges.</strong></p>
+    <p>
+      B9 would now just report B's <em>standalone</em> score again: 76.0, and rank B second on that
+      basis. BLAST instead asks: given A is already assumed fixed-first, what does B <em>actually
+      still add</em>? It recomputes <code>F({A,B})</code> — for the four capabilities both incidents
+      share, the combined probability rises from 0.4 to <code>1 − 0.6×0.6 = 0.64</code>; for the two
+      capabilities only A touches, it stays 0.4:
+    </p>
+    <div class="callout">
+      <p>
+        <code>F({A,B}) = 0.64×(100+60+20+10) + 0.4×(50+5) = 121.6 + 22 = 143.6</code><br>
+        <code>marginal gain of B after A = F({A,B}) − F({A}) = 143.6 − 98.0 = 45.6</code>
+      </p>
+    </div>
+    <p>
+      B's real, order-aware contribution (45.6) is <strong>40% lower</strong> than the 76.0 a
+      standalone score would have credited it with — because most of what B threatens, A already put
+      at risk. This is the whole idea of the paper in one arithmetic example: the two methods agree on
+      what to fix first, and disagree on how much the second incident actually still matters.
+    </p>
+
+    <h3>Stage 4 — the greedy algorithm and why it's provably good</h3>
+    <p>
+      BLAST repeats step 2 until every incident is ranked: at each round, compute every remaining
+      incident's marginal gain <em>given what's already selected</em>, pick the largest, add it to the
+      set, repeat. <code>F(S)</code> — business-capability coverage — has a property called
+      <strong>submodularity</strong>: adding an incident to a small set helps at least as much as
+      adding that same incident to a larger set (diminishing returns, never negative surprises).
+      For any monotone submodular function, this simple greedy rule is mathematically guaranteed to
+      reach at least <code>(1 − 1/e) ≈ 63%</code> of the best possible ordering's value — not just "it
+      tends to work well," but a proven worst-case bound. The dashboard's <span class="tag good">6
+      checks, 0 violations</span> submodularity audit (section 03) is what confirms this guarantee
+      actually applies to BLAST's real, learned <code>F(S)</code> rather than just the textbook
+      version.
+    </p>
+
+    <div class="callout warn">
+      <p>
+        <strong>One score the model does not produce:</strong> Cumulative Business Loss (CBL), used in
+        section 05's baseline comparison, is not <code>F(S)</code>. CBL is a simulation over the
+        <em>measured</em> capability-impairment data — "if you fixed incidents in this order, how much
+        value would actually leak out while you waited" — used to grade a ranking after the fact.
+        <code>F(S)</code> is what BLAST uses to <em>produce</em> a ranking; CBL is how the project
+        checks whether that ranking was any good. Conflating the two is the single easiest mistake to
+        make when explaining this project — keep "the score that ranks" and "the score that grades"
+        separate.
+      </p>
+    </div>
   </section>
 
   <section class="view">
