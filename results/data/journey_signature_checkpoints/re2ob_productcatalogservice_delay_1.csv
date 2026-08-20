@@ -10,4 +10,4 @@ re2ob_productcatalogservice_delay_1,frontend::GetProduct,frontend::GetProduct,Ge
 re2ob_productcatalogservice_delay_1,frontend::GetProduct+GetSupportedCurrencies+ListRecommendations+PlaceOrder,Place Order,GetProduct+GetSupportedCurrencies+ListRecommendations+PlaceOrder,589
 re2ob_productcatalogservice_delay_1,frontend::GetProduct+ListRecommendations+PlaceOrder,frontend::GetProduct+ListRecommendations+PlaceOrder,GetProduct+ListRecommendations+PlaceOrder,1
 re2ob_productcatalogservice_delay_1,frontend::empty,frontend::empty,(empty),1532
-re2ob_productcatalogservice_delay_1,orphaned::hipstershop.CurrencyService/Convert,hipstershop.CurrencyService/Convert (orphaned root),Convert,2087
+re2ob_productcatalogservice_delay_1,direct::hipstershop.CurrencyService/Convert,hipstershop.CurrencyService/Convert (direct),Convert,2087

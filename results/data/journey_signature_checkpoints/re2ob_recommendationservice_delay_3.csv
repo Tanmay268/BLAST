@@ -7,4 +7,4 @@ re2ob_recommendationservice_delay_3,frontend::Convert+GetCart+GetProduct+GetSupp
 re2ob_recommendationservice_delay_3,frontend::GetCart+GetSupportedCurrencies+ListRecommendations,frontend::GetCart+GetSupportedCurrencies+ListRecommendations,GetCart+GetSupportedCurrencies+ListRecommendations,2
 re2ob_recommendationservice_delay_3,frontend::GetProduct+GetSupportedCurrencies+ListRecommendations+PlaceOrder,Place Order,GetProduct+GetSupportedCurrencies+ListRecommendations+PlaceOrder,698
 re2ob_recommendationservice_delay_3,frontend::empty,frontend::empty,(empty),1580
-re2ob_recommendationservice_delay_3,orphaned::hipstershop.CurrencyService/Convert,hipstershop.CurrencyService/Convert (orphaned root),Convert,2348
+re2ob_recommendationservice_delay_3,direct::hipstershop.CurrencyService/Convert,hipstershop.CurrencyService/Convert (direct),Convert,2348

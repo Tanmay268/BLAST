@@ -10,4 +10,4 @@ re2ob_currencyservice_loss_1,frontend::GetProduct+GetSupportedCurrencies+ListRec
 re2ob_currencyservice_loss_1,frontend::GetSupportedCurrencies,frontend::GetSupportedCurrencies,GetSupportedCurrencies,831
 re2ob_currencyservice_loss_1,frontend::PlaceOrder,frontend::PlaceOrder,PlaceOrder,100
 re2ob_currencyservice_loss_1,frontend::empty,frontend::empty,(empty),1356
-re2ob_currencyservice_loss_1,orphaned::hipstershop.CurrencyService/Convert,hipstershop.CurrencyService/Convert (orphaned root),Convert,1712
+re2ob_currencyservice_loss_1,direct::hipstershop.CurrencyService/Convert,hipstershop.CurrencyService/Convert (direct),Convert,1712

@@ -197,8 +197,13 @@ def extract_journeys(case, case_dir, faulty_service, fault_type):
             label = JOURNEY_LABELS.get(frozenset(signature), type_id)
             return type_id, label, signature
 
-        type_id = f"orphaned::{row['operationName']}"
-        label = f"{row['operationName']} (orphaned root)"
+        # A non-wrapper root's own operationName already identifies the
+        # journey (e.g. Train Ticket's REST endpoints, or Online
+        # Boutique's orphaned checkoutservice->currencyservice calls --
+        # see JOURNEY_TYPING_RULE.md for that system-specific nuance;
+        # this label is deliberately neutral across systems).
+        type_id = f"direct::{row['operationName']}"
+        label = f"{row['operationName']} (direct)"
         own_method = (row["methodName"],) if pd.notna(row["methodName"]) else tuple()
 
         return type_id, label, own_method

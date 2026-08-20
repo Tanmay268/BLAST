@@ -1,7 +1,7 @@
 journey_type_id,journey_label,signature_str,n_traces
 frontend::Convert+GetAds+GetCart+GetProduct+GetSupportedCurrencies+ListRecommendations,Product Detail View,Convert+GetAds+GetCart+GetProduct+GetSupportedCurrencies+ListRecommendations,47553
 frontend::Convert+GetCart+GetProduct+GetQuote+GetSupportedCurrencies+ListRecommendations,Cart View,Convert+GetCart+GetProduct+GetQuote+GetSupportedCurrencies+ListRecommendations,21912
-orphaned::hipstershop.CurrencyService/Convert,hipstershop.CurrencyService/Convert (orphaned root),Convert,12751
+direct::hipstershop.CurrencyService/Convert,hipstershop.CurrencyService/Convert (direct),Convert,12751
 frontend::AddItem+GetProduct,Add To Cart,AddItem+GetProduct,11052
 frontend::Convert+GetAds+GetCart+GetSupportedCurrencies+ListProducts,Home Page View,Convert+GetAds+GetCart+GetSupportedCurrencies+ListProducts,10853
 frontend::empty,frontend::empty,(empty),8836

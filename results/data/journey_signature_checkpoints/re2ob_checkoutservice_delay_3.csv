@@ -8,4 +8,4 @@ re2ob_checkoutservice_delay_3,frontend::GetProduct+GetSupportedCurrencies+ListRe
 re2ob_checkoutservice_delay_3,frontend::GetSupportedCurrencies,frontend::GetSupportedCurrencies,GetSupportedCurrencies,1
 re2ob_checkoutservice_delay_3,frontend::PlaceOrder,frontend::PlaceOrder,PlaceOrder,1
 re2ob_checkoutservice_delay_3,frontend::empty,frontend::empty,(empty),1621
-re2ob_checkoutservice_delay_3,orphaned::hipstershop.CurrencyService/Convert,hipstershop.CurrencyService/Convert (orphaned root),Convert,2332
+re2ob_checkoutservice_delay_3,direct::hipstershop.CurrencyService/Convert,hipstershop.CurrencyService/Convert (direct),Convert,2332

@@ -7,4 +7,4 @@ re2ob_emailservice_mem_1,frontend::GetCart+GetProduct+GetSupportedCurrencies+Lis
 re2ob_emailservice_mem_1,frontend::GetProduct+GetSupportedCurrencies,frontend::GetProduct+GetSupportedCurrencies,GetProduct+GetSupportedCurrencies,2
 re2ob_emailservice_mem_1,frontend::GetProduct+GetSupportedCurrencies+ListRecommendations+PlaceOrder,Place Order,GetProduct+GetSupportedCurrencies+ListRecommendations+PlaceOrder,676
 re2ob_emailservice_mem_1,frontend::empty,frontend::empty,(empty),1664
-re2ob_emailservice_mem_1,orphaned::hipstershop.CurrencyService/Convert,hipstershop.CurrencyService/Convert (orphaned root),Convert,2283
+re2ob_emailservice_mem_1,direct::hipstershop.CurrencyService/Convert,hipstershop.CurrencyService/Convert (direct),Convert,2283
