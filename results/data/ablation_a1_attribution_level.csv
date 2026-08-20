@@ -1,0 +1,13 @@
+incident_id,attribution,capabilities_covered,universe,saturation
+re2ob_checkoutservice_cpu_1,service_level (pre-ADR-014),9,9,1.0
+re2ob_checkoutservice_cpu_2,service_level (pre-ADR-014),8,9,0.8888888888888888
+re2ob_checkoutservice_cpu_3,service_level (pre-ADR-014),7,9,0.7777777777777778
+re2ob_checkoutservice_delay_1,service_level (pre-ADR-014),7,9,0.7777777777777778
+re2ob_checkoutservice_delay_2,service_level (pre-ADR-014),7,9,0.7777777777777778
+re2ob_checkoutservice_delay_3,service_level (pre-ADR-014),7,9,0.7777777777777778
+re2ob_checkoutservice_cpu_1,"journey_level (ADR-014, current)",0,9,0.0
+re2ob_checkoutservice_cpu_2,"journey_level (ADR-014, current)",0,9,0.0
+re2ob_checkoutservice_cpu_3,"journey_level (ADR-014, current)",6,9,0.6666666666666666
+re2ob_checkoutservice_delay_1,"journey_level (ADR-014, current)",4,9,0.4444444444444444
+re2ob_checkoutservice_delay_2,"journey_level (ADR-014, current)",4,9,0.4444444444444444
+re2ob_checkoutservice_delay_3,"journey_level (ADR-014, current)",4,9,0.4444444444444444

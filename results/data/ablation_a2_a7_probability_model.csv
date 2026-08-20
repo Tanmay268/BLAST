@@ -1,0 +1,271 @@
+variant,scenario_id,k,cbl,ndcg_5
+learned_smoothed (current default),scenario_k3_001,3,750.3598886608971,0.8531204888278989
+learned_smoothed (current default),scenario_k3_002,3,719.8242799903986,1.0
+learned_smoothed (current default),scenario_k3_003,3,736.0757348978589,0.9771004942267736
+learned_smoothed (current default),scenario_k3_004,3,801.0889353978948,0.9785811466677912
+learned_smoothed (current default),scenario_k3_005,3,292.719893200372,1.0
+learned_smoothed (current default),scenario_k3_006,3,434.50705951150326,1.0
+learned_smoothed (current default),scenario_k3_007,3,798.8210663166411,0.9756570378312251
+learned_smoothed (current default),scenario_k3_008,3,341.7917971998646,1.0
+learned_smoothed (current default),scenario_k3_009,3,827.8311026456053,0.9702877892347537
+learned_smoothed (current default),scenario_k3_010,3,358.97848748906176,1.0
+learned_smoothed (current default),scenario_k3_011,3,257.8263824264341,0.9911111359817338
+learned_smoothed (current default),scenario_k3_012,3,408.5541073899003,1.0
+learned_smoothed (current default),scenario_k3_013,3,354.84326794071956,1.0
+learned_smoothed (current default),scenario_k3_014,3,518.3703559221467,1.0
+learned_smoothed (current default),scenario_k3_015,3,437.887868624175,1.0
+learned_smoothed (current default),scenario_k3_016,3,406.0574805639662,0.9891812231211791
+learned_smoothed (current default),scenario_k3_017,3,374.76525964027167,0.9873795538333673
+learned_smoothed (current default),scenario_k3_018,3,710.4235836104336,1.0
+learned_smoothed (current default),scenario_k3_019,3,322.5342651080668,0.9970946801768481
+learned_smoothed (current default),scenario_k3_020,3,331.28482230574514,1.0
+learned_smoothed (current default),scenario_k3_021,3,318.4056057500069,1.0
+learned_smoothed (current default),scenario_k3_022,3,784.2686546639356,0.9803279394622841
+learned_smoothed (current default),scenario_k3_023,3,638.662998611863,0.9632126031280454
+learned_smoothed (current default),scenario_k3_024,3,502.7368801390939,1.0
+learned_smoothed (current default),scenario_k3_025,3,799.7626213344754,0.9494571720119201
+learned_smoothed (current default),scenario_k3_026,3,216.95385404278665,1.0
+learned_smoothed (current default),scenario_k3_027,3,740.658480774533,0.9779292339984588
+learned_smoothed (current default),scenario_k3_028,3,625.462064008562,0.9999862940423215
+learned_smoothed (current default),scenario_k3_029,3,656.3081405356209,0.9679445901627005
+learned_smoothed (current default),scenario_k3_030,3,532.4149418442121,0.9218267024114613
+learned_smoothed (current default),scenario_k5_001,5,976.4586341019555,0.9688032905297801
+learned_smoothed (current default),scenario_k5_002,5,1099.7602192016375,0.9552515015329063
+learned_smoothed (current default),scenario_k5_003,5,985.7768174583753,0.9701014013949535
+learned_smoothed (current default),scenario_k5_004,5,793.4048186869112,0.9781276624626083
+learned_smoothed (current default),scenario_k5_005,5,560.3697170651872,1.0
+learned_smoothed (current default),scenario_k5_006,5,923.388568659124,0.9999893234419694
+learned_smoothed (current default),scenario_k5_007,5,444.926638755163,1.0
+learned_smoothed (current default),scenario_k5_008,5,1058.1798864416326,0.9748561902886392
+learned_smoothed (current default),scenario_k5_009,5,676.841379106021,0.972512961273742
+learned_smoothed (current default),scenario_k5_010,5,658.6355350157841,0.9956809083415338
+learned_smoothed (current default),scenario_k5_011,5,1111.720868452118,0.977615508683513
+learned_smoothed (current default),scenario_k5_012,5,1082.4032702602308,0.9724888438464933
+learned_smoothed (current default),scenario_k5_013,5,843.119829690395,0.9736606681727517
+learned_smoothed (current default),scenario_k5_014,5,919.2648321315345,0.8817658641797125
+learned_smoothed (current default),scenario_k5_015,5,1002.1535276934782,0.9708372023483163
+learned_smoothed (current default),scenario_k5_016,5,579.7259747673497,0.9980583089330545
+learned_smoothed (current default),scenario_k5_017,5,943.651056109117,0.9667764385334355
+learned_smoothed (current default),scenario_k5_018,5,785.491921839488,0.9734287617301842
+learned_smoothed (current default),scenario_k5_019,5,1188.6648344169307,0.9890877636405497
+learned_smoothed (current default),scenario_k5_020,5,728.8343604874386,0.9982501570070841
+learned_smoothed (current default),scenario_k5_021,5,971.9085716697839,0.9622617060380423
+learned_smoothed (current default),scenario_k5_022,5,655.1339636945357,0.9987212251832185
+learned_smoothed (current default),scenario_k5_023,5,571.900221552758,0.9993304184150609
+learned_smoothed (current default),scenario_k5_024,5,754.4277581421437,0.9900886252543238
+learned_smoothed (current default),scenario_k5_025,5,812.8428260609011,0.8266264093124377
+learned_smoothed (current default),scenario_k5_026,5,783.0972273859446,0.9764280961824067
+learned_smoothed (current default),scenario_k5_027,5,524.2494704724629,0.9955360207955423
+learned_smoothed (current default),scenario_k5_028,5,812.8428260609012,0.945194409948918
+learned_smoothed (current default),scenario_k5_029,5,852.2615033257656,0.998065631322379
+learned_smoothed (current default),scenario_k5_030,5,861.443858934781,0.9995126171927965
+learned_smoothed (current default),scenario_k10_001,10,1883.3107739219279,0.8560663815856745
+learned_smoothed (current default),scenario_k10_002,10,1716.8213032672088,0.8803220518440467
+learned_smoothed (current default),scenario_k10_003,10,1737.6141722398831,0.8589804501131543
+learned_smoothed (current default),scenario_k10_004,10,1891.328732530531,0.9134807820644026
+learned_smoothed (current default),scenario_k10_005,10,2050.89744047089,0.9130205409317552
+learned_smoothed (current default),scenario_k10_006,10,1882.3509641429691,0.8622819314253836
+learned_smoothed (current default),scenario_k10_007,10,1916.62691072362,0.917382853934112
+learned_smoothed (current default),scenario_k10_008,10,2206.1487697063076,0.923626426297075
+learned_smoothed (current default),scenario_k10_009,10,1873.0253988121985,0.9303877175510503
+learned_smoothed (current default),scenario_k10_010,10,1850.0169692324096,0.8598276873920165
+learned_smoothed (current default),scenario_k10_011,10,1718.2832668300225,0.8811442253076601
+learned_smoothed (current default),scenario_k10_012,10,1761.3267189512299,0.9640431077245967
+learned_smoothed (current default),scenario_k10_013,10,1727.569698636463,0.9638312012515664
+learned_smoothed (current default),scenario_k10_014,10,1618.353960620379,0.9668536307344182
+learned_smoothed (current default),scenario_k10_015,10,2209.9980929952726,0.8705262750799209
+learned_smoothed (current default),scenario_k10_016,10,1846.3555677976196,0.8697468945661491
+learned_smoothed (current default),scenario_k10_017,10,1858.3640846536819,0.8668138135495838
+learned_smoothed (current default),scenario_k10_018,10,1883.3107739219279,0.8716353733818304
+learned_smoothed (current default),scenario_k10_019,10,2266.1389901568778,0.9224357389168192
+learned_smoothed (current default),scenario_k10_020,10,1857.7934093033837,0.8766908025399035
+learned_smoothed (current default),scenario_k10_021,10,2161.278535149674,0.8646024080383983
+learned_smoothed (current default),scenario_k10_022,10,1713.4564174549773,0.9672404608654354
+learned_smoothed (current default),scenario_k10_023,10,1761.6223251129163,0.9668136447166688
+learned_smoothed (current default),scenario_k10_024,10,2204.497450796608,0.9245501079493545
+learned_smoothed (current default),scenario_k10_025,10,1796.1727762742455,0.9108460609976684
+learned_smoothed (current default),scenario_k10_026,10,2187.6328305877623,0.9657527070034395
+learned_smoothed (current default),scenario_k10_027,10,2224.48317224171,0.8737544696083714
+learned_smoothed (current default),scenario_k10_028,10,2058.4235225486345,0.902027461949649
+learned_smoothed (current default),scenario_k10_029,10,1763.6278360658046,0.9643353747453084
+learned_smoothed (current default),scenario_k10_030,10,2227.3601526545413,0.8572295125503521
+learned_raw_unsmoothed (A7),scenario_k3_001,3,546.2978200185623,0.92325104545791
+learned_raw_unsmoothed (A7),scenario_k3_002,3,792.3784648552758,0.9820811695574237
+learned_raw_unsmoothed (A7),scenario_k3_003,3,736.0757348978589,0.9771004942267736
+learned_raw_unsmoothed (A7),scenario_k3_004,3,713.8693058126557,1.0
+learned_raw_unsmoothed (A7),scenario_k3_005,3,341.4394510459702,0.9767821795547441
+learned_raw_unsmoothed (A7),scenario_k3_006,3,443.94092295465725,0.9965703666037322
+learned_raw_unsmoothed (A7),scenario_k3_007,3,701.092743668484,1.0
+learned_raw_unsmoothed (A7),scenario_k3_008,3,341.7917971998646,1.0
+learned_raw_unsmoothed (A7),scenario_k3_009,3,827.8311026456053,0.9702877892347537
+learned_raw_unsmoothed (A7),scenario_k3_010,3,370.5489460100756,0.9951502077212953
+learned_raw_unsmoothed (A7),scenario_k3_011,3,257.8263824264341,0.9911111359817338
+learned_raw_unsmoothed (A7),scenario_k3_012,3,431.7513503874601,0.991402478193642
+learned_raw_unsmoothed (A7),scenario_k3_013,3,381.48642270660923,0.9883764587730346
+learned_raw_unsmoothed (A7),scenario_k3_014,3,625.3416169251216,0.9669157809870237
+learned_raw_unsmoothed (A7),scenario_k3_015,3,445.87997067215224,0.9971043061072864
+learned_raw_unsmoothed (A7),scenario_k3_016,3,406.0574805639662,0.9891812231211791
+learned_raw_unsmoothed (A7),scenario_k3_017,3,374.76525964027167,0.9873795538333673
+learned_raw_unsmoothed (A7),scenario_k3_018,3,710.4235836104336,1.0
+learned_raw_unsmoothed (A7),scenario_k3_019,3,317.42773714905644,1.0
+learned_raw_unsmoothed (A7),scenario_k3_020,3,342.77225780730214,0.9948712913008816
+learned_raw_unsmoothed (A7),scenario_k3_021,3,318.4056057500069,1.0
+learned_raw_unsmoothed (A7),scenario_k3_022,3,705.0446515751257,1.0
+learned_raw_unsmoothed (A7),scenario_k3_023,3,519.3393204608288,1.0
+learned_raw_unsmoothed (A7),scenario_k3_024,3,604.3059760381611,0.9678885851320617
+learned_raw_unsmoothed (A7),scenario_k3_025,3,613.5638327942387,1.0
+learned_raw_unsmoothed (A7),scenario_k3_026,3,263.0117482874176,0.9698415091744085
+learned_raw_unsmoothed (A7),scenario_k3_027,3,844.6390541286667,0.952146911449501
+learned_raw_unsmoothed (A7),scenario_k3_028,3,850.769661466318,0.9399742548289833
+learned_raw_unsmoothed (A7),scenario_k3_029,3,550.6591633566903,1.0
+learned_raw_unsmoothed (A7),scenario_k3_030,3,750.359888660897,0.8455349186787962
+learned_raw_unsmoothed (A7),scenario_k5_001,5,1413.6870304555023,0.8827139839895515
+learned_raw_unsmoothed (A7),scenario_k5_002,5,1194.4157866373557,0.9274557566896934
+learned_raw_unsmoothed (A7),scenario_k5_003,5,1415.1485170551673,0.9301174063525663
+learned_raw_unsmoothed (A7),scenario_k5_004,5,1301.255509997562,0.8474112393014503
+learned_raw_unsmoothed (A7),scenario_k5_005,5,965.1301905688449,0.8993177207748887
+learned_raw_unsmoothed (A7),scenario_k5_006,5,1417.8690561239384,0.8879805233983841
+learned_raw_unsmoothed (A7),scenario_k5_007,5,891.517980217802,0.8937518594108257
+learned_raw_unsmoothed (A7),scenario_k5_008,5,1295.6716895258119,0.9430335658554097
+learned_raw_unsmoothed (A7),scenario_k5_009,5,1405.4580288197906,0.8299734327523431
+learned_raw_unsmoothed (A7),scenario_k5_010,5,1284.029548876673,0.8701845080865592
+learned_raw_unsmoothed (A7),scenario_k5_011,5,1409.7168480725747,0.9359230837750273
+learned_raw_unsmoothed (A7),scenario_k5_012,5,1309.0189270202818,0.8989878282778709
+learned_raw_unsmoothed (A7),scenario_k5_013,5,1174.9659058612667,0.884667258964804
+learned_raw_unsmoothed (A7),scenario_k5_014,5,1405.4580288197906,0.757593389673404
+learned_raw_unsmoothed (A7),scenario_k5_015,5,1417.4851759117653,0.9312968585852955
+learned_raw_unsmoothed (A7),scenario_k5_016,5,929.175532461267,0.9275387731564485
+learned_raw_unsmoothed (A7),scenario_k5_017,5,1269.3196758323968,0.8931736667995375
+learned_raw_unsmoothed (A7),scenario_k5_018,5,1412.9494377492579,0.868922917770045
+learned_raw_unsmoothed (A7),scenario_k5_019,5,1303.9549948225904,0.9289729697037904
+learned_raw_unsmoothed (A7),scenario_k5_020,5,1415.2173068305117,0.8824142161446176
+learned_raw_unsmoothed (A7),scenario_k5_021,5,977.0520614700209,0.950832559492118
+learned_raw_unsmoothed (A7),scenario_k5_022,5,870.2165510824377,0.9567623714103158
+learned_raw_unsmoothed (A7),scenario_k5_023,5,938.0976042410429,0.9101707598540151
+learned_raw_unsmoothed (A7),scenario_k5_024,5,1405.928479048476,0.8597049653065051
+learned_raw_unsmoothed (A7),scenario_k5_025,5,1046.5377457924938,0.7645759130436045
+learned_raw_unsmoothed (A7),scenario_k5_026,5,1286.5726722401264,0.8463073202206187
+learned_raw_unsmoothed (A7),scenario_k5_027,5,895.3294513184915,0.8953215431492281
+learned_raw_unsmoothed (A7),scenario_k5_028,5,1072.3966523910208,0.8797445008912356
+learned_raw_unsmoothed (A7),scenario_k5_029,5,1293.0146860158977,0.893390870568009
+learned_raw_unsmoothed (A7),scenario_k5_030,5,1293.0146860158977,0.9065024500511625
+learned_raw_unsmoothed (A7),scenario_k10_001,10,2699.1956428189906,0.5412821063710664
+learned_raw_unsmoothed (A7),scenario_k10_002,10,2723.3255136769967,0.5239120544387709
+learned_raw_unsmoothed (A7),scenario_k10_003,10,2702.2447938870923,0.504647534023605
+learned_raw_unsmoothed (A7),scenario_k10_004,10,2683.936475268058,0.5042274130487479
+learned_raw_unsmoothed (A7),scenario_k10_005,10,2691.3181027426335,0.7353615234233253
+learned_raw_unsmoothed (A7),scenario_k10_006,10,2723.2764240718348,0.5367262610806763
+learned_raw_unsmoothed (A7),scenario_k10_007,10,2683.936475268058,0.5121922703382938
+learned_raw_unsmoothed (A7),scenario_k10_008,10,2718.1215616693726,0.628044693625357
+learned_raw_unsmoothed (A7),scenario_k10_009,10,2712.8163054156958,0.5033314664260954
+learned_raw_unsmoothed (A7),scenario_k10_010,10,2728.0754729666282,0.5256678460932734
+learned_raw_unsmoothed (A7),scenario_k10_011,10,2717.56677990371,0.5140745899398079
+learned_raw_unsmoothed (A7),scenario_k10_012,10,2710.5524713149025,0.5456819969167422
+learned_raw_unsmoothed (A7),scenario_k10_013,10,2707.612868606455,0.521464310632275
+learned_raw_unsmoothed (A7),scenario_k10_014,10,2695.2598254117465,0.5072967790747295
+learned_raw_unsmoothed (A7),scenario_k10_015,10,2712.7534869500105,0.673132493651097
+learned_raw_unsmoothed (A7),scenario_k10_016,10,2685.8628020916462,0.5360758649745014
+learned_raw_unsmoothed (A7),scenario_k10_017,10,2723.2764240718348,0.5566815396939192
+learned_raw_unsmoothed (A7),scenario_k10_018,10,2717.56677990371,0.5377961651412254
+learned_raw_unsmoothed (A7),scenario_k10_019,10,2702.3076123527776,0.661825516128754
+learned_raw_unsmoothed (A7),scenario_k10_020,10,2696.1346725604767,0.5646716384435033
+learned_raw_unsmoothed (A7),scenario_k10_021,10,2702.2447938870923,0.6639551945781166
+learned_raw_unsmoothed (A7),scenario_k10_022,10,2719.4663378461883,0.5213583699573713
+learned_raw_unsmoothed (A7),scenario_k10_023,10,2718.1215616693726,0.5307754389857304
+learned_raw_unsmoothed (A7),scenario_k10_024,10,2712.888299080964,0.6181191100432725
+learned_raw_unsmoothed (A7),scenario_k10_025,10,2694.5171619962443,0.4756437808237007
+learned_raw_unsmoothed (A7),scenario_k10_026,10,2724.139655559384,0.6661365404391094
+learned_raw_unsmoothed (A7),scenario_k10_027,10,2714.505809645196,0.7041082770971506
+learned_raw_unsmoothed (A7),scenario_k10_028,10,2723.2764240718348,0.7237251399661737
+learned_raw_unsmoothed (A7),scenario_k10_029,10,2728.1469514335136,0.5422723744613628
+learned_raw_unsmoothed (A7),scenario_k10_030,10,2720.1979328902707,0.6785178798679652
+"uniform_constant (A2, no learning)",scenario_k3_001,3,591.911882483277,0.9570965682935049
+"uniform_constant (A2, no learning)",scenario_k3_002,3,850.6490919864309,0.9000417089931871
+"uniform_constant (A2, no learning)",scenario_k3_003,3,736.0757348978589,0.9771004942267736
+"uniform_constant (A2, no learning)",scenario_k3_004,3,713.8693058126557,1.0
+"uniform_constant (A2, no learning)",scenario_k3_005,3,536.7202285551457,0.649004619826336
+"uniform_constant (A2, no learning)",scenario_k3_006,3,443.94092295465725,0.9965703666037322
+"uniform_constant (A2, no learning)",scenario_k3_007,3,725.5670418349408,0.9828156183151692
+"uniform_constant (A2, no learning)",scenario_k3_008,3,850.6490919864309,0.6244746010735255
+"uniform_constant (A2, no learning)",scenario_k3_009,3,827.8311026456053,0.9702877892347537
+"uniform_constant (A2, no learning)",scenario_k3_010,3,370.5489460100756,0.9951502077212953
+"uniform_constant (A2, no learning)",scenario_k3_011,3,481.1618002057129,0.6981523558527395
+"uniform_constant (A2, no learning)",scenario_k3_012,3,431.7513503874601,0.991402478193642
+"uniform_constant (A2, no learning)",scenario_k3_013,3,552.6498949359909,0.7242948501251316
+"uniform_constant (A2, no learning)",scenario_k3_014,3,737.9953544557762,0.7754433603925803
+"uniform_constant (A2, no learning)",scenario_k3_015,3,445.87997067215224,0.9971043061072864
+"uniform_constant (A2, no learning)",scenario_k3_016,3,843.2748172918743,0.6351069481050527
+"uniform_constant (A2, no learning)",scenario_k3_017,3,557.7564228950013,0.7300335577485509
+"uniform_constant (A2, no learning)",scenario_k3_018,3,710.4235836104336,1.0
+"uniform_constant (A2, no learning)",scenario_k3_019,3,486.921350633938,0.7875103995775756
+"uniform_constant (A2, no learning)",scenario_k3_020,3,539.8896183444515,0.7276331175694161
+"uniform_constant (A2, no learning)",scenario_k3_021,3,774.3467681501843,0.5642211815971716
+"uniform_constant (A2, no learning)",scenario_k3_022,3,705.0446515751257,1.0
+"uniform_constant (A2, no learning)",scenario_k3_023,3,850.5943277030578,0.8384543613655024
+"uniform_constant (A2, no learning)",scenario_k3_024,3,604.3059760381611,0.9678885851320617
+"uniform_constant (A2, no learning)",scenario_k3_025,3,613.5638327942387,1.0
+"uniform_constant (A2, no learning)",scenario_k3_026,3,512.687879394467,0.5726644962876705
+"uniform_constant (A2, no learning)",scenario_k3_027,3,844.6390541286667,0.9015413920607183
+"uniform_constant (A2, no learning)",scenario_k3_028,3,850.8902309462051,0.7708235233919327
+"uniform_constant (A2, no learning)",scenario_k3_029,3,638.9796859785299,0.9093700193273079
+"uniform_constant (A2, no learning)",scenario_k3_030,3,671.1358855720871,0.7363861751536898
+"uniform_constant (A2, no learning)",scenario_k5_001,5,1413.6870304555023,0.7744470282813011
+"uniform_constant (A2, no learning)",scenario_k5_002,5,1194.4157866373557,0.8378750171913231
+"uniform_constant (A2, no learning)",scenario_k5_003,5,1415.1485170551673,0.9301174063525663
+"uniform_constant (A2, no learning)",scenario_k5_004,5,1301.255509997562,0.8474112393014503
+"uniform_constant (A2, no learning)",scenario_k5_005,5,1297.0813653030445,0.547981122830516
+"uniform_constant (A2, no learning)",scenario_k5_006,5,1417.8690561239384,0.8879805233983841
+"uniform_constant (A2, no learning)",scenario_k5_007,5,1070.6812733010295,0.566817249828891
+"uniform_constant (A2, no learning)",scenario_k5_008,5,1295.6716895258119,0.9430335658554097
+"uniform_constant (A2, no learning)",scenario_k5_009,5,1405.4580288197906,0.5790586882905233
+"uniform_constant (A2, no learning)",scenario_k5_010,5,1417.7484866440514,0.5528850895106071
+"uniform_constant (A2, no learning)",scenario_k5_011,5,1411.7019392640386,0.870767329026833
+"uniform_constant (A2, no learning)",scenario_k5_012,5,1309.0189270202818,0.7970867333582303
+"uniform_constant (A2, no learning)",scenario_k5_013,5,1272.3756798499244,0.632230919063608
+"uniform_constant (A2, no learning)",scenario_k5_014,5,1266.3825527063505,0.7042477759019435
+"uniform_constant (A2, no learning)",scenario_k5_015,5,1417.4851759117653,0.9312968585852955
+"uniform_constant (A2, no learning)",scenario_k5_016,5,1050.8773134679234,0.7352731048044163
+"uniform_constant (A2, no learning)",scenario_k5_017,5,1272.256798958443,0.7307229551974187
+"uniform_constant (A2, no learning)",scenario_k5_018,5,1412.9494377492579,0.7345468726990839
+"uniform_constant (A2, no learning)",scenario_k5_019,5,1303.9549948225904,0.9289729697037904
+"uniform_constant (A2, no learning)",scenario_k5_020,5,1417.4851759117653,0.7030017756206933
+"uniform_constant (A2, no learning)",scenario_k5_021,5,977.0520614700209,0.9062694686124365
+"uniform_constant (A2, no learning)",scenario_k5_022,5,1268.2015351554069,0.6807140893220235
+"uniform_constant (A2, no learning)",scenario_k5_023,5,1286.5726722401264,0.5723301765029939
+"uniform_constant (A2, no learning)",scenario_k5_024,5,1407.7945753467961,0.5592051099976775
+"uniform_constant (A2, no learning)",scenario_k5_025,5,1034.3921479619332,0.6122259727690226
+"uniform_constant (A2, no learning)",scenario_k5_026,5,1286.5726722401264,0.6782393239403468
+"uniform_constant (A2, no learning)",scenario_k5_027,5,1063.8102937294163,0.5900579868888904
+"uniform_constant (A2, no learning)",scenario_k5_028,5,1072.3966523910208,0.8797445008912356
+"uniform_constant (A2, no learning)",scenario_k5_029,5,1295.2825550971513,0.7348599229808994
+"uniform_constant (A2, no learning)",scenario_k5_030,5,1293.0146860158977,0.9065024500511625
+"uniform_constant (A2, no learning)",scenario_k10_001,10,2699.1956428189906,0.3848245693841008
+"uniform_constant (A2, no learning)",scenario_k10_002,10,2723.3255136769967,0.3714912079505306
+"uniform_constant (A2, no learning)",scenario_k10_003,10,2702.2447938870923,0.3491230614435036
+"uniform_constant (A2, no learning)",scenario_k10_004,10,2683.936475268058,0.355436256269674
+"uniform_constant (A2, no learning)",scenario_k10_005,10,2691.3181027426335,0.667123657794164
+"uniform_constant (A2, no learning)",scenario_k10_006,10,2723.2764240718348,0.3807812740841492
+"uniform_constant (A2, no learning)",scenario_k10_007,10,2683.936475268058,0.3623764698379733
+"uniform_constant (A2, no learning)",scenario_k10_008,10,2718.1215616693726,0.5676433390117565
+"uniform_constant (A2, no learning)",scenario_k10_009,10,2712.8163054156958,0.3555818901253786
+"uniform_constant (A2, no learning)",scenario_k10_010,10,2728.0754729666282,0.37149820641271686
+"uniform_constant (A2, no learning)",scenario_k10_011,10,2717.56677990371,0.35526769817732057
+"uniform_constant (A2, no learning)",scenario_k10_012,10,2710.5524713149025,0.3971437032384675
+"uniform_constant (A2, no learning)",scenario_k10_013,10,2707.612868606455,0.3685274980158482
+"uniform_constant (A2, no learning)",scenario_k10_014,10,2695.2598254117465,0.34969154583562273
+"uniform_constant (A2, no learning)",scenario_k10_015,10,2712.7534869500105,0.6051488974386883
+"uniform_constant (A2, no learning)",scenario_k10_016,10,2685.8628020916462,0.37959990548235
+"uniform_constant (A2, no learning)",scenario_k10_017,10,2723.2764240718348,0.40440376432290925
+"uniform_constant (A2, no learning)",scenario_k10_018,10,2717.56677990371,0.3832145048729736
+"uniform_constant (A2, no learning)",scenario_k10_019,10,2702.3076123527776,0.6010657445293663
+"uniform_constant (A2, no learning)",scenario_k10_020,10,2696.1346725604767,0.41007785648129647
+"uniform_constant (A2, no learning)",scenario_k10_021,10,2702.2447938870923,0.6000282907809887
+"uniform_constant (A2, no learning)",scenario_k10_022,10,2719.4663378461883,0.36745857660152187
+"uniform_constant (A2, no learning)",scenario_k10_023,10,2718.1215616693726,0.3774126297223349
+"uniform_constant (A2, no learning)",scenario_k10_024,10,2712.888299080964,0.5518877283760597
+"uniform_constant (A2, no learning)",scenario_k10_025,10,2694.5171619962443,0.32836710403035047
+"uniform_constant (A2, no learning)",scenario_k10_026,10,2724.139655559384,0.5953233066390424
+"uniform_constant (A2, no learning)",scenario_k10_027,10,2714.505809645196,0.6363048864963136
+"uniform_constant (A2, no learning)",scenario_k10_028,10,2723.2764240718348,0.6566125995522497
+"uniform_constant (A2, no learning)",scenario_k10_029,10,2728.1469514335136,0.394787527678772
+"uniform_constant (A2, no learning)",scenario_k10_030,10,2720.1979328902707,0.6102270697719253
