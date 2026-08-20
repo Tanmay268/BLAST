@@ -1,0 +1,423 @@
+<title>BLAST Requirements Matrix</title>
+<style>
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0B0F1A; --surface: #121826; --ink: #E8ECF5; --ink-soft: #9AA4BC;
+      --ink-faint: #6B7590; --line: #262F45; --accent: #6E93FF; --accent-ink: #0B0F1A;
+      --good: #4FCE94; --warn: #E0AA3E; --bad: #F0705A; --neutral: #8FA3E0;
+      --good-bg: rgba(79,206,148,0.12); --warn-bg: rgba(224,170,62,0.14);
+      --bad-bg: rgba(240,112,90,0.12); --neutral-bg: rgba(143,163,224,0.12);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0B0F1A; --surface: #121826; --ink: #E8ECF5; --ink-soft: #9AA4BC;
+    --ink-faint: #6B7590; --line: #262F45; --accent: #6E93FF; --accent-ink: #0B0F1A;
+    --good: #4FCE94; --warn: #E0AA3E; --bad: #F0705A; --neutral: #8FA3E0;
+    --good-bg: rgba(79,206,148,0.12); --warn-bg: rgba(224,170,62,0.14);
+    --bad-bg: rgba(240,112,90,0.12); --neutral-bg: rgba(143,163,224,0.12);
+  }
+  :root {
+    --paper: #F4F6FA; --surface: #FFFFFF; --ink: #10182A; --ink-soft: #57607A;
+    --ink-faint: #7C86A0; --line: #DEE3ED; --accent: #2149D1; --accent-ink: #FFFFFF;
+    --good: #1B8A5F; --warn: #A66A0A; --bad: #C0402A; --neutral: #2149D1;
+    --good-bg: #E7F5EF; --warn-bg: #FBF0DD; --bad-bg: #FBEAE6; --neutral-bg: #EAEEFB;
+    --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Cambria", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    --mono: "SF Mono", "Cascadia Code", "Consolas", "Menlo", "Liberation Mono", monospace;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--sans); line-height: 1.6; margin: 0; padding: 0 24px 96px; }
+  .page { max-width: 860px; margin: 0 auto; }
+  ::selection { background: var(--accent); color: var(--accent-ink); }
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; }
+
+  .cover { padding: 84px 0 44px; border-bottom: 1px solid var(--line); }
+  .eyebrow { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin: 0 0 18px; }
+  h1.title { font-family: var(--serif); font-weight: 400; font-size: clamp(2.1rem, 4.6vw, 2.9rem); line-height: 1.1; letter-spacing: -0.01em; margin: 0 0 18px; text-wrap: balance; }
+  .thesis { font-size: 1.1rem; color: var(--ink-soft); max-width: 64ch; margin: 0 0 32px; text-wrap: balance; }
+
+  .rollup { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  .rollup .cell { background: var(--surface); padding: 16px 18px; }
+  .rollup .num { font-family: var(--mono); font-size: 1.5rem; font-variant-numeric: tabular-nums; display: block; line-height: 1.1; }
+  .rollup .lbl { font-size: 0.78rem; color: var(--ink-soft); margin-top: 4px; display: block; }
+  .rollup .num.good { color: var(--good); } .rollup .num.warn { color: var(--warn); }
+  .rollup .num.bad { color: var(--bad); } .rollup .num.neutral { color: var(--neutral); }
+
+  section.blk { padding: 48px 0; border-bottom: 1px solid var(--line); }
+  section.blk:last-of-type { border-bottom: none; }
+  .blk-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 8px; }
+  .blk-num { font-family: var(--mono); font-size: 0.85rem; color: var(--ink-faint); flex-shrink: 0; }
+  h2.blk-title { font-family: var(--serif); font-weight: 400; font-size: 1.5rem; margin: 0; text-wrap: balance; }
+  .src { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-faint); margin: 2px 0 18px; }
+  section.blk > p.lead { max-width: 66ch; color: var(--ink-soft); margin: 0 0 18px; }
+
+  .tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; margin: 0 0 8px; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.87rem; background: var(--surface); }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  th { font-family: var(--mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-faint); font-weight: 600; background: var(--paper); }
+  td.item { color: var(--ink); font-weight: 600; white-space: nowrap; }
+  td.note { color: var(--ink-soft); }
+  td.evidence { color: var(--ink-faint); font-family: var(--mono); font-size: 0.78rem; white-space: nowrap; }
+
+  .tag { display: inline-flex; align-items: center; gap: 5px; font-family: var(--mono); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.02em; text-transform: uppercase; padding: 3px 9px; border-radius: 20px; white-space: nowrap; }
+  .tag.good { background: var(--good-bg); color: var(--good); }
+  .tag.warn { background: var(--warn-bg); color: var(--warn); }
+  .tag.bad { background: var(--bad-bg); color: var(--bad); }
+  .tag.neutral { background: var(--neutral-bg); color: var(--neutral); }
+
+  .legend { display: flex; gap: 18px; flex-wrap: wrap; font-size: 0.82rem; color: var(--ink-soft); margin-top: 14px; }
+  .legend .tag { margin-right: 4px; }
+
+  .callout { border-left: 3px solid var(--accent); background: var(--surface); border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 16px 0 4px; max-width: 66ch; }
+  .callout p { margin: 0; color: var(--ink-soft); }
+
+  footer { padding: 44px 0 0; color: var(--ink-faint); font-size: 0.82rem; }
+  footer a { color: var(--ink-faint); }
+
+  @media (max-width: 560px) {
+    body { padding: 0 14px 72px; }
+    .cover { padding-top: 52px; }
+    th, td { padding: 8px 10px; }
+  }
+</style>
+
+<div class="page">
+
+  <div class="cover">
+    <p class="eyebrow">Requirements traceability · vs. the original project brief</p>
+    <h1 class="title">What's Been Built, Against What Was Asked</h1>
+    <p class="thesis">
+      Every item from <code>context/source/PROJECT_CONTEXT.pdf</code> — the original brief —
+      checked against what actually exists today: fulfilled, partially fulfilled, deliberately
+      descoped with a documented reason, or not yet done.
+    </p>
+
+    <div class="rollup">
+      <div class="cell"><span class="num good">44</span><span class="lbl">Fulfilled</span></div>
+      <div class="cell"><span class="num warn">17</span><span class="lbl">Partial / in progress</span></div>
+      <div class="cell"><span class="num neutral">24</span><span class="lbl">Deliberately descoped</span></div>
+      <div class="cell"><span class="num bad">7</span><span class="lbl">Not yet done</span></div>
+    </div>
+
+    <div class="legend">
+      <span><span class="tag good">Fulfilled</span> built, run, verified</span>
+      <span><span class="tag warn">Partial</span> some but not all of the requirement, or actively in progress</span>
+      <span><span class="tag neutral">Descoped</span> a considered decision, recorded as an ADR — not a shortfall</span>
+      <span><span class="tag bad">Not done</span> genuinely outstanding, no plan yet or blocked on the user</span>
+    </div>
+
+    <div class="callout" style="margin-top:20px;">
+      <p>
+        <strong>Second pass, after "make a plan and achieve it":</strong> every item below was
+        re-reviewed with one question — is this worth building, does something better already
+        cover it, or should it be retired with a stated reason? Most of the newly "descoped" items
+        were previously sitting as "not done", which reads as an open to-do; they weren't — no
+        real data source exists for several (Recovery Cost, SLA Risk, Historical Importance), and
+        several others (graph embeddings, topological sorting, community detection) don't apply
+        meaningfully at this graph's size. New builds this pass: B5/B10/B11/B12, MAP, the latency/
+        memory/scalability benchmark, and the A1/A2/A6/A7 ablations. Only 7 items remain
+        genuinely open with no plan — the research paper itself (excluded from this pass by
+        request), RQ1/RQ2/RQ5, and two Incident-data-model fields RCAEval simply doesn't record
+        (§01, §04, §11 below) — listed plainly, not buried.
+      </p>
+    </div>
+  </div>
+
+  <section class="blk">
+    <div class="blk-head"><span class="blk-num">01</span><h2 class="blk-title">Core goals</h2></div>
+    <p class="src">brief, p.1 "Goal"</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Goal</th><th>Status</th><th>Note</th><th>Evidence</th></tr></thead>
+        <tbody>
+          <tr><td class="item">Publish a research paper</td><td><span class="tag bad">Not done</span></td><td class="note">Not started — every underlying result and decision is written up and paper-ready</td><td class="evidence">context/03_RESEARCH_DESIGN.md §10</td></tr>
+          <tr><td class="item">Build a working prototype</td><td><span class="tag good">Fulfilled</span></td><td class="note">Full pipeline + live public dashboard</td><td class="evidence">blastops.streamlit.app</td></tr>
+          <tr><td class="item">Demonstrate novelty over AIOps systems</td><td><span class="tag warn">Partial</span></td><td class="note">Ranking-accuracy gain is real AND robust — survives a 5-model value-weight sensitivity sweep, including uniform and adversarial-inverted weights; business-loss gain isn't proven yet, and a follow-up sweep found the same null result across all 5 weight models too, ruling out "wrong weights" as the explanation</td><td class="evidence">ADR-019, ADR-020, value_model_sweep.csv</td></tr>
+          <tr><td class="item">Solve a practical DevOps/SRE problem</td><td><span class="tag warn">Partial</span></td><td class="note">Solved on a benchmark; not validated with real engineers — the study instrument is now drafted and ready, running it needs the user to recruit participants</td><td class="evidence">RQ5, below; human_study_instrument.md</td></tr>
+          <tr><td class="item">Contains a novel algorithm/framework</td><td><span class="tag good">Fulfilled</span></td><td class="note">Submodular greedy set-selection over probabilistic capability coverage</td><td class="evidence">ADR-011, ADR-016</td></tr>
+          <tr><td class="item">Contains an actual implementation</td><td><span class="tag good">Fulfilled</span></td><td class="note">30+ pipeline scripts + dashboard, all runnable end to end, plus a second full system (Train Ticket) added this pass</td><td class="evidence">scripts/pipeline/</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="blk-head"><span class="blk-num">02</span><h2 class="blk-title">Scope discipline</h2></div>
+    <p class="src">brief, p.2-3 "Scope" / "Existing Work"</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Requirement</th><th>Status</th><th>Note</th><th>Evidence</th></tr></thead>
+        <tbody>
+          <tr><td class="item">Starts after detection / classification / RCA</td><td><span class="tag good">Fulfilled</span></td><td class="note">Never touches detection or root-cause logic; consumes pre-given incidents only</td><td class="evidence">ADR-001</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="blk-head"><span class="blk-num">03</span><h2 class="blk-title">Expected novelty checklist</h2></div>
+    <p class="src">brief, p.13 — the brief's own explicit ✅/❌ list</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Requirement</th><th>Status</th><th>Note</th><th>Evidence</th></tr></thead>
+        <tbody>
+          <tr><td class="item">Must NOT be another anomaly detector</td><td><span class="tag good">Honored</span></td><td class="note">—</td><td class="evidence">ADR-001</td></tr>
+          <tr><td class="item">Must NOT be another root-cause localizer</td><td><span class="tag good">Honored</span></td><td class="note">—</td><td class="evidence">ADR-001</td></tr>
+          <tr><td class="item">Must NOT be another log parser</td><td><span class="tag good">Honored</span></td><td class="note">Traces only, by design</td><td class="evidence">ADR-009</td></tr>
+          <tr><td class="item">SHOULD be a new graph representation</td><td><span class="tag warn">Partial</span></td><td class="note">Real trace-derived graph + declared capability overlay; simpler than originally scoped (see §06)</td><td class="evidence">results/data/service_graph.csv</td></tr>
+          <tr><td class="item">SHOULD be a new dependency-aware prioritization algorithm</td><td><span class="tag good">Fulfilled</span></td><td class="note">(1-1/e) guarantee; 0/200 submodularity violations in regression testing</td><td class="evidence">run_probabilistic_blast.py</td></tr>
+          <tr><td class="item">SHOULD be a business-aware optimization framework</td><td><span class="tag good">Fulfilled</span></td><td class="note">Declared, versioned, sensitivity-testable value overlay</td><td class="evidence">business_overlay/online_boutique_v2.yaml</td></tr>
+          <tr><td class="item">SHOULD be intelligent incident ranking</td><td><span class="tag good">Fulfilled</span></td><td class="note">Live in the dashboard + full evaluation harness</td><td class="evidence">dashboard/, run_evaluation.py</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="blk-head"><span class="blk-num">04</span><h2 class="blk-title">Research questions</h2></div>
+    <p class="src">brief, p.13; refined in context/03_RESEARCH_DESIGN.md §1</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Question</th><th>Status</th><th>Answer so far</th><th>Evidence</th></tr></thead>
+        <tbody>
+          <tr><td class="item">RQ1 — graph reasoning improves prioritization?</td><td><span class="tag bad">Tested — null</span></td><td class="note">0/20 edges show real propagation on this benchmark</td><td class="evidence">ADR-018</td></tr>
+          <tr><td class="item">RQ2 — business-aware beats static severity?</td><td><span class="tag bad">Tested — not confirmed</span></td><td class="note">Severity/rule-based baselines beat BLAST on ranking accuracy here; root cause diagnosed, not a bug</td><td class="evidence">ADR-019</td></tr>
+          <tr><td class="item">RQ3 — which graph representation captures impact best?</td><td><span class="tag neutral">Descoped this pass</span></td><td class="note">Was "not addressed"; now deliberately shelved: RQ1 already found graph propagation near-zero on this benchmark, so which of several graph REPRESENTATIONS is used is unlikely to change anything — building alternatives just to ablate a structurally-inert component isn't worth it until a system where propagation actually matters is found. Revisit if Train Ticket (§10) shows non-trivial propagation.</td><td class="evidence">ADR-018</td></tr>
+          <tr><td class="item">RQ4 — graph learning reduces response time? <em>(reframed as simulated business loss)</em></td><td><span class="tag warn">Tested — mixed</span></td><td class="note">Real ranking-accuracy gain, robust across a 5-model value-weight sweep; no practical business-loss gain yet; follow-up ruled out the obvious cause</td><td class="evidence">ADR-019, ADR-020</td></tr>
+          <tr><td class="item">RQ5 — explainable reasoning improves engineer trust?</td><td><span class="tag bad">Not done</span></td><td class="note">Needs a real human study (10-20 SREs, possibly IRB) — outside what can be run autonomously. The instrument (12 real scenarios, consent text, questions, analysis plan) is now built and ready; only recruitment is missing.</td><td class="evidence">context/03_RESEARCH_DESIGN.md §3.4; human_study_instrument.md</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="blk-head"><span class="blk-num">05</span><h2 class="blk-title">Expected deliverables</h2></div>
+    <p class="src">brief, p.14</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Deliverable</th><th>Status</th><th>Note</th><th>Evidence</th></tr></thead>
+        <tbody>
+          <tr><td class="item">Research paper</td><td><span class="tag bad">Not done</span></td><td class="note">—</td><td class="evidence">—</td></tr>
+          <tr><td class="item">System architecture</td><td><span class="tag good">Fulfilled</span></td><td class="note">—</td><td class="evidence">context/02_ARCHITECTURE.md</td></tr>
+          <tr><td class="item">Dependency graph construction module</td><td><span class="tag warn">Partial</span></td><td class="note">Service graph only, verified against all target services on 2 systems now</td><td class="evidence">build_service_graph.py, re2tt_build_service_graph.py</td></tr>
+          <tr><td class="item">Business impact analyzer</td><td><span class="tag good">Fulfilled</span></td><td class="note">Journey-level attribution, corpus-wide, on 2 systems</td><td class="evidence">build_incident_capability_model.py</td></tr>
+          <tr><td class="item">Priority optimization algorithm</td><td><span class="tag good">Fulfilled</span></td><td class="note">—</td><td class="evidence">run_probabilistic_blast.py</td></tr>
+          <tr><td class="item">Dashboard</td><td><span class="tag good">Fulfilled</span></td><td class="note">Deployed publicly</td><td class="evidence">blastops.streamlit.app</td></tr>
+          <tr><td class="item">Experimental evaluation</td><td><span class="tag good">Fulfilled</span></td><td class="note">90 held-out test scenarios, 12 methods</td><td class="evidence">run_evaluation.py</td></tr>
+          <tr><td class="item">Ablation study</td><td><span class="tag good">Fulfilled</span></td><td class="note">A1 (attribution level), A2 (learned vs uniform p), A4 (set-selection on/off = B9), A6 (5-model value sweep), A7 (smoothed vs raw MLE) all built and run. A3/A5 explicitly marked not-applicable with a stated reason, not silently skipped.</td><td class="evidence">run_ablations.py, run_value_model_sweep.py</td></tr>
+          <tr><td class="item">Comparison with baselines</td><td><span class="tag good">Fulfilled</span></td><td class="note">12 baselines built and run (more than the 9 originally planned) — B1-B7, B9-B12</td><td class="evidence">§10 below</td></tr>
+          <tr><td class="item">Open-source implementation</td><td><span class="tag good">Fulfilled</span></td><td class="note">Public repo</td><td class="evidence">github.com/Tanmay268/BLAST</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="blk-head"><span class="blk-num">06</span><h2 class="blk-title">Business Dependency Graph — node &amp; edge types</h2></div>
+    <p class="src">brief, p.5-6; narrowed in context/02_ARCHITECTURE.md (ADR-007)</p>
+    <p class="lead">
+      The brief brainstormed roughly ten possible node types and eighteen possible node attributes.
+      The architecture doc deliberately cut this to four node types, reasoning that the rest were
+      unpopulatable from available data without inventing numbers. Of those four, two were actually
+      built as real graph structures this session.
+    </p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Node / edge type</th><th>Brief suggests it</th><th>Architecture scoped it</th><th>Actually built</th></tr></thead>
+        <tbody>
+          <tr><td class="item">Service</td><td>✓</td><td>✓</td><td><span class="tag good">Yes — real services, 2 systems now</span></td></tr>
+          <tr><td class="item">Endpoint / API</td><td>✓</td><td>✓</td><td><span class="tag neutral">Descoped this pass — functional equivalent exists</span></td></tr>
+          <tr><td class="item">Datastore / Database</td><td>✓</td><td>✓</td><td><span class="tag neutral">Descoped this pass</span></td></tr>
+          <tr><td class="item">Business Capability</td><td>✓</td><td>✓</td><td><span class="tag warn">As a YAML overlay, not a literal graph node</span></td></tr>
+          <tr><td class="item">Message Queue, Cache, Deployment, Team, Infra</td><td>✓</td><td><span class="tag neutral">Cut (ADR-007)</span></td><td><span class="tag neutral">No real data source — permanently out of scope</span></td></tr>
+          <tr><td class="item">Edge: service → service ("calls")</td><td>✓</td><td>✓</td><td><span class="tag good">Yes — real edges from trace parent-child spans, 2 systems</span></td></tr>
+          <tr><td class="item">Edge: service → datastore, service → endpoint</td><td>✓</td><td>✓</td><td><span class="tag neutral">Descoped this pass</span></td></tr>
+          <tr><td class="item">Edge: endpoint → capability ("realises")</td><td>✓</td><td>✓</td><td><span class="tag warn">A Python dict lookup, not a formal graph edge</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout">
+      <p>
+        <strong>Why the simpler version was the right call, not a shortfall:</strong> a heterogeneous
+        graph with unpopulated attribute fields (Owner Team, SLA, Revenue Contribution, MTTR — all
+        listed in the brief) would mean inventing numbers RCAEval doesn't provide, which the project's
+        own hard rules explicitly forbid. The graph that got built only contains what could be measured.
+      </p>
+    </div>
+    <div class="callout" style="margin-top:10px;">
+      <p>
+        <strong>Endpoint/Datastore nodes and their edges, reclassified this pass:</strong> these
+        were "not done" in the first version of this table, implying they were still on the to-do
+        list. On reflection they aren't — the job a literal <code>Endpoint</code> graph node with a
+        formal <code>realises</code> edge would do (connect an operation to the capability it
+        delivers) is already done by the overlay's <code>realised_by</code> lookup, just as a plain
+        dictionary instead of a graph structure. Formalising that into extra node/edge types would
+        add ceremony without adding anything the pipeline can't already compute. Not building it is
+        a considered call, not a gap.
+      </p>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="blk-head"><span class="blk-num">07</span><h2 class="blk-title">Priority score formula</h2></div>
+    <p class="src">brief, p.8</p>
+    <p class="lead">
+      The brief proposes a priority score combining eight factors, with weights possibly learned
+      automatically. The actual formula built is
+      <code>F(S) = Σ w_c · P(capability c impaired | incident set S)</code> — narrower, but every
+      term in it is either measured or an explicitly declared assumption, never invented.
+    </p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Factor</th><th>Status</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td class="item">Business Impact</td><td><span class="tag good">Fulfilled</span></td><td class="note">Declared relative weights, w_c, per capability</td></tr>
+          <tr><td class="item">Technical Severity</td><td><span class="tag good">Fulfilled</span></td><td class="note">Folded into p(c|i), from measured statistical significance + effect size</td></tr>
+          <tr><td class="item">Propagation Risk</td><td><span class="tag warn">Modeled, empirically inert</span></td><td class="note">Present in the formal model; measured at ~0% on this benchmark (ADR-018)</td></tr>
+          <tr><td class="item">Dependency Centrality</td><td><span class="tag warn">Computed, not used by BLAST itself</span></td><td class="note">PageRank / personalized PageRank exist only as baselines B4/B6</td></tr>
+          <tr><td class="item">Critical Path Importance</td><td><span class="tag neutral">Descoped this pass</span></td><td class="note">The service call graph is shallow (mostly 1-2 hops from any target) — a dedicated critical-path analysis would just reproduce what the centrality baselines (B4/B5/B6/B11/B12, all now built) already show. Not worth a separate computation at this graph size.</td></tr>
+          <tr><td class="item">Historical Failure Importance</td><td><span class="tag neutral">Descoped this pass</span></td><td class="note">No historical incident data exists in RCAEval, and none is plausibly obtainable for this project — building it would mean inventing numbers (hard rule #1). Permanently out of scope, not a to-do item.</td></tr>
+          <tr><td class="item">Recovery Cost</td><td><span class="tag neutral">Descoped this pass</span></td><td class="note">Same reasoning — no real repair-duration data exists. Assumed uniform (one engineer, one incident at a time), stated explicitly as a simplification rather than silently defaulted.</td></tr>
+          <tr><td class="item">SLA Violation Risk</td><td><span class="tag neutral">Descoped this pass</span></td><td class="note">No SLA data available and none plausibly obtainable. A declared "SLA-urgency" alternative VALUE MODEL was built for the sensitivity sweep (§(A6) below) — that is a different, achievable thing from measuring real SLA risk, and is not being conflated with it here.</td></tr>
+          <tr><td class="item">Weights learned automatically</td><td><span class="tag warn">Partial</span></td><td class="note">p(c|i) is learned from data; the business weight w_c is declared, not learned — learning it would need real revenue data that doesn't exist</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="blk-head"><span class="blk-num">08</span><h2 class="blk-title">Graph algorithms</h2></div>
+    <p class="src">brief, p.9</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Algorithm</th><th>Status</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td class="item">PageRank</td><td><span class="tag good">Used</span></td><td class="note">Baseline B4 + dashboard graph view</td></tr>
+          <tr><td class="item">Personalized PageRank</td><td><span class="tag good">Used</span></td><td class="note">Baseline B6</td></tr>
+          <tr><td class="item">Shortest Path</td><td><span class="tag good">Used</span></td><td class="note">Propagation-distance testing</td></tr>
+          <tr><td class="item">Dependency Traversal</td><td><span class="tag warn">Used implicitly</span></td><td class="note">Graph descendant queries in the propagation audit</td></tr>
+          <tr><td class="item">Influence Maximization</td><td><span class="tag warn">Conceptual ancestor</span></td><td class="note">The independent-cascade model BLAST uses comes from this literature (Kempe-Kleinberg-Tardos), not run as a literal IM algorithm</td></tr>
+          <tr><td class="item">Betweenness / Closeness / Eigenvector Centrality</td><td><span class="tag good">Used</span></td><td class="note">Baselines B5, B11, B12 — all three now built and evaluated; all three lose clearly to BLAST, consistent with topology not predicting impact well on this benchmark (ADR-018/019)</td></tr>
+          <tr><td class="item">Topological Sorting</td><td><span class="tag neutral">Descoped this pass</span></td><td class="note">Greedy marginal-gain order is a different ordering principle by design, not a gap — a topological sort answers "what's reachable in what order," BLAST answers "what to fix first," which is not the same question</td></tr>
+          <tr><td class="item">Community Detection</td><td><span class="tag neutral">Descoped this pass</span></td><td class="note">The service graphs built (7 and 26 nodes) are too small and too shallow to have meaningful community structure — one or two clusters at most, not worth a dedicated algorithm</td></tr>
+          <tr><td class="item">GNN / GAT / GraphSAGE / Message Passing / Graph Transformers</td><td><span class="tag neutral">Deliberately excluded as core method</span></td><td class="note">Overfits at 7-64 node scale; kept only as a possible future baseline (B8), not built this session</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="blk-head"><span class="blk-num">09</span><h2 class="blk-title">Novel optimization techniques</h2></div>
+    <p class="src">brief, p.9</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Technique</th><th>Status</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td class="item">Submodular set-selection <em>(not brief-listed — what was actually chosen)</em></td><td><span class="tag good">Fulfilled</span></td><td class="note">The project's actual novel technique; theoretical guarantee + empirical regression test</td></tr>
+          <tr><td class="item">Reinforcement Learning</td><td><span class="tag neutral">Deliberately rejected</span></td><td class="note">No environment, no reward signal, no data to train against</td></tr>
+          <tr><td class="item">GNN / GAT for ranking</td><td><span class="tag neutral">Deliberately rejected as core</span></td><td class="note">Same reasoning as §08</td></tr>
+          <tr><td class="item">Learning-to-Rank / Pairwise Ranking</td><td><span class="tag good">Fulfilled</span></td><td class="note">B10 — trains directly on "does incident A outrank incident B" over all ordered train-split pairs, scores by pairwise win count. B7 remains a separate, pointwise-regression baseline; B10 fills the gap it left.</td></tr>
+          <tr><td class="item">Graph Embeddings</td><td><span class="tag neutral">Descoped this pass</span></td><td class="note">Same reasoning as GNNs (ADR-005): a 7-26 node graph is too small for embeddings to say anything a direct centrality measure doesn't already say more transparently</td></tr>
+          <tr><td class="item">Node Importance Prediction</td><td><span class="tag warn">Classical only</span></td><td class="note">PageRank/betweenness/closeness/eigenvector as baselines (B4/B5/B6/B11/B12), not a learned predictor</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="blk-head"><span class="blk-num">10</span><h2 class="blk-title">Evaluation — datasets, metrics, baselines</h2></div>
+    <p class="src">brief, p.11-13</p>
+
+    <h3 style="font-family:var(--sans);font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 10px;">Datasets</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Dataset</th><th>Status</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td class="item">Online Boutique (RE2-OB)</td><td><span class="tag good">Used</span></td><td class="note">90 cases — 5 services × 6 fault types × 3 repetitions</td></tr>
+          <tr><td class="item">Google Microservices Demo</td><td><span class="tag good">Fulfilled — correction</span></td><td class="note">This is not a separate system: "Online Boutique" IS Google's open-source microservices demo (formerly "Hipster Shop"), same codebase. Listing it as a separate unfulfilled item in the first version of this table was a mistake, corrected here, not a new build.</td></tr>
+          <tr><td class="item">Train Ticket (RE2-TT)</td><td><span class="tag warn">In progress</span></td><td class="note">Verified viable (90/90 cases have trace data, same schema as Online Boutique) and being built now: business overlay, journey-typing generalisation, service graph, and full evaluation harness all written and running against a live 90-case download at the time of this table update.</td></tr>
+          <tr><td class="item">Sock Shop (RE2-SS)</td><td><span class="tag neutral">Descoped — not viable</span></td><td class="note">Checked directly against the dataset before assuming anything: 0 of 90 Sock Shop cases have ANY trace data (logs + metrics only). This project's entire methodology is trace-based (ADR-009) — there is no viable path to using Sock Shop without a fundamentally different, metrics/logs-based attribution approach, which is out of scope. Not a build gap; a hard data-availability fact.</td></tr>
+          <tr><td class="item">DeathStarBench, OpenTelemetry Demo</td><td><span class="tag neutral">Descoped this pass</span></td><td class="note">Different benchmark frameworks entirely — no RCAEval-style pre-injected fault corpus with ground-truth timing, meaning the whole download/distill/evaluate pipeline would need rebuilding from scratch for a new data format. Low tractability relative to Train Ticket, which reuses everything already built. Not pursued while a same-family system (Train Ticket) is available and unfinished.</td></tr>
+          <tr><td class="item">Synthetic clusters</td><td><span class="tag warn">Different form</span></td><td class="note">A synthetic simulation (not a K8s cluster) was used for the heterogeneity sweep, ADR-020</td></tr>
+          <tr><td class="item">Real production logs</td><td><span class="tag neutral">Descoped — genuinely unobtainable</span></td><td class="note">No real production system exists for this student research project and none is a realistic prospect. Reclassified from "not available" (implying a gap to close) to "descoped" (a fact about the project's nature).</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="font-family:var(--sans);font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-faint);margin:24px 0 10px;">Metrics</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Metric</th><th>Status</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td class="item">NDCG, MRR, Top-K / Precision@K</td><td><span class="tag good">Used</span></td><td class="note">NDCG@1/3/5, MRR, Precision@3</td></tr>
+          <tr><td class="item">Precision / Recall / F1</td><td><span class="tag warn">Substituted</span></td><td class="note">These are classification metrics; the ranking-appropriate equivalents above were used instead</td></tr>
+          <tr><td class="item">MAP</td><td><span class="tag good">Fulfilled</span></td><td class="note">average_precision() in blast_eval_lib.py, wired into every evaluation run</td></tr>
+          <tr><td class="item">Latency / memory / scalability</td><td><span class="tag good">Fulfilled</span></td><td class="note">benchmark_performance.py — 16.6ms mean latency and ~2KB peak memory at 30 concurrent incidents (the corpus's full type count), empirical scaling exponent 2.16 (theory predicts O(k^2), close match)</td></tr>
+          <tr><td class="item">Kendall's τ, CBL, AULC, Cliff's δ, Wilcoxon <em>(not brief-listed)</em></td><td><span class="tag good">Added</span></td><td class="note">A decision-quality and statistical-rigor layer beyond the brief's list</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="font-family:var(--sans);font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-faint);margin:24px 0 10px;">Baselines</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Baseline</th><th>Status</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td class="item">Severity-based</td><td><span class="tag good">Used</span></td><td class="note">B2</td></tr>
+          <tr><td class="item">Rule-based</td><td><span class="tag good">Used</span></td><td class="note">B3 — ITIL priority matrix, an actual industry standard</td></tr>
+          <tr><td class="item">Static Dependency Ranking</td><td><span class="tag good">Used</span></td><td class="note">B4/B6/B5/B11/B12 — PageRank, personalized PageRank, betweenness, closeness, eigenvector centrality — the full centrality family now, not just two of five</td></tr>
+          <tr><td class="item">Random, learned classifier, pairwise ranker, own-method ablation <em>(not brief-listed)</em></td><td><span class="tag good">Added</span></td><td class="note">B1, B7, B10, B9 — B9 is the single most important comparison in the project; B10 fills the pairwise-ranking gap B7 (pointwise regression) left</td></tr>
+          <tr><td class="item">ART, TrioXpert</td><td><span class="tag neutral">Deliberately not compared</span></td><td class="note">Verified they perform localization, not prioritization — comparing would be a category error; cited as related work instead</td></tr>
+          <tr><td class="item">PagerDuty, ServiceNow</td><td><span class="tag neutral">Descoped — genuinely inaccessible</span></td><td class="note">Proprietary commercial systems with no research API access available to a student project. Reclassified from "not compared" to "descoped": there is no plan that makes this achievable, so it shouldn't read as a to-do item.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="blk-head"><span class="blk-num">11</span><h2 class="blk-title">Incident data model — added this pass</h2></div>
+    <p class="src">brief, p.6-7 "Incident Input" / "Business Impact Engine" — not covered in the first version of this table</p>
+    <p class="lead">
+      Two brief sections got missed entirely in the first pass of this matrix. Filling that gap now
+      rather than leaving it out twice.
+    </p>
+
+    <h3 style="font-family:var(--sans);font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 10px;">Incident input fields</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Field</th><th>Status</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td class="item">ID, timestamp, affected service, failure type</td><td><span class="tag good">Fulfilled</span></td><td class="note">case ID, inject_time.txt, target_service, fault_type — every case carries these</td></tr>
+          <tr><td class="item">Technical severity, error metrics, traces</td><td><span class="tag good">Fulfilled</span></td><td class="note">Journey-level statistical significance + effect size stand in for a raw severity score, arguably more rigorous</td></tr>
+          <tr><td class="item">Affected APIs</td><td><span class="tag good">Fulfilled</span></td><td class="note">Journey types / operations touched, per incident</td></tr>
+          <tr><td class="item">Root cause</td><td><span class="tag neutral">Out of scope by design</span></td><td class="note">RCA is explicitly upstream (ADR-001) — BLAST receives incidents, doesn't diagnose them</td></tr>
+          <tr><td class="item">Logs</td><td><span class="tag neutral">Deliberately excluded</span></td><td class="note">ADR-009 — traces suffice, logs triple storage for no benefit</td></tr>
+          <tr><td class="item">Deployment information</td><td><span class="tag bad">Not tracked</span></td><td class="note">RCAEval doesn't provide deployment/version metadata for injected-fault cases</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="font-family:var(--sans);font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-faint);margin:24px 0 10px;">Business Impact Engine outputs</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Output</th><th>Status</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td class="item">Affected services / APIs / transactions</td><td><span class="tag good">Fulfilled</span></td><td class="note">target_service, journey types, n_baseline/n_fault request counts</td></tr>
+          <tr><td class="item">Business Capability Impact</td><td><span class="tag good">Fulfilled</span></td><td class="note">The core of the whole pipeline — p(c|i) and measured magnitude(c|i)</td></tr>
+          <tr><td class="item">Propagation Depth, Dependency Centrality</td><td><span class="tag good">Fulfilled</span></td><td class="note">graph_distance in the propagation audit; PageRank/betweenness/closeness/eigenvector baselines</td></tr>
+          <tr><td class="item">Revenue Impact</td><td><span class="tag warn">Partial, by design</span></td><td class="note">Declared relative business value, never real revenue (ADR-002, hard rule #3) — this is a permanent, principled substitution, not a gap</td></tr>
+          <tr><td class="item">Affected Users, Customer Impact</td><td><span class="tag bad">Not tracked</span></td><td class="note">RCAEval doesn't record per-request user/customer identity</td></tr>
+          <tr><td class="item">SLA Risk, MTTR Risk, Recovery Cost, Historical Importance</td><td><span class="tag neutral">Descoped — see §07</span></td><td class="note">Same no-data-source reasoning as the Priority Score formula's matching factors</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    Source brief: <code>context/source/PROJECT_CONTEXT.pdf</code>. Every status above is traceable
+    to a script, a result file, or an ADR in <code>context/01_DECISION_LOG.md</code> — nothing here
+    is asserted without a pointer to where it lives.
+  </footer>
+
+</div>

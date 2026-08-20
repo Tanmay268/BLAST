@@ -1,0 +1,17 @@
+case,journey_type_id,journey_label,signature_str,n_traces
+re2tt_ts-route-service_mem_2,direct::GET /api/v1/adminbasicservice/adminbasic/configs,GET /api/v1/adminbasicservice/adminbasic/configs (direct),GET /api/v1/adminbasicservice/adminbasic/configs,225
+re2tt_ts-route-service_mem_2,direct::GET /api/v1/adminbasicservice/adminbasic/prices,GET /api/v1/adminbasicservice/adminbasic/prices (direct),GET /api/v1/adminbasicservice/adminbasic/prices,224
+re2tt_ts-route-service_mem_2,direct::GET /api/v1/admintravelservice/admintravel,GET /api/v1/admintravelservice/admintravel (direct),GET /api/v1/admintravelservice/admintravel,224
+re2tt_ts-route-service_mem_2,direct::GET /api/v1/assuranceservice/assurances/types,GET /api/v1/assuranceservice/assurances/types (direct),GET /api/v1/assuranceservice/assurances/types,153
+re2tt_ts-route-service_mem_2,direct::GET /api/v1/contactservice/contacts/account/{accountId},GET /api/v1/contactservice/contacts/account/{accountId} (direct),GET /api/v1/contactservice/contacts/account/{accountId},153
+re2tt_ts-route-service_mem_2,direct::GET /api/v1/foodservice/foods/{date}/{startStation}/{endStation}/{tripId},GET /api/v1/foodservice/foods/{date}/{startStation}/{endStation}/{tripId} (direct),GET /api/v1/foodservice/foods/{date}/{startStation}/{endStation}/{tripId},470
+re2tt_ts-route-service_mem_2,direct::GET /error,GET /error (direct),GET /error,2
+re2tt_ts-route-service_mem_2,direct::POST /api/v1/inside_pay_service/inside_payment,POST /api/v1/inside_pay_service/inside_payment (direct),POST /api/v1/inside_pay_service/inside_payment,151
+re2tt_ts-route-service_mem_2,direct::POST /api/v1/orderOtherService/orderOther/refresh,POST /api/v1/orderOtherService/orderOther/refresh (direct),POST /api/v1/orderOtherService/orderOther/refresh,128
+re2tt_ts-route-service_mem_2,direct::POST /api/v1/orderservice/order/refresh,POST /api/v1/orderservice/order/refresh (direct),POST /api/v1/orderservice/order/refresh,190
+re2tt_ts-route-service_mem_2,direct::POST /api/v1/preserveotherservice/preserveOther,POST /api/v1/preserveotherservice/preserveOther (direct),POST /api/v1/preserveotherservice/preserveOther,59
+re2tt_ts-route-service_mem_2,direct::POST /api/v1/preserveservice/preserve,POST /api/v1/preserveservice/preserve (direct),POST /api/v1/preserveservice/preserve,94
+re2tt_ts-route-service_mem_2,direct::POST /api/v1/travel2service/trips/left,POST /api/v1/travel2service/trips/left (direct),POST /api/v1/travel2service/trips/left,1724
+re2tt_ts-route-service_mem_2,direct::POST /api/v1/travelservice/trips/left,POST /api/v1/travelservice/trips/left (direct),POST /api/v1/travelservice/trips/left,521
+re2tt_ts-route-service_mem_2,direct::POST /api/v1/users/login,POST /api/v1/users/login (direct),POST /api/v1/users/login,1889
+re2tt_ts-route-service_mem_2,direct::PUT /api/v1/consignservice/consigns,PUT /api/v1/consignservice/consigns (direct),PUT /api/v1/consignservice/consigns,167

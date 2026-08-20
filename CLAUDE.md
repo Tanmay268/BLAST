@@ -250,6 +250,71 @@ pre-registered fallback: "write the proof... and if it does not hold, say so and
 reporting greedy as a heuristic") rather than an assumed win — worth a paragraph in Discussion,
 not a claim in Results.
 
+### Repo reorganization, dashboard, and public deployment (2026-08-20)
+
+Repo restructured: `scripts/pipeline/` (reproducible chain) + `scripts/exploration/`
+(one-off), `results/data/` + `results/figures/` + `results/tables/` (all outputs, previously
+scattered at repo root), stale duplicate docs removed. Built a thin Streamlit dashboard
+(`dashboard/`, 6 views: overview, live incident ranker, service graph, capability path viewer,
+baseline comparison, heterogeneity sweep) — deployed publicly at **blastops.streamlit.app**,
+auto-redeploys on push to `main` (repo: github.com/Tanmay268/BLAST). A live review of the
+deployed dashboard caught and fixed a real bug (the baseline-comparison table mislabeled cases
+where a baseline significantly *beat* BLAST as "no difference") plus several clarity issues —
+see the git log around commit `53711f1` for the fixed dashboard.
+
+Two artifacts published as companions to this work: a plain-language **dashboard walkthrough**
+and a **requirements-traceability matrix** against `context/source/PROJECT_CONTEXT.pdf` (the
+original brief) — the matrix is the authoritative running record of what's fulfilled, partial,
+deliberately descoped (with reasons), or still open; check it before assuming something from
+the brief hasn't been addressed.
+
+### Closing the remaining brief-requirement gaps (2026-08-20)
+
+Per the requirements matrix, built or reclassified everything not excluded by the user
+(everything except the paper draft itself):
+
+- **New baselines:** B5 (betweenness), B10 (pairwise learning-to-rank, trained on ordered
+  TRAIN-split pairs), B11 (closeness), B12 (eigenvector centrality) — `run_evaluation.py` now
+  runs 12 methods, not 8. Verified the existing BLAST-vs-B9 Gate 4 numbers reproduce identically
+  after adding these. Finding: all three pure-topology baselines (B5/B11/B12) lose clearly to
+  BLAST — consistent with ADR-018 (topology doesn't predict impact well here; technical
+  severity does).
+- **MAP metric** (`average_precision()` in `blast_eval_lib.py`) and a **latency/memory/
+  scalability benchmark** (`benchmark_performance.py`: 16.6ms mean, ~2KB peak memory at 30
+  incidents, empirical O(k^2.16) scaling vs. the theoretical O(k^2) prediction).
+- **Ablation study** (`run_ablations.py`, `run_value_model_sweep.py`): A1 (formalizes
+  service-level-vs-journey-level, 83.3%→33.3% mean saturation), A2 (learned vs. uniform
+  probability — learned wins clearly, Cliff's δ=0.741 on NDCG@5), A7 (Beta-smoothed vs. raw
+  MLE — smoothing wins, δ=0.437), **A6 (5-model value-weight sensitivity sweep — BLAST's
+  NDCG@5 advantage survives in all 5, including uniform and adversarial-inverted weights; the
+  CBL null result also survives in all 5, ruling out "wrong weights" as the explanation)**. A3
+  and A5 marked not-applicable with reasons (the current `F(S)` never uses multi-hop propagation
+  or heterogeneous edge types as a live input, so there's nothing for either to remove).
+- **Human study instrument** (`results/data/human_study_instrument.md`): 12 real k=5 scenarios
+  from the actual corpus, consent text, blind-comparison questions, analysis plan. Cannot
+  collect real responses — needs the user to recruit 10-20 SREs, possibly IRB.
+- **Cross-system expansion — Train Ticket (RE2-TT), in progress.** Verified Sock Shop (RE2-SS)
+  is not viable at all (0/90 cases have any trace data — logs+metrics only); Train Ticket has
+  traces for all 90 cases and is being built now: `business_overlay/train_ticket_v1.yaml` (10
+  capabilities, grounded in observed operations), `blast_journey_lib.py` generalized for reuse
+  (caught a real issue before it caused silent data loss: Train Ticket's root spans have
+  `methodName == NA` for every case, unlike Online Boutique where only wrapper roots lack it —
+  fixed to fall back to `operationName`), full `re2tt_*` pipeline scripts reusing every shared
+  library and baseline function from the Online Boutique scripts (no logic duplication). 90-case
+  download/distill running; downstream capability model, ground-truth scenarios, and evaluation
+  not yet run as of this note — check `results/data/re2tt_evaluation_statistics.csv` for whether
+  the cross-system Gate 4 pattern matches Online Boutique's before citing anything about it.
+
+**Reclassified in the requirements matrix, not built (with reasons — see the matrix for full
+text):** Endpoint/Datastore graph nodes (functional equivalent already exists via the overlay),
+Critical Path Importance/Historical Failure Importance/Recovery Cost/SLA Violation Risk (no real
+data source, would require fabrication), Topological Sorting/Community Detection/Graph
+Embeddings (graph too small at 7-26 nodes for these to say anything useful), RQ3 (moot while
+propagation measures near-zero), Sock Shop/DeathStarBench/OpenTelemetry Demo/real production
+logs/PagerDuty/ServiceNow (genuinely inaccessible or intractable relative to what's already
+reusable). "Google Microservices Demo" corrected from "not used" to fulfilled — it's the same
+application as Online Boutique, not a separate system.
+
 Update this section as the next phase gets planned.
 
 ---

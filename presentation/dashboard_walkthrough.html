@@ -1,0 +1,690 @@
+<title>BLAST Presentation Guide</title>
+<style>
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0B0F1A;
+      --surface: #121826;
+      --surface-raised: #171F30;
+      --ink: #E8ECF5;
+      --ink-soft: #9AA4BC;
+      --ink-faint: #6B7590;
+      --line: #262F45;
+      --accent: #6E93FF;
+      --accent-ink: #0B0F1A;
+      --good: #4FCE94;
+      --warn: #E0AA3E;
+      --bad: #F0705A;
+      --good-bg: rgba(79,206,148,0.12);
+      --warn-bg: rgba(224,170,62,0.14);
+      --bad-bg: rgba(240,112,90,0.12);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0B0F1A;
+    --surface: #121826;
+    --surface-raised: #171F30;
+    --ink: #E8ECF5;
+    --ink-soft: #9AA4BC;
+    --ink-faint: #6B7590;
+    --line: #262F45;
+    --accent: #6E93FF;
+    --accent-ink: #0B0F1A;
+    --good: #4FCE94;
+    --warn: #E0AA3E;
+    --bad: #F0705A;
+    --good-bg: rgba(79,206,148,0.12);
+    --warn-bg: rgba(224,170,62,0.14);
+    --bad-bg: rgba(240,112,90,0.12);
+  }
+
+  :root {
+    --paper: #F4F6FA;
+    --surface: #FFFFFF;
+    --surface-raised: #FFFFFF;
+    --ink: #10182A;
+    --ink-soft: #57607A;
+    --ink-faint: #7C86A0;
+    --line: #DEE3ED;
+    --accent: #2149D1;
+    --accent-ink: #FFFFFF;
+    --good: #1B8A5F;
+    --warn: #A66A0A;
+    --bad: #C0402A;
+    --good-bg: #E7F5EF;
+    --warn-bg: #FBF0DD;
+    --bad-bg: #FBEAE6;
+
+    --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Cambria", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    --mono: "SF Mono", "Cascadia Code", "Consolas", "Menlo", "Liberation Mono", monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 24px 96px;
+  }
+
+  .page {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  ::selection { background: var(--accent); color: var(--accent-ink); }
+
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; }
+  a:hover { opacity: 0.8; }
+
+  /* ---------- Cover ---------- */
+
+  .cover {
+    padding: 88px 0 52px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 18px;
+  }
+
+  h1.title {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2.3rem, 5vw, 3.2rem);
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    margin: 0 0 20px;
+    text-wrap: balance;
+    color: var(--ink);
+  }
+
+  .thesis {
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    max-width: 62ch;
+    margin: 0 0 28px;
+    text-wrap: balance;
+  }
+
+  .cover-meta {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--ink-faint);
+  }
+
+  .cover-meta strong { color: var(--ink-soft); font-weight: 600; }
+
+  /* ---------- how-to-use box ---------- */
+
+  .howto {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 22px 26px;
+    margin: 40px 0 0;
+  }
+  .howto h2 {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 0 0 10px;
+    font-weight: 700;
+  }
+  .howto p { margin: 0; color: var(--ink-soft); font-size: 0.96rem; }
+
+  /* ---------- sections ---------- */
+
+  section.view {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  section.view:last-of-type { border-bottom: none; }
+
+  .view-head {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 6px;
+  }
+
+  .view-num {
+    font-family: var(--mono);
+    font-size: 0.9rem;
+    color: var(--ink-faint);
+    flex-shrink: 0;
+  }
+
+  h2.view-title {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 1.7rem;
+    margin: 0;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+
+  .tab-name {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--ink-faint);
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    padding: 2px 8px;
+    margin: 4px 0 22px;
+  }
+
+  section.view h3 {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 28px 0 10px;
+    font-weight: 700;
+  }
+
+  section.view p { margin: 0 0 14px; max-width: 68ch; }
+  section.view ul, section.view ol { margin: 0 0 14px; padding-left: 22px; max-width: 66ch; }
+  section.view li { margin-bottom: 6px; }
+
+  code {
+    font-family: var(--mono);
+    font-size: 0.88em;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 1px 5px;
+    color: var(--ink);
+  }
+
+  /* ---------- stat row ---------- */
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 8px 0 20px;
+  }
+  .stat {
+    background: var(--surface);
+    padding: 16px 18px;
+  }
+  .stat .num {
+    font-family: var(--mono);
+    font-size: 1.4rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+    display: block;
+    line-height: 1.15;
+  }
+  .stat .label {
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    margin-top: 4px;
+    display: block;
+  }
+
+  /* ---------- verdict tag ---------- */
+
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--mono);
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 20px;
+  }
+  .tag.good { background: var(--good-bg); color: var(--good); }
+  .tag.warn { background: var(--warn-bg); color: var(--warn); }
+  .tag.bad  { background: var(--bad-bg);  color: var(--bad); }
+
+  /* ---------- callout ---------- */
+
+  .callout {
+    border-left: 3px solid var(--accent);
+    background: var(--surface);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px;
+    margin: 16px 0 20px;
+    max-width: 66ch;
+  }
+  .callout p { margin: 0; }
+  .callout.warn { border-left-color: var(--warn); }
+  .callout.warn strong { color: var(--warn); }
+
+  /* ---------- glossary ---------- */
+
+  .glossary { display: grid; gap: 14px; margin: 10px 0 20px; }
+  .gterm {
+    display: grid;
+    grid-template-columns: 168px 1fr;
+    gap: 16px;
+    align-items: baseline;
+  }
+  .gterm dt {
+    font-family: var(--mono);
+    font-size: 0.86rem;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .gterm dd { margin: 0; color: var(--ink-soft); font-size: 0.94rem; }
+
+  /* ---------- QA ---------- */
+
+  .qa { margin: 10px 0 8px; }
+  .qa .q {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    color: var(--ink);
+    margin: 22px 0 6px;
+  }
+  .qa .a { color: var(--ink-soft); max-width: 66ch; }
+
+  /* ---------- table ---------- */
+
+  .tablewrap { overflow-x: auto; margin: 8px 0 20px; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.88rem; }
+  th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  th { font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-faint); font-weight: 600; }
+  td { color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+  td.hl { color: var(--ink); font-weight: 600; }
+
+  /* ---------- footer ---------- */
+
+  footer {
+    padding: 48px 0 0;
+    color: var(--ink-faint);
+    font-size: 0.82rem;
+  }
+  footer a { color: var(--ink-faint); }
+
+  @media (max-width: 560px) {
+    .gterm { grid-template-columns: 1fr; gap: 2px; }
+    body { padding: 0 16px 72px; }
+    .cover { padding-top: 56px; }
+  }
+</style>
+
+<div class="page">
+
+  <div class="cover">
+    <p class="eyebrow">Presentation companion · dashboard walkthrough</p>
+    <h1 class="title">Understanding the BLAST Dashboard</h1>
+    <p class="thesis">
+      A section-by-section guide to <a href="https://blastops.streamlit.app">blastops.streamlit.app</a> —
+      what each screen shows, why it exists, where its numbers come from, and how to explain it
+      to someone seeing the project for the first time.
+    </p>
+    <div class="cover-meta">
+      <span><strong>Project</strong> BLAST — Business-Loss Aware Structural Triage</span>
+      <span><strong>Dataset</strong> RCAEval RE2-OB, 90 cases</span>
+      <span><strong>Result</strong> Gate 4: mixed, reported honestly</span>
+    </div>
+    <div class="howto">
+      <h2>How to use this</h2>
+      <p>
+        The six sections below match the six tabs in the dashboard's sidebar, in the same order.
+        Read a section right before you click that tab. A glossary and a "likely questions" section
+        sit at the end for quick reference during Q&amp;A.
+      </p>
+    </div>
+  </div>
+
+  <section class="view">
+    <div class="view-head">
+      <span class="view-num">00</span>
+      <h2 class="view-title">The one-sentence idea</h2>
+    </div>
+
+    <p>
+      When several things break in a microservice system at once, most tools rank them by how
+      <em>technically severe</em> each one looks on its own — error rate, latency spike, CPU usage.
+      BLAST's claim is that this is the wrong unit of analysis, because broken things often overlap
+      in <em>what they affect</em>. If incident A and incident B both knock out the same business
+      feature, fixing A already recovers most of the value B was going to cost you — B's true priority
+      just dropped, even though nothing about B itself changed.
+    </p>
+    <p>
+      BLAST treats "which incident first?" as picking a small <strong>set</strong> of incidents to
+      cover the most business-critical capabilities, not scoring incidents one at a time. That's a
+      classic <em>submodular set-selection</em> problem — the same mathematical family behind
+      influence-maximization and sensor placement — which is why a simple greedy algorithm comes with
+      a provable quality guarantee, not just an intuition.
+    </p>
+
+    <div class="callout">
+      <p>
+        <strong>Where BLAST starts and stops:</strong> it never detects faults, localizes root causes,
+        or reads logs. It assumes some upstream system has already told it "these N services are
+        broken right now" — BLAST's only job is deciding the order to fix them in.
+      </p>
+    </div>
+  </section>
+
+  <section class="view">
+    <div class="view-head">
+      <span class="view-num">01</span>
+      <h2 class="view-title">Overview &amp; Findings</h2>
+    </div>
+    <span class="tab-name">sidebar → Overview &amp; Findings</span>
+
+    <p>
+      This is the results summary — the page that answers "did it work?" honestly, before anything
+      interactive. The headline is <span class="tag warn">Gate 4 — Mixed</span>, and the whole page
+      exists to explain that verdict precisely rather than round it up to a win.
+    </p>
+
+    <div class="stats">
+      <div class="stat"><span class="num">0.954</span><span class="label">BLAST's NDCG@5 (ranking accuracy)</span></div>
+      <div class="stat"><span class="num">0.277</span><span class="label">Cliff's δ vs baseline — a real effect</span></div>
+      <div class="stat"><span class="num">-0.023</span><span class="label">Cliff's δ on business loss — negligible</span></div>
+      <div class="stat"><span class="num">0/20</span><span class="label">graph edges with real propagation</span></div>
+    </div>
+
+    <h3>What "mixed" actually means</h3>
+    <p>
+      BLAST is compared against <strong>B9</strong>, a version of itself with the set-selection logic
+      switched off — it just scores every incident independently and sorts. This is the single most
+      important comparison in the project, because it isolates exactly one thing: does thinking about
+      <em>overlap</em> between incidents help?
+    </p>
+    <ul>
+      <li>
+        On <strong>NDCG@5</strong> (how close BLAST's ordering is to the true best ordering) — yes,
+        clearly. The gap is real by two separate tests: a p-value near zero, <em>and</em> an effect
+        size (Cliff's δ = 0.277) past the "this isn't just noise" threshold.
+      </li>
+      <li>
+        On <strong>Cumulative Business Loss</strong> — the more practical metric, "how much value did
+        you lose while waiting for fixes" — the improvement is technically detectable (helped by
+        having 90 test scenarios, which makes even tiny effects statistically visible) but the effect
+        size is almost zero. In plain terms: BLAST orders things more accurately, but at these
+        scenario sizes it barely changes how much damage accumulates before everything gets fixed.
+      </li>
+    </ul>
+
+    <div class="callout warn">
+      <p>
+        <strong>Why report it this way instead of picking the flattering number:</strong> a project
+        log that only reports p-values would call this an unqualified win. Applying the same effect-size
+        bar used everywhere else in the project to this result too is what makes the "win" honest — it
+        also happens to be more interesting: it says <em>where</em> the method's real strength is
+        (ordering accuracy) and where it isn't proven yet (loss reduction).
+      </p>
+    </div>
+
+    <h3>The rest of the page</h3>
+    <p>
+      A bar chart compares all eight methods on NDCG@5 and business loss side by side; a footprint
+      statistic reports how many of the capabilities a typical incident actually touches (never all
+      of them, once attribution was fixed); and an expander lists exactly what the project does
+      <em>not</em> claim — no real revenue was measured, scenarios are synthesized from single faults,
+      and so on.
+    </p>
+  </section>
+
+  <section class="view">
+    <div class="view-head">
+      <span class="view-num">02</span>
+      <h2 class="view-title">Ranked Incident Queue</h2>
+    </div>
+    <span class="tab-name">sidebar → Ranked Incident Queue</span>
+
+    <p>
+      The only screen where you build something yourself. Pick two or more incident types from a
+      dropdown — say, a CPU fault on the currency service and a network-loss fault on the
+      recommendation service — and the page computes, live in your browser, the order BLAST would
+      fix them in, next to the order the "no set-selection" baseline would use.
+    </p>
+
+    <h3>What's actually running</h3>
+    <p>
+      Each incident type carries a probability of impairing each of the 9 business capabilities,
+      learned from its three real repetitions in the dataset. BLAST repeatedly asks: <em>"of the
+      incidents I haven't picked yet, which one adds the most expected coverage of still-unprotected
+      capabilities?"</em> — and picks that one first. Each card shows exactly what it newly covers, which
+      is the whole submodular idea made visible: later picks in the queue add less because earlier
+      picks already covered some of the same ground.
+    </p>
+    <p>
+      The bottom of the page runs the composed scenario against the same measured ground truth the
+      real evaluation uses, and reports the actual simulated business loss under each ordering — a
+      smaller, live version of the Gate 4 experiment.
+    </p>
+
+    <div class="callout">
+      <p>
+        <strong>Presentation tip:</strong> pick a scenario where a service's incidents share a lot of
+        overlap (e.g. two currency-service faults) alongside one that doesn't (an unrelated
+        email-service fault). BLAST will visibly promote the non-overlapping one earlier than the
+        independent-scoring baseline does — that's the concept in one click.
+      </p>
+    </div>
+  </section>
+
+  <section class="view">
+    <div class="view-head">
+      <span class="view-num">03</span>
+      <h2 class="view-title">Business Dependency Graph</h2>
+    </div>
+    <span class="tab-name">sidebar → Business Dependency Graph</span>
+
+    <p>
+      A node-and-edge picture of which services call which, reconstructed directly from real request
+      traces (not hand-drawn) — 7 services, 9 call edges. Node size and color reflect PageRank, a
+      measure of structural centrality: <code>checkoutservice</code> and <code>frontendservice</code>
+      sit at the center because most user journeys pass through them.
+    </p>
+
+    <h3>The table underneath is the more important part</h3>
+    <p>
+      For every edge, the table reports how often a fault in the source service was rigorously shown
+      to also degrade the target service — real statistical testing (a significance test <em>and</em>
+      an effect-size floor), not a guess. The honest number is <strong>0% on every tested edge</strong>.
+      Faults in this dataset stay contained to the service they were injected into; they don't
+      meaningfully spread along the call graph.
+    </p>
+    <div class="callout warn">
+      <p>
+        <strong>Why this doesn't sink the project:</strong> it changes which half of the idea is doing
+        the work. BLAST has two conceptual halves — "faults propagate across the graph" and "concurrent
+        incidents overlap in what they cover." The propagation half turned out to be weak on this
+        benchmark; the overlap half (Section 01/02) is where the real signal is. Saying this plainly
+        is more credible than quietly dropping the graph view.
+      </p>
+    </div>
+  </section>
+
+  <section class="view">
+    <div class="view-head">
+      <span class="view-num">04</span>
+      <h2 class="view-title">Capability Path Viewer</h2>
+    </div>
+    <span class="tab-name">sidebar → Capability Path Viewer</span>
+
+    <p>
+      Pick a service and a fault type, and see exactly which business capability got hit and why.
+      Each row reads left to right: <em>service → the specific user journey that got measurably
+      slower or failed → the business capability that journey delivers.</em> For example, a delay
+      fault on <code>checkoutservice</code> degrades the <em>Place Order</em> journey, which realizes
+      the <em>Order Placement</em> capability — a direct, traceable chain, not a guess.
+    </p>
+
+    <h3>The bug this screen exists to demonstrate the fix for</h3>
+    <p>
+      An earlier version attributed impact at the <em>service</em> level: "was checkoutservice
+      generally slower?" That sounds reasonable, but checkoutservice's own outbound calls (to
+      currency, payment, email…) got misattributed to checkoutservice itself, so almost any fault
+      appeared to hit nearly every business capability at once — useless for prioritization, since
+      everything looked equally bad. Re-attributing impact at the level of the actual user journey
+      that got worse fixed this: now different incidents visibly hit different capabilities, which is
+      what makes set-selection meaningful in the first place.
+    </p>
+  </section>
+
+  <section class="view">
+    <div class="view-head">
+      <span class="view-num">05</span>
+      <h2 class="view-title">BLAST vs Baselines</h2>
+    </div>
+    <span class="tab-name">sidebar → BLAST vs Baselines</span>
+
+    <p>
+      The full scoreboard. Every method is run on the same 90 held-out test scenarios, and a box plot
+      shows the spread of results per method for whichever metric you select. The table below runs the
+      actual statistics.
+    </p>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Method</th><th>What it represents</th></tr></thead>
+        <tbody>
+          <tr><td class="hl">B1 — Random</td><td>sanity floor: a coin flip should lose to everything</td></tr>
+          <tr><td class="hl">B2 — Severity</td><td>rank by raw technical badness only, no business context</td></tr>
+          <tr><td class="hl">B3 — ITIL matrix</td><td>the impact × urgency grid many real ops teams already use</td></tr>
+          <tr><td class="hl">B4 — PageRank</td><td>rank by how central the affected service is in the call graph</td></tr>
+          <tr><td class="hl">B6 — Personalized PageRank</td><td>PageRank biased toward this scenario's affected services</td></tr>
+          <tr><td class="hl">B7 — Learned classifier</td><td>a gradient-boosted model trained on other incidents to predict priority</td></tr>
+          <tr><td class="hl">B9 — BLAST, independent</td><td>BLAST's own scoring model, with set-selection switched off</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Reading the result column</h3>
+    <p>
+      Every comparison is classified using two checks at once: is the difference statistically real
+      (a paired significance test, corrected for testing many comparisons at once), <em>and</em> is it
+      large enough to matter (an effect-size floor). Only rows clearing both read
+      <span class="tag good">BLAST wins (real)</span>. A perhaps-surprising honest result: the plain
+      severity and ITIL baselines actually out-rank BLAST on pure ranking accuracy — traced to the
+      fact that, in this dataset, <em>how badly</em> a fault hits tracks its business cost almost as
+      well as <em>what</em> it hits does, which weakens the advantage of business-aware weighting
+      specifically on this benchmark.
+    </p>
+  </section>
+
+  <section class="view">
+    <div class="view-head">
+      <span class="view-num">06</span>
+      <h2 class="view-title">Heterogeneity Sweep</h2>
+    </div>
+    <span class="tab-name">sidebar → Heterogeneity Sweep</span>
+
+    <p>
+      A follow-up experiment, not on the real dataset at all — a simulation. The natural explanation
+      for Section 01's mixed business-loss result was "maybe the real incidents just don't overlap
+      enough for set-selection to pay off." This screen tests that directly: it generates synthetic
+      incident types with a dial for exactly how much their business-capability footprints overlap,
+      from identical (like the real dataset) to completely disjoint, and reruns the BLAST-vs-independent
+      comparison at every setting.
+    </p>
+
+    <div class="callout warn">
+      <p>
+        <strong>The honest result: the hypothesis didn't hold.</strong> The independent baseline beat
+        BLAST on business loss at every overlap level tested, including zero overlap — not what was
+        predicted. A follow-up check ruled out the obvious bug (a mismatch in how the two methods
+        combine overlapping incidents); it wasn't that. The working explanation now is that minimizing
+        business loss under a fixed one-at-a-time repair schedule is closer to a
+        <em>scheduling</em> problem — where sorting by value is already a strong strategy — than to
+        the <em>coverage-maximizing</em> problem BLAST's greedy algorithm is mathematically proven to
+        do well on. Those turned out to not be the same problem.
+      </p>
+    </div>
+    <p>
+      This is presented as a real, useful negative result: it narrows down <em>why</em> the business-loss
+      number didn't move, rather than leaving it unexplained.
+    </p>
+  </section>
+
+  <section class="view">
+    <div class="view-head">
+      <span class="view-num">07</span>
+      <h2 class="view-title">Glossary</h2>
+    </div>
+
+    <dl class="glossary">
+      <div class="gterm"><dt>NDCG@5</dt><dd>How close a ranking's top 5 are to the true best top 5, on a 0–1 scale. 1.0 is a perfect match.</dd></div>
+      <div class="gterm"><dt>Cumulative Business Loss</dt><dd>Simulates fixing incidents one at a time in a given order and adds up the business value still broken at each step. Lower is better.</dd></div>
+      <div class="gterm"><dt>Cliff's delta</dt><dd>An effect-size measure: how often one method's results actually beat the other's, not just whether the average differs. Below ≈0.15 is treated as noise-sized in this project.</dd></div>
+      <div class="gterm"><dt>p-value / Holm correction</dt><dd>The odds a difference this large would appear by chance. Holm correction tightens the bar when many comparisons are run at once, so a few get lucky by chance.</dd></div>
+      <div class="gterm"><dt>Submodular</dt><dd>A "diminishing returns" property: adding an incident to a small set helps at least as much as adding it to a bigger set that already covers more ground. It's what gives greedy selection its quality guarantee.</dd></div>
+      <div class="gterm"><dt>Journey</dt><dd>One real end-to-end user request through the system, reconstructed from a distributed trace — e.g. one "place an order" attempt.</dd></div>
+      <div class="gterm"><dt>Capability</dt><dd>A business-facing feature a journey delivers, e.g. <em>Order Placement</em> or <em>Product Browsing</em> — the unit BLAST actually optimizes for, not raw technical health.</dd></div>
+      <div class="gterm"><dt>RE2-OB</dt><dd>The benchmark dataset: 90 real fault-injection experiments on Online Boutique, a demo e-commerce microservice app — 5 services × 6 fault types × 3 repeats.</dd></div>
+    </dl>
+  </section>
+
+  <section class="view">
+    <div class="view-head">
+      <span class="view-num">08</span>
+      <h2 class="view-title">If a faculty member asks…</h2>
+    </div>
+
+    <div class="qa">
+      <p class="q">"So does it actually work, yes or no?"</p>
+      <p class="a">
+        It ranks incidents more accurately than scoring them independently — that part is real,
+        statistically and practically. It hasn't yet been shown to reduce simulated business loss by
+        a meaningful margin on this specific benchmark, and the follow-up experiment (Section 06)
+        narrows down why, rather than leaving that unexplained.
+      </p>
+    </div>
+    <div class="qa">
+      <p class="q">"Why trust a synthetic value model instead of real revenue?"</p>
+      <p class="a">
+        No public incident dataset has real revenue attached. The business weights are declared
+        openly as an assumption (never claimed as measured), and the project checks how much the
+        results depend on that assumption rather than hiding it.
+      </p>
+    </div>
+    <div class="qa">
+      <p class="q">"Isn't 90 test scenarios small?"</p>
+      <p class="a">
+        It's enough to detect real differences reliably — which is exactly how the "statistically
+        significant but practically negligible" business-loss result was caught rather than
+        overstated: a small effect still showed up as "significant" at this sample size, which is
+        precisely why the effect-size check matters alongside the p-value.
+      </p>
+    </div>
+    <div class="qa">
+      <p class="q">"What would you do next?"</p>
+      <p class="a">
+        Test on a second system with a different call topology (the current graph-propagation result
+        may be specific to this app), and separately, work out whether the ranking algorithm can be
+        changed to directly target business-loss reduction rather than capability coverage — since
+        Section 06 suggests those are related but not identical objectives.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    Dashboard: <a href="https://blastops.streamlit.app">blastops.streamlit.app</a> · Source and full
+    methodology: <a href="https://github.com/Tanmay268/BLAST">github.com/Tanmay268/BLAST</a>, see
+    <code>context/01_DECISION_LOG.md</code> for every decision referenced above.
+  </footer>
+
+</div>
