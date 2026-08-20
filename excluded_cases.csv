@@ -1,0 +1,2 @@
+case,target_service,fault_type,reason,detail,hard_exclusion
+re2ob_checkoutservice_cpu_2,checkoutservice,cpu,short_window,before=720.0s after=38.6s (min required 300s each side),False

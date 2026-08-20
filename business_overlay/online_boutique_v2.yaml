@@ -1,0 +1,127 @@
+# BLAST — Business Overlay v2 (Online Boutique)
+#
+# context/07_NEXT_PHASE_PLAN.md Step 3. Supersedes
+# business_capabilities.csv (service-level, ADR-014).
+#
+# Maps OPERATIONS (methodName, never serviceName) to
+# business capabilities. A journey type "realises" a
+# capability if any operation in its signature (see
+# journey_impairment.csv / build_journey_impairment.py)
+# appears in that capability's realised_by list.
+#
+# value_per_min is a RELATIVE unit, never currency
+# (ADR-002, hard rule: never write $, never claim
+# dollars). Weights below are a DECLARED assumption --
+# a qualitative revenue-criticality ranking, not a
+# measurement -- and must be validated by the >=5-model
+# sensitivity sweep in 03_RESEARCH_DESIGN.md A6 (Step 5
+# of 07_NEXT_PHASE_PLAN.md), which must include a uniform
+# model as one of the five so uniform weighting is shown
+# rather than silently assumed. This file is that sweep's
+# primary ("revenue_weighted") model, not its only one.
+
+version: 2
+system: online-boutique
+value_model: revenue_weighted
+
+capabilities:
+
+  - id: order_placement
+    display: "Order Placement"
+    value_per_min: 100.0
+    realised_by: [PlaceOrder]
+    rationale: >
+      The operation that converts intent into a completed
+      transaction. Highest criticality tier alongside payment.
+
+  - id: payment_processing
+    display: "Payment Processing"
+    value_per_min: 100.0
+    realised_by: [Charge]
+    rationale: >
+      Directly gates revenue capture. Not observed as its own
+      journey type in the 6-case pilot (checkoutservice's Charge
+      call is internal to PlaceOrder and did not surface as a
+      separate root in this pilot) -- kept declared here so the
+      overlay is correct once cross-service/cross-fault expansion
+      (Step 4) surfaces cases where it is directly observable.
+
+  - id: currency_conversion
+    display: "Currency Conversion"
+    value_per_min: 60.0
+    realised_by: [Convert, GetSupportedCurrencies]
+    rationale: >
+      On the checkout critical path (price correctness at
+      payment time) but also appears on browsing/cart pages for
+      display -- hence high but below the two direct-transaction
+      capabilities.
+
+  - id: cart_management
+    display: "Cart Management"
+    value_per_min: 50.0
+    realised_by: [AddItem, GetCart, EmptyCart]
+    rationale: >
+      Necessary precursor to checkout; high funnel importance
+      without being the transaction itself.
+
+  - id: shipping
+    display: "Shipping"
+    value_per_min: 40.0
+    realised_by: [GetQuote, ShipOrder]
+    rationale: >
+      Required to complete an order (quote at cart time, shipment
+      after payment) but not blocking for browsing or cart
+      management.
+
+  - id: order_confirmation
+    display: "Order Confirmation"
+    value_per_min: 25.0
+    realised_by: [SendOrderConfirmation]
+    rationale: >
+      Post-purchase trust/retention signal; the sale is already
+      captured by the time this runs, so it is valued below the
+      pre-purchase funnel capabilities.
+
+  - id: product_browsing
+    display: "Product Browsing"
+    value_per_min: 20.0
+    realised_by: [GetProduct, ListProducts]
+    rationale: >
+      Top-of-funnel discovery. Essential but not immediately
+      revenue-blocking for any single request.
+
+  - id: product_recommendations
+    display: "Product Recommendations"
+    value_per_min: 10.0
+    realised_by: [ListRecommendations]
+    rationale: >
+      Secondary/upsell feature layered on top of browsing and
+      cart/checkout pages.
+
+  - id: advertisement_retrieval
+    display: "Advertisement Retrieval"
+    value_per_min: 5.0
+    realised_by: [GetAds]
+    rationale: >
+      Monetization-adjacent UX feature; lowest direct criticality
+      to completing a transaction. Matches the plan's own worked
+      example (07_NEXT_PHASE_PLAN.md Step 3).
+
+# ------------------------------------------------------
+# Known coverage gaps, recorded rather than hidden:
+#
+# - payment_processing's Charge operation was not observed
+#   as an independent journey root in the 6-case pilot
+#   (checkout-target-only). It exists in the overlay for
+#   correctness once Step 4 expands to other target
+#   services / fault types where it may surface directly.
+#
+# - A composite frontend page (e.g. Product Detail View)
+#   realises several capabilities in one request by
+#   construction (Online Boutique renders browsing, ads,
+#   recommendations, cart badge, and currency together).
+#   An impaired composite journey cannot be localised to
+#   one constituent capability from duration alone -- see
+#   JOURNEY_TYPING_RULE.md's threat-to-validity note on the
+#   cpu_3 / Product Detail View borderline case.
+# ------------------------------------------------------

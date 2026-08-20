@@ -1,0 +1,10 @@
+case,journey_type_id,journey_label,signature_str,n_traces
+re2ob_currencyservice_loss_2,frontend::AddItem+GetProduct,Add To Cart,AddItem+GetProduct,1780
+re2ob_currencyservice_loss_2,frontend::Convert+GetAds+GetCart+GetProduct+GetSupportedCurrencies+ListRecommendations,Product Detail View,Convert+GetAds+GetCart+GetProduct+GetSupportedCurrencies+ListRecommendations,7828
+re2ob_currencyservice_loss_2,frontend::Convert+GetAds+GetCart+GetSupportedCurrencies+ListProducts,Home Page View,Convert+GetAds+GetCart+GetSupportedCurrencies+ListProducts,1880
+re2ob_currencyservice_loss_2,frontend::Convert+GetCart+GetProduct+GetQuote+GetSupportedCurrencies+ListRecommendations,Cart View,Convert+GetCart+GetProduct+GetQuote+GetSupportedCurrencies+ListRecommendations,3570
+re2ob_currencyservice_loss_2,frontend::GetProduct+GetSupportedCurrencies,frontend::GetProduct+GetSupportedCurrencies,GetProduct+GetSupportedCurrencies,16
+re2ob_currencyservice_loss_2,frontend::GetProduct+GetSupportedCurrencies+ListRecommendations+PlaceOrder,Place Order,GetProduct+GetSupportedCurrencies+ListRecommendations+PlaceOrder,588
+re2ob_currencyservice_loss_2,frontend::GetSupportedCurrencies,frontend::GetSupportedCurrencies,GetSupportedCurrencies,14
+re2ob_currencyservice_loss_2,frontend::empty,frontend::empty,(empty),1587
+re2ob_currencyservice_loss_2,orphaned::hipstershop.CurrencyService/Convert,hipstershop.CurrencyService/Convert (orphaned root),Convert,2004

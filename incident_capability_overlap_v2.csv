@@ -1,0 +1,16 @@
+incident_a,incident_b,intersection_size,union_size,jaccard_overlap,overlapping_capabilities
+re2ob_checkoutservice_cpu_1,re2ob_checkoutservice_cpu_2,0,0,0.0,
+re2ob_checkoutservice_cpu_1,re2ob_checkoutservice_cpu_3,0,6,0.0,
+re2ob_checkoutservice_cpu_1,re2ob_checkoutservice_delay_1,0,4,0.0,
+re2ob_checkoutservice_cpu_1,re2ob_checkoutservice_delay_2,0,4,0.0,
+re2ob_checkoutservice_cpu_1,re2ob_checkoutservice_delay_3,0,4,0.0,
+re2ob_checkoutservice_cpu_2,re2ob_checkoutservice_cpu_3,0,6,0.0,
+re2ob_checkoutservice_cpu_2,re2ob_checkoutservice_delay_1,0,4,0.0,
+re2ob_checkoutservice_cpu_2,re2ob_checkoutservice_delay_2,0,4,0.0,
+re2ob_checkoutservice_cpu_2,re2ob_checkoutservice_delay_3,0,4,0.0,
+re2ob_checkoutservice_cpu_3,re2ob_checkoutservice_delay_1,4,6,0.6666666666666666,Currency Conversion;Order Placement;Product Browsing;Product Recommendations
+re2ob_checkoutservice_cpu_3,re2ob_checkoutservice_delay_2,4,6,0.6666666666666666,Currency Conversion;Order Placement;Product Browsing;Product Recommendations
+re2ob_checkoutservice_cpu_3,re2ob_checkoutservice_delay_3,4,6,0.6666666666666666,Currency Conversion;Order Placement;Product Browsing;Product Recommendations
+re2ob_checkoutservice_delay_1,re2ob_checkoutservice_delay_2,4,4,1.0,Currency Conversion;Order Placement;Product Browsing;Product Recommendations
+re2ob_checkoutservice_delay_1,re2ob_checkoutservice_delay_3,4,4,1.0,Currency Conversion;Order Placement;Product Browsing;Product Recommendations
+re2ob_checkoutservice_delay_2,re2ob_checkoutservice_delay_3,4,4,1.0,Currency Conversion;Order Placement;Product Browsing;Product Recommendations

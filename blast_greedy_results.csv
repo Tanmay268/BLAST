@@ -1,0 +1,7 @@
+selection_step,selected_incident,fault_type,marginal_gain,standalone_coverage,cumulative_coverage,unique_capabilities_covered,total_capabilities,coverage_fraction
+1,re2ob_checkoutservice_cpu_1,cpu,9.0,9.0,9.0,9,9,1.0
+2,re2ob_checkoutservice_cpu_2,cpu,0.0,8.0,9.0,9,9,1.0
+3,re2ob_checkoutservice_cpu_3,cpu,0.0,7.0,9.0,9,9,1.0
+4,re2ob_checkoutservice_delay_1,delay,0.0,7.0,9.0,9,9,1.0
+5,re2ob_checkoutservice_delay_2,delay,0.0,7.0,9.0,9,9,1.0
+6,re2ob_checkoutservice_delay_3,delay,0.0,7.0,9.0,9,9,1.0

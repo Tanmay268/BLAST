@@ -1,0 +1,271 @@
+service,fault_type,capability_id,capability,n_reps,max_magnitude,mean_magnitude,value_per_min,weighted_max_magnitude
+checkoutservice,cpu,order_placement,Order Placement,3,0.8905325147475638,0.29684417158252124,100.0,89.05325147475638
+checkoutservice,cpu,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+checkoutservice,cpu,currency_conversion,Currency Conversion,3,0.8905325147475638,0.29684417158252124,60.0,53.431950884853826
+checkoutservice,cpu,cart_management,Cart Management,3,0.1520836403645709,0.0506945467881903,50.0,7.604182018228545
+checkoutservice,cpu,shipping,Shipping,3,0.0,0.0,40.0,0.0
+checkoutservice,cpu,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+checkoutservice,cpu,product_browsing,Product Browsing,3,0.8905325147475638,0.29684417158252124,20.0,17.810650294951277
+checkoutservice,cpu,product_recommendations,Product Recommendations,3,0.8905325147475638,0.29684417158252124,10.0,8.905325147475638
+checkoutservice,cpu,advertisement_retrieval,Advertisement Retrieval,3,0.1520836403645709,0.0506945467881903,5.0,0.7604182018228545
+checkoutservice,delay,order_placement,Order Placement,3,1.0,0.9987096973345064,100.0,100.0
+checkoutservice,delay,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+checkoutservice,delay,currency_conversion,Currency Conversion,3,1.0,0.999543318454354,60.0,60.0
+checkoutservice,delay,cart_management,Cart Management,3,0.0,0.0,50.0,0.0
+checkoutservice,delay,shipping,Shipping,3,0.0,0.0,40.0,0.0
+checkoutservice,delay,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+checkoutservice,delay,product_browsing,Product Browsing,3,1.0,0.9987096973345064,20.0,20.0
+checkoutservice,delay,product_recommendations,Product Recommendations,3,1.0,0.9987096973345064,10.0,10.0
+checkoutservice,delay,advertisement_retrieval,Advertisement Retrieval,3,0.0,0.0,5.0,0.0
+checkoutservice,disk,order_placement,Order Placement,3,0.6721059391790438,0.5032780724977893,100.0,67.21059391790438
+checkoutservice,disk,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+checkoutservice,disk,currency_conversion,Currency Conversion,3,0.6721059391790438,0.5032780724977893,60.0,40.32635635074263
+checkoutservice,disk,cart_management,Cart Management,3,0.0,0.0,50.0,0.0
+checkoutservice,disk,shipping,Shipping,3,0.0,0.0,40.0,0.0
+checkoutservice,disk,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+checkoutservice,disk,product_browsing,Product Browsing,3,0.6721059391790438,0.5032780724977893,20.0,13.442118783580877
+checkoutservice,disk,product_recommendations,Product Recommendations,3,0.6721059391790438,0.5032780724977893,10.0,6.721059391790439
+checkoutservice,disk,advertisement_retrieval,Advertisement Retrieval,3,0.0,0.0,5.0,0.0
+checkoutservice,loss,order_placement,Order Placement,3,0.9950125760474666,0.9759928361189042,100.0,99.50125760474666
+checkoutservice,loss,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+checkoutservice,loss,currency_conversion,Currency Conversion,3,0.9950125760474666,0.9759928361189042,60.0,59.700754562848
+checkoutservice,loss,cart_management,Cart Management,3,0.0,0.0,50.0,0.0
+checkoutservice,loss,shipping,Shipping,3,0.0,0.0,40.0,0.0
+checkoutservice,loss,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+checkoutservice,loss,product_browsing,Product Browsing,3,0.9950125760474666,0.9759928361189042,20.0,19.900251520949332
+checkoutservice,loss,product_recommendations,Product Recommendations,3,0.9950125760474666,0.9759928361189042,10.0,9.950125760474666
+checkoutservice,loss,advertisement_retrieval,Advertisement Retrieval,3,0.0,0.0,5.0,0.0
+checkoutservice,mem,order_placement,Order Placement,3,0.9419452887537992,0.77870118137757,100.0,94.19452887537993
+checkoutservice,mem,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+checkoutservice,mem,currency_conversion,Currency Conversion,3,0.9419452887537992,0.77870118137757,60.0,56.51671732522795
+checkoutservice,mem,cart_management,Cart Management,3,0.177199518873576,0.059066506291192,50.0,8.8599759436788
+checkoutservice,mem,shipping,Shipping,3,0.0,0.0,40.0,0.0
+checkoutservice,mem,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+checkoutservice,mem,product_browsing,Product Browsing,3,0.9419452887537992,0.77870118137757,20.0,18.838905775075986
+checkoutservice,mem,product_recommendations,Product Recommendations,3,0.9419452887537992,0.77870118137757,10.0,9.419452887537993
+checkoutservice,mem,advertisement_retrieval,Advertisement Retrieval,3,0.177199518873576,0.059066506291192,5.0,0.88599759436788
+checkoutservice,socket,order_placement,Order Placement,3,0.3065373677423912,0.21927644681475256,100.0,30.65373677423912
+checkoutservice,socket,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+checkoutservice,socket,currency_conversion,Currency Conversion,3,0.3065373677423912,0.21927644681475256,60.0,18.392242064543474
+checkoutservice,socket,cart_management,Cart Management,3,0.0,0.0,50.0,0.0
+checkoutservice,socket,shipping,Shipping,3,0.0,0.0,40.0,0.0
+checkoutservice,socket,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+checkoutservice,socket,product_browsing,Product Browsing,3,0.3065373677423912,0.21927644681475256,20.0,6.130747354847824
+checkoutservice,socket,product_recommendations,Product Recommendations,3,0.3065373677423912,0.21927644681475256,10.0,3.065373677423912
+checkoutservice,socket,advertisement_retrieval,Advertisement Retrieval,3,0.0,0.0,5.0,0.0
+currencyservice,cpu,order_placement,Order Placement,3,0.817720225934383,0.8044043811304284,100.0,81.7720225934383
+currencyservice,cpu,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+currencyservice,cpu,currency_conversion,Currency Conversion,3,0.9505767197267724,0.9378566593872208,60.0,57.03460318360634
+currencyservice,cpu,cart_management,Cart Management,3,0.9505767197267724,0.9378566593872208,50.0,47.52883598633862
+currencyservice,cpu,shipping,Shipping,3,0.8006079299299438,0.7956734287315047,40.0,32.02431719719775
+currencyservice,cpu,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+currencyservice,cpu,product_browsing,Product Browsing,3,0.9505767197267724,0.9378566593872208,20.0,19.01153439453545
+currencyservice,cpu,product_recommendations,Product Recommendations,3,0.817720225934383,0.8083679280933932,10.0,8.17720225934383
+currencyservice,cpu,advertisement_retrieval,Advertisement Retrieval,3,0.9505767197267724,0.9378566593872208,5.0,4.752883598633862
+currencyservice,delay,order_placement,Order Placement,3,1.0,0.9952590861654679,100.0,100.0
+currencyservice,delay,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+currencyservice,delay,currency_conversion,Currency Conversion,3,1.0,0.9987750913285026,60.0,60.0
+currencyservice,delay,cart_management,Cart Management,3,0.9993614057644916,0.9984442225434272,50.0,49.96807028822458
+currencyservice,delay,shipping,Shipping,3,0.9978087495160666,0.9957931406387308,40.0,39.91234998064266
+currencyservice,delay,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+currencyservice,delay,product_browsing,Product Browsing,3,1.0,0.9987750913285026,20.0,20.0
+currencyservice,delay,product_recommendations,Product Recommendations,3,1.0,0.9965235574667085,10.0,10.0
+currencyservice,delay,advertisement_retrieval,Advertisement Retrieval,3,0.9993614057644916,0.9984442225434272,5.0,4.996807028822458
+currencyservice,disk,order_placement,Order Placement,3,0.8889201571417316,0.8686851304177852,100.0,88.89201571417316
+currencyservice,disk,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+currencyservice,disk,currency_conversion,Currency Conversion,3,0.9728126850804932,0.9411833194337006,60.0,58.368761104829595
+currencyservice,disk,cart_management,Cart Management,3,0.9728126850804932,0.9411833194337006,50.0,48.64063425402466
+currencyservice,disk,shipping,Shipping,3,0.8773767318930372,0.831990725288001,40.0,35.095069275721485
+currencyservice,disk,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+currencyservice,disk,product_browsing,Product Browsing,3,0.9728126850804932,0.9411833194337006,20.0,19.456253701609864
+currencyservice,disk,product_recommendations,Product Recommendations,3,0.90307002055264,0.8734017515547547,10.0,9.030700205526399
+currencyservice,disk,advertisement_retrieval,Advertisement Retrieval,3,0.9728126850804932,0.9411833194337006,5.0,4.864063425402466
+currencyservice,loss,order_placement,Order Placement,3,0.9797002046573372,0.952985873075099,100.0,97.97002046573373
+currencyservice,loss,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+currencyservice,loss,currency_conversion,Currency Conversion,3,0.9945516811955168,0.9825695419151864,60.0,59.67310087173101
+currencyservice,loss,cart_management,Cart Management,3,0.9945516811955168,0.9825695419151864,50.0,49.72758405977584
+currencyservice,loss,shipping,Shipping,3,0.9529279842528576,0.9318751387672445,40.0,38.1171193701143
+currencyservice,loss,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+currencyservice,loss,product_browsing,Product Browsing,3,0.9945516811955168,0.9825695419151864,20.0,19.89103362391034
+currencyservice,loss,product_recommendations,Product Recommendations,3,0.9797002046573372,0.952985873075099,10.0,9.797002046573372
+currencyservice,loss,advertisement_retrieval,Advertisement Retrieval,3,0.9945516811955168,0.9825695419151864,5.0,4.972758405977585
+currencyservice,mem,order_placement,Order Placement,3,0.9297676164200148,0.9250288905338545,100.0,92.97676164200148
+currencyservice,mem,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+currencyservice,mem,currency_conversion,Currency Conversion,3,0.9950191862976798,0.9901281569571195,60.0,59.70115117786079
+currencyservice,mem,cart_management,Cart Management,3,0.9950191862976798,0.9901281569571195,50.0,49.75095931488399
+currencyservice,mem,shipping,Shipping,3,0.938386754750836,0.9301041465613876,40.0,37.535470190033436
+currencyservice,mem,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+currencyservice,mem,product_browsing,Product Browsing,3,0.9950191862976798,0.9901281569571195,20.0,19.900383725953596
+currencyservice,mem,product_recommendations,Product Recommendations,3,0.969306388718024,0.9581371293292288,10.0,9.69306388718024
+currencyservice,mem,advertisement_retrieval,Advertisement Retrieval,3,0.9950191862976798,0.9901281569571195,5.0,4.975095931488399
+currencyservice,socket,order_placement,Order Placement,3,0.922190328215662,0.5765285596646701,100.0,92.2190328215662
+currencyservice,socket,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+currencyservice,socket,currency_conversion,Currency Conversion,3,0.983252176479268,0.6461476488814104,60.0,58.995130588756076
+currencyservice,socket,cart_management,Cart Management,3,0.983252176479268,0.6461476488814104,50.0,49.1626088239634
+currencyservice,socket,shipping,Shipping,3,0.889804059509629,0.5688409869715559,40.0,35.59216238038516
+currencyservice,socket,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+currencyservice,socket,product_browsing,Product Browsing,3,0.983252176479268,0.6461476488814104,20.0,19.66504352958536
+currencyservice,socket,product_recommendations,Product Recommendations,3,0.922190328215662,0.5907389827313241,10.0,9.221903282156621
+currencyservice,socket,advertisement_retrieval,Advertisement Retrieval,3,0.983252176479268,0.6461476488814104,5.0,4.91626088239634
+emailservice,cpu,order_placement,Order Placement,3,0.3795937000684775,0.2308623559472173,100.0,37.95937000684775
+emailservice,cpu,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+emailservice,cpu,currency_conversion,Currency Conversion,3,0.3795937000684775,0.2308623559472173,60.0,22.775622004108648
+emailservice,cpu,cart_management,Cart Management,3,0.0,0.0,50.0,0.0
+emailservice,cpu,shipping,Shipping,3,0.0,0.0,40.0,0.0
+emailservice,cpu,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+emailservice,cpu,product_browsing,Product Browsing,3,0.3795937000684775,0.2308623559472173,20.0,7.59187400136955
+emailservice,cpu,product_recommendations,Product Recommendations,3,0.3795937000684775,0.2308623559472173,10.0,3.795937000684775
+emailservice,cpu,advertisement_retrieval,Advertisement Retrieval,3,0.0,0.0,5.0,0.0
+emailservice,delay,order_placement,Order Placement,3,0.9590699967137692,0.9487026538111748,100.0,95.90699967137692
+emailservice,delay,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+emailservice,delay,currency_conversion,Currency Conversion,3,0.9590699967137692,0.9487026538111748,60.0,57.54419980282616
+emailservice,delay,cart_management,Cart Management,3,0.0,0.0,50.0,0.0
+emailservice,delay,shipping,Shipping,3,0.0,0.0,40.0,0.0
+emailservice,delay,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+emailservice,delay,product_browsing,Product Browsing,3,0.9590699967137692,0.9487026538111748,20.0,19.181399934275383
+emailservice,delay,product_recommendations,Product Recommendations,3,0.9590699967137692,0.9487026538111748,10.0,9.590699967137692
+emailservice,delay,advertisement_retrieval,Advertisement Retrieval,3,0.0,0.0,5.0,0.0
+emailservice,disk,order_placement,Order Placement,3,0.33644578313253,0.1976215028785596,100.0,33.644578313253
+emailservice,disk,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+emailservice,disk,currency_conversion,Currency Conversion,3,0.33644578313253,0.1976215028785596,60.0,20.1867469879518
+emailservice,disk,cart_management,Cart Management,3,0.0,0.0,50.0,0.0
+emailservice,disk,shipping,Shipping,3,0.0,0.0,40.0,0.0
+emailservice,disk,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+emailservice,disk,product_browsing,Product Browsing,3,0.33644578313253,0.1976215028785596,20.0,6.7289156626506
+emailservice,disk,product_recommendations,Product Recommendations,3,0.33644578313253,0.1976215028785596,10.0,3.3644578313253
+emailservice,disk,advertisement_retrieval,Advertisement Retrieval,3,0.0,0.0,5.0,0.0
+emailservice,loss,order_placement,Order Placement,3,0.3288575652631791,0.31596848693976937,100.0,32.88575652631791
+emailservice,loss,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+emailservice,loss,currency_conversion,Currency Conversion,3,0.3288575652631791,0.31596848693976937,60.0,19.731453915790745
+emailservice,loss,cart_management,Cart Management,3,0.0,0.0,50.0,0.0
+emailservice,loss,shipping,Shipping,3,0.0,0.0,40.0,0.0
+emailservice,loss,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+emailservice,loss,product_browsing,Product Browsing,3,0.3288575652631791,0.31596848693976937,20.0,6.577151305263582
+emailservice,loss,product_recommendations,Product Recommendations,3,0.3288575652631791,0.31596848693976937,10.0,3.288575652631791
+emailservice,loss,advertisement_retrieval,Advertisement Retrieval,3,0.0,0.0,5.0,0.0
+emailservice,mem,order_placement,Order Placement,3,0.6683167177031291,0.6320687580155878,100.0,66.83167177031291
+emailservice,mem,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+emailservice,mem,currency_conversion,Currency Conversion,3,0.6683167177031291,0.6320687580155878,60.0,40.09900306218774
+emailservice,mem,cart_management,Cart Management,3,0.0,0.0,50.0,0.0
+emailservice,mem,shipping,Shipping,3,0.0,0.0,40.0,0.0
+emailservice,mem,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+emailservice,mem,product_browsing,Product Browsing,3,0.6683167177031291,0.6320687580155878,20.0,13.36633435406258
+emailservice,mem,product_recommendations,Product Recommendations,3,0.6683167177031291,0.6320687580155878,10.0,6.68316717703129
+emailservice,mem,advertisement_retrieval,Advertisement Retrieval,3,0.0,0.0,5.0,0.0
+emailservice,socket,order_placement,Order Placement,3,0.2372030779524925,0.07906769265083084,100.0,23.72030779524925
+emailservice,socket,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+emailservice,socket,currency_conversion,Currency Conversion,3,0.2372030779524925,0.07906769265083084,60.0,14.23218467714955
+emailservice,socket,cart_management,Cart Management,3,0.0,0.0,50.0,0.0
+emailservice,socket,shipping,Shipping,3,0.0,0.0,40.0,0.0
+emailservice,socket,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+emailservice,socket,product_browsing,Product Browsing,3,0.2372030779524925,0.07906769265083084,20.0,4.74406155904985
+emailservice,socket,product_recommendations,Product Recommendations,3,0.2372030779524925,0.07906769265083084,10.0,2.372030779524925
+emailservice,socket,advertisement_retrieval,Advertisement Retrieval,3,0.0,0.0,5.0,0.0
+productcatalogservice,cpu,order_placement,Order Placement,3,0.8717818600087959,0.5588086524103394,100.0,87.17818600087959
+productcatalogservice,cpu,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+productcatalogservice,cpu,currency_conversion,Currency Conversion,3,0.9428354922374492,0.7631718726069964,60.0,56.57012953424695
+productcatalogservice,cpu,cart_management,Cart Management,3,0.9428354922374492,0.7631718726069964,50.0,47.141774611872464
+productcatalogservice,cpu,shipping,Shipping,3,0.8556564252021264,0.5619280233282132,40.0,34.22625700808506
+productcatalogservice,cpu,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+productcatalogservice,cpu,product_browsing,Product Browsing,3,0.9428354922374492,0.7631718726069964,20.0,18.856709844748984
+productcatalogservice,cpu,product_recommendations,Product Recommendations,3,0.9428354922374492,0.7631718726069964,10.0,9.428354922374492
+productcatalogservice,cpu,advertisement_retrieval,Advertisement Retrieval,3,0.9428354922374492,0.7631718726069964,5.0,4.714177461187246
+productcatalogservice,delay,order_placement,Order Placement,3,1.0,0.9976851251530016,100.0,100.0
+productcatalogservice,delay,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+productcatalogservice,delay,currency_conversion,Currency Conversion,3,1.0,0.9997209594559634,60.0,60.0
+productcatalogservice,delay,cart_management,Cart Management,3,1.0,0.9990155745158199,50.0,50.0
+productcatalogservice,delay,shipping,Shipping,3,1.0,0.9987254028180358,40.0,40.0
+productcatalogservice,delay,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+productcatalogservice,delay,product_browsing,Product Browsing,3,1.0,0.9997209594559634,20.0,20.0
+productcatalogservice,delay,product_recommendations,Product Recommendations,3,1.0,0.9997209594559634,10.0,10.0
+productcatalogservice,delay,advertisement_retrieval,Advertisement Retrieval,3,0.9991383792147576,0.9985451623980013,5.0,4.9956918960737875
+productcatalogservice,disk,order_placement,Order Placement,3,0.8855068735888423,0.7680105290726139,100.0,88.55068735888423
+productcatalogservice,disk,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+productcatalogservice,disk,currency_conversion,Currency Conversion,3,0.9493327462820174,0.8502020236817683,60.0,56.95996477692104
+productcatalogservice,disk,cart_management,Cart Management,3,0.9493327462820174,0.8548427110621309,50.0,47.466637314100865
+productcatalogservice,disk,shipping,Shipping,3,0.8822120280887433,0.7274745494063559,40.0,35.28848112354973
+productcatalogservice,disk,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+productcatalogservice,disk,product_browsing,Product Browsing,3,0.9493327462820174,0.8548427110621309,20.0,18.986654925640348
+productcatalogservice,disk,product_recommendations,Product Recommendations,3,0.9493327462820174,0.8502020236817683,10.0,9.493327462820174
+productcatalogservice,disk,advertisement_retrieval,Advertisement Retrieval,3,0.9493327462820174,0.8502020236817683,5.0,4.746663731410087
+productcatalogservice,loss,order_placement,Order Placement,3,0.9830549503752116,0.9760744595273293,100.0,98.30549503752117
+productcatalogservice,loss,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+productcatalogservice,loss,currency_conversion,Currency Conversion,3,0.9956055789590176,0.9908623469702169,60.0,59.73633473754106
+productcatalogservice,loss,cart_management,Cart Management,3,0.9956055789590176,0.9908623469702169,50.0,49.780278947950876
+productcatalogservice,loss,shipping,Shipping,3,0.9904431664411366,0.9726509229600394,40.0,39.61772665764546
+productcatalogservice,loss,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+productcatalogservice,loss,product_browsing,Product Browsing,3,0.9956055789590176,0.9908623469702169,20.0,19.91211157918035
+productcatalogservice,loss,product_recommendations,Product Recommendations,3,0.9956055789590176,0.9908623469702169,10.0,9.956055789590176
+productcatalogservice,loss,advertisement_retrieval,Advertisement Retrieval,3,0.9956055789590176,0.9908623469702169,5.0,4.978027894795088
+productcatalogservice,mem,order_placement,Order Placement,3,0.9927766361541814,0.9665237353570914,100.0,99.27766361541815
+productcatalogservice,mem,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+productcatalogservice,mem,currency_conversion,Currency Conversion,3,0.9945546312849188,0.9921896208111308,60.0,59.67327787709513
+productcatalogservice,mem,cart_management,Cart Management,3,0.9945546312849188,0.9921896208111308,50.0,49.72773156424594
+productcatalogservice,mem,shipping,Shipping,3,0.9846264309555376,0.9778325023967261,40.0,39.385057238221506
+productcatalogservice,mem,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+productcatalogservice,mem,product_browsing,Product Browsing,3,0.9945546312849188,0.9921896208111308,20.0,19.891092625698377
+productcatalogservice,mem,product_recommendations,Product Recommendations,3,0.9945546312849188,0.9921896208111308,10.0,9.945546312849189
+productcatalogservice,mem,advertisement_retrieval,Advertisement Retrieval,3,0.9945546312849188,0.9921896208111308,5.0,4.972773156424594
+productcatalogservice,socket,order_placement,Order Placement,3,0.9813398767404702,0.44997120932053575,100.0,98.13398767404702
+productcatalogservice,socket,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+productcatalogservice,socket,currency_conversion,Currency Conversion,3,0.988969803634659,0.4773585828862899,60.0,59.338188218079544
+productcatalogservice,socket,cart_management,Cart Management,3,0.988969803634659,0.4773585828862899,50.0,49.44849018173295
+productcatalogservice,socket,shipping,Shipping,3,0.988969803634659,0.4773585828862899,40.0,39.55879214538636
+productcatalogservice,socket,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+productcatalogservice,socket,product_browsing,Product Browsing,3,0.988969803634659,0.4773585828862899,20.0,19.77939607269318
+productcatalogservice,socket,product_recommendations,Product Recommendations,3,0.988969803634659,0.4773585828862899,10.0,9.88969803634659
+productcatalogservice,socket,advertisement_retrieval,Advertisement Retrieval,3,0.9886106871344822,0.4200868864659824,5.0,4.943053435672411
+recommendationservice,cpu,order_placement,Order Placement,3,0.2143242740134028,0.07144142467113426,100.0,21.432427401340277
+recommendationservice,cpu,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+recommendationservice,cpu,currency_conversion,Currency Conversion,3,0.6412777283429534,0.5412713692261785,60.0,38.476663700577205
+recommendationservice,cpu,cart_management,Cart Management,3,0.6412777283429534,0.5412713692261785,50.0,32.06388641714767
+recommendationservice,cpu,shipping,Shipping,3,0.4397630774313386,0.3323361111317188,40.0,17.590523097253545
+recommendationservice,cpu,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+recommendationservice,cpu,product_browsing,Product Browsing,3,0.6412777283429534,0.5412713692261785,20.0,12.825554566859068
+recommendationservice,cpu,product_recommendations,Product Recommendations,3,0.6412777283429534,0.5412713692261785,10.0,6.412777283429534
+recommendationservice,cpu,advertisement_retrieval,Advertisement Retrieval,3,0.6412777283429534,0.5412713692261785,5.0,3.206388641714767
+recommendationservice,delay,order_placement,Order Placement,3,0.9939755771523536,0.9906371687303489,100.0,99.39755771523537
+recommendationservice,delay,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+recommendationservice,delay,currency_conversion,Currency Conversion,3,0.9968114303749032,0.9932694945377495,60.0,59.80868582249419
+recommendationservice,delay,cart_management,Cart Management,3,0.9968114303749032,0.9908543390118565,50.0,49.84057151874516
+recommendationservice,delay,shipping,Shipping,3,0.9968114303749032,0.9908543390118565,40.0,39.872457214996125
+recommendationservice,delay,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+recommendationservice,delay,product_browsing,Product Browsing,3,0.9968114303749032,0.9932694945377495,20.0,19.936228607498062
+recommendationservice,delay,product_recommendations,Product Recommendations,3,0.9968114303749032,0.9932694945377495,10.0,9.968114303749031
+recommendationservice,delay,advertisement_retrieval,Advertisement Retrieval,3,0.9857635878367366,0.9854233718257238,5.0,4.928817939183682
+recommendationservice,disk,order_placement,Order Placement,3,0.2866882012920775,0.16186646766552512,100.0,28.668820129207752
+recommendationservice,disk,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+recommendationservice,disk,currency_conversion,Currency Conversion,3,0.6659656331283463,0.5023798669196101,60.0,39.95793798770078
+recommendationservice,disk,cart_management,Cart Management,3,0.6659656331283463,0.5053059763556295,50.0,33.298281656417316
+recommendationservice,disk,shipping,Shipping,3,0.497854497712433,0.30980343294463536,40.0,19.91417990849732
+recommendationservice,disk,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+recommendationservice,disk,product_browsing,Product Browsing,3,0.6659656331283463,0.5053059763556295,20.0,13.319312662566926
+recommendationservice,disk,product_recommendations,Product Recommendations,3,0.6659656331283463,0.5023798669196101,10.0,6.659656331283463
+recommendationservice,disk,advertisement_retrieval,Advertisement Retrieval,3,0.6659656331283463,0.5023798669196101,5.0,3.3298281656417315
+recommendationservice,loss,order_placement,Order Placement,3,0.760093997009186,0.6844362523728248,100.0,76.0093997009186
+recommendationservice,loss,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+recommendationservice,loss,currency_conversion,Currency Conversion,3,0.760093997009186,0.7037662841510571,60.0,45.60563982055116
+recommendationservice,loss,cart_management,Cart Management,3,0.6459852748181596,0.6353552491387761,50.0,32.29926374090798
+recommendationservice,loss,shipping,Shipping,3,0.6459852748181596,0.6353552491387761,40.0,25.839410992726386
+recommendationservice,loss,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+recommendationservice,loss,product_browsing,Product Browsing,3,0.760093997009186,0.7037662841510571,20.0,15.20187994018372
+recommendationservice,loss,product_recommendations,Product Recommendations,3,0.760093997009186,0.7037662841510571,10.0,7.60093997009186
+recommendationservice,loss,advertisement_retrieval,Advertisement Retrieval,3,0.6069746662735509,0.5792463851455868,5.0,3.0348733313677547
+recommendationservice,mem,order_placement,Order Placement,3,0.3736249604305159,0.29210922104440623,100.0,37.36249604305159
+recommendationservice,mem,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+recommendationservice,mem,currency_conversion,Currency Conversion,3,0.7536051963249792,0.7388919831560146,60.0,45.21631177949875
+recommendationservice,mem,cart_management,Cart Management,3,0.7536051963249792,0.7388919831560146,50.0,37.68025981624896
+recommendationservice,mem,shipping,Shipping,3,0.6065177571995521,0.5354048099810267,40.0,24.260710287982086
+recommendationservice,mem,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+recommendationservice,mem,product_browsing,Product Browsing,3,0.7536051963249792,0.7388919831560146,20.0,15.072103926499585
+recommendationservice,mem,product_recommendations,Product Recommendations,3,0.7536051963249792,0.7388919831560146,10.0,7.536051963249792
+recommendationservice,mem,advertisement_retrieval,Advertisement Retrieval,3,0.7536051963249792,0.7388919831560146,5.0,3.768025981624896
+recommendationservice,socket,order_placement,Order Placement,3,0.7341192937123169,0.24470643123743896,100.0,73.4119293712317
+recommendationservice,socket,payment_processing,Payment Processing,3,0.0,0.0,100.0,0.0
+recommendationservice,socket,currency_conversion,Currency Conversion,3,0.94918484118736,0.31639494706245336,60.0,56.9510904712416
+recommendationservice,socket,cart_management,Cart Management,3,0.94918484118736,0.31639494706245336,50.0,47.459242059368
+recommendationservice,socket,shipping,Shipping,3,0.8500344347152708,0.28334481157175695,40.0,34.001377388610834
+recommendationservice,socket,order_confirmation,Order Confirmation,3,0.0,0.0,25.0,0.0
+recommendationservice,socket,product_browsing,Product Browsing,3,0.94918484118736,0.31639494706245336,20.0,18.983696823747202
+recommendationservice,socket,product_recommendations,Product Recommendations,3,0.94918484118736,0.31639494706245336,10.0,9.491848411873601
+recommendationservice,socket,advertisement_retrieval,Advertisement Retrieval,3,0.94918484118736,0.31639494706245336,5.0,4.7459242059368005

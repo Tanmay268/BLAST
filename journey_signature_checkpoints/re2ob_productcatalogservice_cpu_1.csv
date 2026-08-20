@@ -1,0 +1,12 @@
+case,journey_type_id,journey_label,signature_str,n_traces
+re2ob_productcatalogservice_cpu_1,frontend::AddItem+GetProduct,Add To Cart,AddItem+GetProduct,1976
+re2ob_productcatalogservice_cpu_1,frontend::Convert+GetAds+GetCart+GetProduct+GetSupportedCurrencies+ListRecommendations,Product Detail View,Convert+GetAds+GetCart+GetProduct+GetSupportedCurrencies+ListRecommendations,8341
+re2ob_productcatalogservice_cpu_1,frontend::Convert+GetAds+GetCart+GetSupportedCurrencies+ListProducts,Home Page View,Convert+GetAds+GetCart+GetSupportedCurrencies+ListProducts,1955
+re2ob_productcatalogservice_cpu_1,frontend::Convert+GetCart+GetProduct+GetQuote+GetSupportedCurrencies+ListRecommendations,Cart View,Convert+GetCart+GetProduct+GetQuote+GetSupportedCurrencies+ListRecommendations,3895
+re2ob_productcatalogservice_cpu_1,frontend::Convert+GetCart+GetProduct+GetSupportedCurrencies,frontend::Convert+GetCart+GetProduct+GetSupportedCurrencies,Convert+GetCart+GetProduct+GetSupportedCurrencies,1
+re2ob_productcatalogservice_cpu_1,frontend::Convert+GetCart+GetProduct+GetSupportedCurrencies+ListRecommendations,frontend::Convert+GetCart+GetProduct+GetSupportedCurrencies+ListRecommendations,Convert+GetCart+GetProduct+GetSupportedCurrencies+ListRecommendations,1
+re2ob_productcatalogservice_cpu_1,frontend::Convert+GetCart+GetSupportedCurrencies+ListProducts,frontend::Convert+GetCart+GetSupportedCurrencies+ListProducts,Convert+GetCart+GetSupportedCurrencies+ListProducts,2
+re2ob_productcatalogservice_cpu_1,frontend::GetProduct+GetSupportedCurrencies+ListRecommendations+PlaceOrder,Place Order,GetProduct+GetSupportedCurrencies+ListRecommendations+PlaceOrder,640
+re2ob_productcatalogservice_cpu_1,frontend::PlaceOrder,frontend::PlaceOrder,PlaceOrder,1
+re2ob_productcatalogservice_cpu_1,frontend::empty,frontend::empty,(empty),1587
+re2ob_productcatalogservice_cpu_1,orphaned::hipstershop.CurrencyService/Convert,hipstershop.CurrencyService/Convert (orphaned root),Convert,2337

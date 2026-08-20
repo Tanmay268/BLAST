@@ -1,0 +1,7 @@
+incident_id,fault_type,Order Placement,Payment Processing,Currency Conversion,Cart Management,Shipping,Order Confirmation,Product Browsing,Product Recommendations,Advertisement Retrieval
+re2ob_checkoutservice_cpu_1,cpu,0,0,0,0,0,0,0,0,0
+re2ob_checkoutservice_cpu_2,cpu,0,0,0,0,0,0,0,0,0
+re2ob_checkoutservice_cpu_3,cpu,1,0,1,1,0,0,1,1,1
+re2ob_checkoutservice_delay_1,delay,1,0,1,0,0,0,1,1,0
+re2ob_checkoutservice_delay_2,delay,1,0,1,0,0,0,1,1,0
+re2ob_checkoutservice_delay_3,delay,1,0,1,0,0,0,1,1,0

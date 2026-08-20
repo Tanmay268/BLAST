@@ -1,0 +1,7 @@
+incident_id,fault_type,independent_score,capabilities_covered,rank
+re2ob_checkoutservice_cpu_3,cpu,245.0,6,1
+re2ob_checkoutservice_delay_1,delay,190.0,4,2
+re2ob_checkoutservice_delay_2,delay,190.0,4,3
+re2ob_checkoutservice_delay_3,delay,190.0,4,4
+re2ob_checkoutservice_cpu_1,cpu,0.0,0,5
+re2ob_checkoutservice_cpu_2,cpu,0.0,0,6

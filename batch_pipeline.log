@@ -1,0 +1,388 @@
+==============================================================================================================
+BLAST — FULL RE2-OB BATCH PIPELINE
+==============================================================================================================
+
+Total cases to process: 90
+
+[1/90] re2ob_checkoutservice_cpu_1 (target=checkoutservice, fault=cpu)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 2it [00:00, 39199.10it/s]
+  OK -- 9 journey types, 0 impaired
+
+[2/90] re2ob_checkoutservice_cpu_2 (target=checkoutservice, fault=cpu)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 2it [00:00, 18808.54it/s]
+  WARNING: short window (before=720.0s, after=38.6s) -- kept, flagged insufficient_data in output
+  OK -- 9 journey types, 0 impaired
+
+[3/90] re2ob_checkoutservice_cpu_3 (target=checkoutservice, fault=cpu)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 2it [00:00, 50533.78it/s]
+  OK -- 7 journey types, 3 impaired
+
+[4/90] re2ob_checkoutservice_delay_1 (target=checkoutservice, fault=delay)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 2it [00:00, 47662.55it/s]
+  OK -- 9 journey types, 2 impaired
+
+[5/90] re2ob_checkoutservice_delay_2 (target=checkoutservice, fault=delay)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 2it [00:00, 47127.01it/s]
+  OK -- 8 journey types, 2 impaired
+
+[6/90] re2ob_checkoutservice_delay_3 (target=checkoutservice, fault=delay)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 2it [00:00, 54120.05it/s]
+  OK -- 10 journey types, 2 impaired
+
+[7/90] re2ob_checkoutservice_disk_1 (target=checkoutservice, fault=disk)...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  2.04it/s]Fetching ... files: 2it [00:09,  5.26s/it]Fetching ... files: 2it [00:09,  4.54s/it]
+  OK -- 8 journey types, 1 impaired
+
+[8/90] re2ob_checkoutservice_disk_2 (target=checkoutservice, fault=disk)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  1.71it/s]Fetching ... files: 2it [00:05,  3.37s/it]Fetching ... files: 2it [00:05,  2.96s/it]
+  OK -- 7 journey types, 2 impaired
+
+[9/90] re2ob_checkoutservice_disk_3 (target=checkoutservice, fault=disk)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  1.70it/s]Fetching ... files: 2it [00:06,  3.72s/it]Fetching ... files: 2it [00:06,  3.25s/it]
+  OK -- 8 journey types, 2 impaired
+
+[10/90] re2ob_checkoutservice_loss_1 (target=checkoutservice, fault=loss)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  4.13it/s]Fetching ... files: 2it [00:06,  3.70s/it]Fetching ... files: 2it [00:06,  3.18s/it]
+  OK -- 8 journey types, 2 impaired
+
+[11/90] re2ob_checkoutservice_loss_2 (target=checkoutservice, fault=loss)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  5.21it/s]Fetching ... files: 2it [00:06,  3.75s/it]Fetching ... files: 2it [00:06,  3.21s/it]
+  OK -- 10 journey types, 2 impaired
+
+[12/90] re2ob_checkoutservice_loss_3 (target=checkoutservice, fault=loss)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  3.64it/s]Fetching ... files: 2it [00:08,  4.87s/it]Fetching ... files: 2it [00:08,  4.18s/it]
+  OK -- 9 journey types, 2 impaired
+
+[13/90] re2ob_checkoutservice_mem_1 (target=checkoutservice, fault=mem)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:01,  1.15s/it]Fetching ... files: 2it [00:06,  3.35s/it]Fetching ... files: 2it [00:06,  3.02s/it]
+  OK -- 9 journey types, 2 impaired
+
+[14/90] re2ob_checkoutservice_mem_2 (target=checkoutservice, fault=mem)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  1.99it/s]Fetching ... files: 2it [00:05,  3.19s/it]Fetching ... files: 2it [00:05,  2.79s/it]
+  OK -- 8 journey types, 3 impaired
+
+[15/90] re2ob_checkoutservice_mem_3 (target=checkoutservice, fault=mem)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  3.55it/s]Fetching ... files: 2it [00:06,  3.86s/it]Fetching ... files: 2it [00:06,  3.33s/it]
+  OK -- 8 journey types, 2 impaired
+
+[16/90] re2ob_checkoutservice_socket_1 (target=checkoutservice, fault=socket)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  1.64it/s]Fetching ... files: 2it [00:06,  3.48s/it]Fetching ... files: 2it [00:06,  3.05s/it]
+  OK -- 7 journey types, 1 impaired
+
+[17/90] re2ob_checkoutservice_socket_2 (target=checkoutservice, fault=socket)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  2.65it/s]Fetching ... files: 2it [00:06,  3.50s/it]Fetching ... files: 2it [00:06,  3.03s/it]
+  OK -- 9 journey types, 1 impaired
+
+[18/90] re2ob_checkoutservice_socket_3 (target=checkoutservice, fault=socket)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 2it [00:05,  2.75s/it]Fetching ... files: 2it [00:05,  2.75s/it]
+  OK -- 8 journey types, 2 impaired
+
+[19/90] re2ob_currencyservice_cpu_1 (target=currencyservice, fault=cpu)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  2.10it/s]Fetching ... files: 2it [00:06,  3.54s/it]Fetching ... files: 2it [00:06,  3.08s/it]
+  OK -- 7 journey types, 5 impaired
+
+[20/90] re2ob_currencyservice_cpu_2 (target=currencyservice, fault=cpu)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 2it [00:06,  3.40s/it]Fetching ... files: 2it [00:06,  3.40s/it]
+  OK -- 10 journey types, 5 impaired
+
+[21/90] re2ob_currencyservice_cpu_3 (target=currencyservice, fault=cpu)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  1.69it/s]Fetching ... files: 2it [00:06,  3.66s/it]Fetching ... files: 2it [00:06,  3.20s/it]
+  OK -- 7 journey types, 5 impaired
+
+[22/90] re2ob_currencyservice_delay_1 (target=currencyservice, fault=delay)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  2.10it/s]Fetching ... files: 2it [00:06,  3.71s/it]Fetching ... files: 2it [00:06,  3.22s/it]
+  OK -- 10 journey types, 5 impaired
+
+[23/90] re2ob_currencyservice_delay_2 (target=currencyservice, fault=delay)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  3.30it/s]Fetching ... files: 2it [00:06,  3.54s/it]Fetching ... files: 2it [00:06,  3.06s/it]
+  OK -- 11 journey types, 5 impaired
+
+[24/90] re2ob_currencyservice_delay_3 (target=currencyservice, fault=delay)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  1.66it/s]Fetching ... files: 2it [00:06,  3.77s/it]Fetching ... files: 2it [00:06,  3.29s/it]
+  OK -- 11 journey types, 5 impaired
+
+[25/90] re2ob_currencyservice_disk_1 (target=currencyservice, fault=disk)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  1.92it/s]Fetching ... files: 2it [00:06,  3.48s/it]Fetching ... files: 2it [00:06,  3.04s/it]
+  OK -- 9 journey types, 5 impaired
+
+[26/90] re2ob_currencyservice_disk_2 (target=currencyservice, fault=disk)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  1.98it/s]Fetching ... files: 2it [00:06,  3.90s/it]Fetching ... files: 2it [00:06,  3.39s/it]
+  OK -- 10 journey types, 5 impaired
+
+[27/90] re2ob_currencyservice_disk_3 (target=currencyservice, fault=disk)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  2.08it/s]Fetching ... files: 2it [00:06,  3.71s/it]Fetching ... files: 2it [00:06,  3.22s/it]
+  OK -- 8 journey types, 5 impaired
+
+[28/90] re2ob_currencyservice_loss_1 (target=currencyservice, fault=loss)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  2.07it/s]Fetching ... files: 2it [00:05,  2.93s/it]Fetching ... files: 2it [00:05,  2.56s/it]
+  OK -- 12 journey types, 6 impaired
+
+[29/90] re2ob_currencyservice_loss_2 (target=currencyservice, fault=loss)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  2.49it/s]Fetching ... files: 2it [00:05,  3.32s/it]Fetching ... files: 2it [00:05,  2.89s/it]
+  OK -- 9 journey types, 6 impaired
+
+[30/90] re2ob_currencyservice_loss_3 (target=currencyservice, fault=loss)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  2.17it/s]Fetching ... files: 2it [00:06,  3.52s/it]Fetching ... files: 2it [00:06,  3.06s/it]
+  OK -- 12 journey types, 6 impaired
+
+[31/90] re2ob_currencyservice_mem_1 (target=currencyservice, fault=mem)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  2.56it/s]Fetching ... files: 2it [00:05,  3.25s/it]Fetching ... files: 2it [00:05,  2.82s/it]
+  OK -- 11 journey types, 6 impaired
+
+[32/90] re2ob_currencyservice_mem_2 (target=currencyservice, fault=mem)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  1.90it/s]Fetching ... files: 2it [00:06,  3.87s/it]Fetching ... files: 2it [00:06,  3.37s/it]
+  OK -- 10 journey types, 6 impaired
+
+[33/90] re2ob_currencyservice_mem_3 (target=currencyservice, fault=mem)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  1.66it/s]Fetching ... files: 2it [00:05,  3.39s/it]Fetching ... files: 2it [00:05,  2.97s/it]
+  OK -- 10 journey types, 6 impaired
+
+[34/90] re2ob_currencyservice_socket_1 (target=currencyservice, fault=socket)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  4.07it/s]Fetching ... files: 2it [00:05,  3.42s/it]Fetching ... files: 2it [00:05,  2.94s/it]
+  OK -- 8 journey types, 0 impaired
+
+[35/90] re2ob_currencyservice_socket_2 (target=currencyservice, fault=socket)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  2.01it/s]Fetching ... files: 2it [00:06,  3.46s/it]Fetching ... files: 2it [00:06,  3.01s/it]
+  OK -- 7 journey types, 5 impaired
+
+[36/90] re2ob_currencyservice_socket_3 (target=currencyservice, fault=socket)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  1.55it/s]Fetching ... files: 2it [00:06,  3.58s/it]Fetching ... files: 2it [00:06,  3.14s/it]
+  OK -- 8 journey types, 5 impaired
+
+[37/90] re2ob_emailservice_cpu_1 (target=emailservice, fault=cpu)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  2.27it/s]Fetching ... files: 2it [00:06,  3.48s/it]Fetching ... files: 2it [00:06,  3.02s/it]
+  OK -- 8 journey types, 0 impaired
+
+[38/90] re2ob_emailservice_cpu_2 (target=emailservice, fault=cpu)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  4.39it/s]Fetching ... files: 2it [00:05,  3.44s/it]Fetching ... files: 2it [00:05,  2.96s/it]
+  OK -- 7 journey types, 1 impaired
+
+[39/90] re2ob_emailservice_cpu_3 (target=emailservice, fault=cpu)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  3.16it/s]Fetching ... files: 2it [00:05,  3.18s/it]Fetching ... files: 2it [00:05,  2.75s/it]
+  OK -- 7 journey types, 1 impaired
+
+[40/90] re2ob_emailservice_delay_1 (target=emailservice, fault=delay)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  4.21it/s]Fetching ... files: 2it [00:06,  3.61s/it]Fetching ... files: 2it [00:06,  3.11s/it]
+  OK -- 7 journey types, 1 impaired
+
+[41/90] re2ob_emailservice_delay_2 (target=emailservice, fault=delay)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  2.01it/s]Fetching ... files: 2it [00:05,  3.36s/it]Fetching ... files: 2it [00:05,  2.93s/it]
+  OK -- 7 journey types, 1 impaired
+
+[42/90] re2ob_emailservice_delay_3 (target=emailservice, fault=delay)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  2.13it/s]Fetching ... files: 2it [00:05,  3.45s/it]Fetching ... files: 2it [00:05,  3.00s/it]
+  OK -- 7 journey types, 1 impaired
+
+[43/90] re2ob_emailservice_disk_1 (target=emailservice, fault=disk)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  5.88it/s]Fetching ... files: 2it [00:05,  3.03s/it]Fetching ... files: 2it [00:05,  2.60s/it]
+  OK -- 7 journey types, 0 impaired
+
+[44/90] re2ob_emailservice_disk_2 (target=emailservice, fault=disk)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  1.26it/s]Fetching ... files: 2it [00:05,  3.27s/it]Fetching ... files: 2it [00:05,  2.90s/it]
+  OK -- 7 journey types, 1 impaired
+
+[45/90] re2ob_emailservice_disk_3 (target=emailservice, fault=disk)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  3.38it/s]Fetching ... files: 2it [00:05,  3.24s/it]Fetching ... files: 2it [00:05,  2.80s/it]
+  OK -- 7 journey types, 1 impaired
+
+[46/90] re2ob_emailservice_loss_1 (target=emailservice, fault=loss)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 2it [00:05,  2.77s/it]Fetching ... files: 2it [00:05,  2.77s/it]
+  OK -- 8 journey types, 1 impaired
+
+[47/90] re2ob_emailservice_loss_2 (target=emailservice, fault=loss)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  2.75it/s]Fetching ... files: 2it [00:05,  3.34s/it]Fetching ... files: 2it [00:05,  2.89s/it]
+  OK -- 9 journey types, 1 impaired
+
+[48/90] re2ob_emailservice_loss_3 (target=emailservice, fault=loss)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  1.53it/s]Fetching ... files: 2it [00:05,  3.05s/it]Fetching ... files: 2it [00:05,  2.69s/it]
+  OK -- 8 journey types, 1 impaired
+
+[49/90] re2ob_emailservice_mem_1 (target=emailservice, fault=mem)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  1.86it/s]Fetching ... files: 2it [00:05,  3.20s/it]Fetching ... files: 2it [00:05,  2.80s/it]
+  OK -- 9 journey types, 1 impaired
+
+[50/90] re2ob_emailservice_mem_2 (target=emailservice, fault=mem)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  3.31it/s]Fetching ... files: 2it [00:05,  3.39s/it]Fetching ... files: 2it [00:05,  2.93s/it]
+  OK -- 8 journey types, 1 impaired
+
+[51/90] re2ob_emailservice_mem_3 (target=emailservice, fault=mem)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  1.66it/s]Fetching ... files: 2it [00:05,  3.16s/it]Fetching ... files: 2it [00:05,  2.78s/it]
+  OK -- 63 journey types, 1 impaired
+
+[52/90] re2ob_emailservice_socket_1 (target=emailservice, fault=socket)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  9.19it/s]Fetching ... files: 2it [00:05,  3.44s/it]Fetching ... files: 2it [00:05,  2.94s/it]
+  OK -- 7 journey types, 0 impaired
+
+[53/90] re2ob_emailservice_socket_2 (target=emailservice, fault=socket)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  2.14it/s]Fetching ... files: 2it [00:05,  3.26s/it]Fetching ... files: 2it [00:05,  2.84s/it]
+  OK -- 7 journey types, 1 impaired
+
+[54/90] re2ob_emailservice_socket_3 (target=emailservice, fault=socket)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  3.02it/s]Fetching ... files: 2it [00:05,  3.29s/it]Fetching ... files: 2it [00:05,  2.85s/it]
+  OK -- 8 journey types, 0 impaired
+
+[55/90] re2ob_productcatalogservice_cpu_1 (target=productcatalogservice, fault=cpu)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  2.89it/s]Fetching ... files: 2it [00:05,  3.27s/it]Fetching ... files: 2it [00:05,  2.83s/it]
+  OK -- 11 journey types, 2 impaired
+
+[56/90] re2ob_productcatalogservice_cpu_2 (target=productcatalogservice, fault=cpu)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  1.61it/s]Fetching ... files: 2it [00:06,  3.67s/it]Fetching ... files: 2it [00:06,  3.21s/it]
+  OK -- 9 journey types, 5 impaired
+
+[57/90] re2ob_productcatalogservice_cpu_3 (target=productcatalogservice, fault=cpu)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  2.35it/s]Fetching ... files: 2it [00:07,  4.59s/it]Fetching ... files: 2it [00:07,  3.97s/it]
+  OK -- 9 journey types, 5 impaired
+
+[58/90] re2ob_productcatalogservice_delay_1 (target=productcatalogservice, fault=delay)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  2.32it/s]Fetching ... files: 2it [00:05,  3.12s/it]Fetching ... files: 2it [00:05,  2.72s/it]
+  OK -- 12 journey types, 5 impaired
+
+[59/90] re2ob_productcatalogservice_delay_2 (target=productcatalogservice, fault=delay)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  1.75it/s]Fetching ... files: 2it [00:05,  3.10s/it]Fetching ... files: 2it [00:05,  2.72s/it]
+  OK -- 13 journey types, 5 impaired
+
+[60/90] re2ob_productcatalogservice_delay_3 (target=productcatalogservice, fault=delay)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  4.03it/s]Fetching ... files: 2it [00:05,  3.37s/it]Fetching ... files: 2it [00:05,  2.90s/it]
+  OK -- 14 journey types, 5 impaired
+
+[61/90] re2ob_productcatalogservice_disk_1 (target=productcatalogservice, fault=disk)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  3.57it/s]Fetching ... files: 2it [00:06,  3.72s/it]Fetching ... files: 2it [00:06,  3.20s/it]
+  OK -- 10 journey types, 4 impaired
+
+[62/90] re2ob_productcatalogservice_disk_2 (target=productcatalogservice, fault=disk)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  1.67it/s]Fetching ... files: 2it [00:05,  3.12s/it]Fetching ... files: 2it [00:05,  2.74s/it]
+  OK -- 10 journey types, 6 impaired
+
+[63/90] re2ob_productcatalogservice_disk_3 (target=productcatalogservice, fault=disk)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  1.71it/s]Fetching ... files: 2it [00:07,  4.47s/it]Fetching ... files: 2it [00:07,  3.89s/it]
+  OK -- 9 journey types, 6 impaired
+
+[64/90] re2ob_productcatalogservice_loss_1 (target=productcatalogservice, fault=loss)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:01,  1.50s/it]Fetching ... files: 2it [00:05,  2.76s/it]Fetching ... files: 2it [00:05,  2.57s/it]
+  OK -- 12 journey types, 6 impaired
+
+[65/90] re2ob_productcatalogservice_loss_2 (target=productcatalogservice, fault=loss)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  1.00it/s]Fetching ... files: 2it [00:04,  2.29s/it]Fetching ... files: 2it [00:04,  2.10s/it]
+  OK -- 14 journey types, 7 impaired
+
+[66/90] re2ob_productcatalogservice_loss_3 (target=productcatalogservice, fault=loss)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  7.36it/s]Fetching ... files: 2it [00:06,  3.85s/it]Fetching ... files: 2it [00:06,  3.29s/it]
+  OK -- 14 journey types, 5 impaired
+
+[67/90] re2ob_productcatalogservice_mem_1 (target=productcatalogservice, fault=mem)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  5.64it/s]Fetching ... files: 2it [00:06,  3.76s/it]Fetching ... files: 2it [00:06,  3.22s/it]
+  OK -- 16 journey types, 5 impaired
+
+[68/90] re2ob_productcatalogservice_mem_2 (target=productcatalogservice, fault=mem)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  7.62it/s]Fetching ... files: 2it [00:05,  3.39s/it]Fetching ... files: 2it [00:05,  2.91s/it]
+  OK -- 24 journey types, 6 impaired
+
+[69/90] re2ob_productcatalogservice_mem_3 (target=productcatalogservice, fault=mem)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  4.38it/s]Fetching ... files: 2it [00:04,  2.63s/it]Fetching ... files: 2it [00:04,  2.27s/it]
+  OK -- 17 journey types, 7 impaired
+
+[70/90] re2ob_productcatalogservice_socket_1 (target=productcatalogservice, fault=socket)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 2it [00:05,  2.85s/it]Fetching ... files: 2it [00:05,  2.85s/it]
+  OK -- 9 journey types, 5 impaired
+
+[71/90] re2ob_productcatalogservice_socket_2 (target=productcatalogservice, fault=socket)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  3.57it/s]Fetching ... files: 2it [00:07,  4.08s/it]Fetching ... files: 2it [00:07,  3.51s/it]
+  OK -- 7 journey types, 4 impaired
+
+[72/90] re2ob_productcatalogservice_socket_3 (target=productcatalogservice, fault=socket)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  2.42it/s]Fetching ... files: 2it [00:06,  4.00s/it]Fetching ... files: 2it [00:06,  3.46s/it]
+  OK -- 8 journey types, 2 impaired
+
+[73/90] re2ob_recommendationservice_cpu_1 (target=recommendationservice, fault=cpu)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  1.23it/s]Fetching ... files: 2it [00:07,  4.00s/it]Fetching ... files: 2it [00:07,  3.52s/it]
+  OK -- 10 journey types, 3 impaired
+
+[74/90] re2ob_recommendationservice_cpu_2 (target=recommendationservice, fault=cpu)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  2.66it/s]Fetching ... files: 2it [00:06,  4.03s/it]Fetching ... files: 2it [00:06,  3.48s/it]
+  OK -- 8 journey types, 3 impaired
+
+[75/90] re2ob_recommendationservice_cpu_3 (target=recommendationservice, fault=cpu)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  3.44it/s]Fetching ... files: 2it [00:05,  3.47s/it]Fetching ... files: 2it [00:05,  3.00s/it]
+  OK -- 8 journey types, 2 impaired
+
+[76/90] re2ob_recommendationservice_delay_1 (target=recommendationservice, fault=delay)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  7.65it/s]Fetching ... files: 2it [00:07,  4.49s/it]Fetching ... files: 2it [00:07,  3.83s/it]
+  OK -- 9 journey types, 3 impaired
+
+[77/90] re2ob_recommendationservice_delay_2 (target=recommendationservice, fault=delay)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  2.27it/s]Fetching ... files: 2it [00:06,  3.79s/it]Fetching ... files: 2it [00:06,  3.28s/it]
+  OK -- 8 journey types, 3 impaired
+
+[78/90] re2ob_recommendationservice_delay_3 (target=recommendationservice, fault=delay)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  9.47it/s]Fetching ... files: 2it [00:06,  3.74s/it]Fetching ... files: 2it [00:06,  3.19s/it]
+  OK -- 9 journey types, 3 impaired
+
+[79/90] re2ob_recommendationservice_disk_1 (target=recommendationservice, fault=disk)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  2.90it/s]Fetching ... files: 2it [00:10,  6.08s/it]Fetching ... files: 2it [00:10,  5.22s/it]
+  OK -- 9 journey types, 2 impaired
+
+[80/90] re2ob_recommendationservice_disk_2 (target=recommendationservice, fault=disk)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  2.09it/s]Fetching ... files: 2it [00:05,  3.35s/it]Fetching ... files: 2it [00:05,  2.92s/it]
+  OK -- 9 journey types, 4 impaired
+
+[81/90] re2ob_recommendationservice_disk_3 (target=recommendationservice, fault=disk)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  2.10it/s]Fetching ... files: 2it [00:07,  4.15s/it]Fetching ... files: 2it [00:07,  3.60s/it]
+  OK -- 7 journey types, 3 impaired
+
+[82/90] re2ob_recommendationservice_loss_1 (target=recommendationservice, fault=loss)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  2.50it/s]Fetching ... files: 2it [00:05,  3.07s/it]Fetching ... files: 2it [00:05,  2.67s/it]
+  OK -- 21 journey types, 4 impaired
+
+[83/90] re2ob_recommendationservice_loss_2 (target=recommendationservice, fault=loss)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  3.29it/s]Fetching ... files: 2it [00:07,  4.45s/it]Fetching ... files: 2it [00:07,  3.83s/it]
+  OK -- 9 journey types, 4 impaired
+
+[84/90] re2ob_recommendationservice_loss_3 (target=recommendationservice, fault=loss)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  2.55it/s]Fetching ... files: 2it [00:05,  3.40s/it]Fetching ... files: 2it [00:05,  2.95s/it]
+  OK -- 14 journey types, 4 impaired
+
+[85/90] re2ob_recommendationservice_mem_1 (target=recommendationservice, fault=mem)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 2it [00:06,  3.30s/it]Fetching ... files: 2it [00:06,  3.30s/it]
+  OK -- 8 journey types, 4 impaired
+
+[86/90] re2ob_recommendationservice_mem_2 (target=recommendationservice, fault=mem)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  3.98it/s]Fetching ... files: 2it [00:07,  4.50s/it]Fetching ... files: 2it [00:07,  3.86s/it]
+  OK -- 9 journey types, 3 impaired
+
+[87/90] re2ob_recommendationservice_mem_3 (target=recommendationservice, fault=mem)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  2.09it/s]Fetching ... files: 2it [00:05,  3.24s/it]Fetching ... files: 2it [00:05,  2.82s/it]
+  OK -- 7 journey types, 4 impaired
+
+[88/90] re2ob_recommendationservice_socket_1 (target=recommendationservice, fault=socket)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  4.57it/s]Fetching ... files: 2it [00:05,  3.07s/it]Fetching ... files: 2it [00:05,  2.65s/it]
+  OK -- 10 journey types, 4 impaired
+
+[89/90] re2ob_recommendationservice_socket_2 (target=recommendationservice, fault=socket)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  1.91it/s]Fetching ... files: 2it [00:06,  3.91s/it]Fetching ... files: 2it [00:06,  3.41s/it]
+  OK -- 7 journey types, 0 impaired
+
+[90/90] re2ob_recommendationservice_socket_3 (target=recommendationservice, fault=socket)...
+Fetching ... files: 0it [00:00, ?it/s]Fetching ... files: 1it [00:00,  1.81it/s]Fetching ... files: 2it [00:06,  3.68s/it]Fetching ... files: 2it [00:06,  3.21s/it]
+  OK -- 7 journey types, 0 impaired
+
+
+==============================================================================================================
+BATCH RUN SUMMARY
+==============================================================================================================
+Already checkpointed (skipped): 0
+Newly processed: 90
+Failed: 0
+Elapsed this run: 1074.0s
+
+
+==============================================================================================================
+CONSOLIDATED OUTPUT
+==============================================================================================================
+Total cases with checkpoints: 90 / 90
+Total journey-type rows: 899
+Saved: journey_impairment_full.csv
+Saved: journey_signature_catalog_full.csv
+Saved: excluded_cases.csv (1 exclusion records)
+
+All cases processed. Pipeline complete.

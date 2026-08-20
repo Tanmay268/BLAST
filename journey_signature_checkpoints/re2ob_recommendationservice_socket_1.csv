@@ -1,0 +1,11 @@
+case,journey_type_id,journey_label,signature_str,n_traces
+re2ob_recommendationservice_socket_1,frontend::AddItem+GetProduct,Add To Cart,AddItem+GetProduct,1499
+re2ob_recommendationservice_socket_1,frontend::Convert+GetAds,frontend::Convert+GetAds,Convert+GetAds,2
+re2ob_recommendationservice_socket_1,frontend::Convert+GetAds+GetCart+GetProduct+GetSupportedCurrencies+ListRecommendations,Product Detail View,Convert+GetAds+GetCart+GetProduct+GetSupportedCurrencies+ListRecommendations,6551
+re2ob_recommendationservice_socket_1,frontend::Convert+GetAds+GetCart+GetSupportedCurrencies+ListProducts,Home Page View,Convert+GetAds+GetCart+GetSupportedCurrencies+ListProducts,1555
+re2ob_recommendationservice_socket_1,frontend::Convert+GetCart+GetProduct+GetQuote+GetSupportedCurrencies+ListRecommendations,Cart View,Convert+GetCart+GetProduct+GetQuote+GetSupportedCurrencies+ListRecommendations,2915
+re2ob_recommendationservice_socket_1,frontend::GetAds+GetProduct,frontend::GetAds+GetProduct,GetAds+GetProduct,3
+re2ob_recommendationservice_socket_1,frontend::GetAds+GetProduct+ListRecommendations,frontend::GetAds+GetProduct+ListRecommendations,GetAds+GetProduct+ListRecommendations,2
+re2ob_recommendationservice_socket_1,frontend::GetProduct+GetSupportedCurrencies+ListRecommendations+PlaceOrder,Place Order,GetProduct+GetSupportedCurrencies+ListRecommendations+PlaceOrder,506
+re2ob_recommendationservice_socket_1,frontend::empty,frontend::empty,(empty),1250
+re2ob_recommendationservice_socket_1,orphaned::hipstershop.CurrencyService/Convert,hipstershop.CurrencyService/Convert (orphaned root),Convert,1778

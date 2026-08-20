@@ -1,0 +1,8 @@
+case,journey_type_id,journey_label,signature_str,n_traces
+re2ob_recommendationservice_socket_2,frontend::AddItem+GetProduct,Add To Cart,AddItem+GetProduct,2004
+re2ob_recommendationservice_socket_2,frontend::Convert+GetAds+GetCart+GetProduct+GetSupportedCurrencies+ListRecommendations,Product Detail View,Convert+GetAds+GetCart+GetProduct+GetSupportedCurrencies+ListRecommendations,8766
+re2ob_recommendationservice_socket_2,frontend::Convert+GetAds+GetCart+GetSupportedCurrencies+ListProducts,Home Page View,Convert+GetAds+GetCart+GetSupportedCurrencies+ListProducts,2070
+re2ob_recommendationservice_socket_2,frontend::Convert+GetCart+GetProduct+GetQuote+GetSupportedCurrencies+ListRecommendations,Cart View,Convert+GetCart+GetProduct+GetQuote+GetSupportedCurrencies+ListRecommendations,4005
+re2ob_recommendationservice_socket_2,frontend::GetProduct+GetSupportedCurrencies+ListRecommendations+PlaceOrder,Place Order,GetProduct+GetSupportedCurrencies+ListRecommendations+PlaceOrder,648
+re2ob_recommendationservice_socket_2,frontend::empty,frontend::empty,(empty),1636
+re2ob_recommendationservice_socket_2,orphaned::hipstershop.CurrencyService/Convert,hipstershop.CurrencyService/Convert (orphaned root),Convert,2281

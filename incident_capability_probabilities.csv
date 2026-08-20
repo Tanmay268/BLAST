@@ -1,0 +1,271 @@
+service,fault_type,capability_id,capability,n_reps,n_impaired_reps,raw_probability,posterior_alpha,posterior_beta,p_smoothed
+checkoutservice,cpu,order_placement,Order Placement,3,1,0.3333333333333333,2.0,3.0,0.4
+checkoutservice,cpu,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+checkoutservice,cpu,currency_conversion,Currency Conversion,3,1,0.3333333333333333,2.0,3.0,0.4
+checkoutservice,cpu,cart_management,Cart Management,3,1,0.3333333333333333,2.0,3.0,0.4
+checkoutservice,cpu,shipping,Shipping,3,0,0.0,1.0,4.0,0.2
+checkoutservice,cpu,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+checkoutservice,cpu,product_browsing,Product Browsing,3,1,0.3333333333333333,2.0,3.0,0.4
+checkoutservice,cpu,product_recommendations,Product Recommendations,3,1,0.3333333333333333,2.0,3.0,0.4
+checkoutservice,cpu,advertisement_retrieval,Advertisement Retrieval,3,1,0.3333333333333333,2.0,3.0,0.4
+checkoutservice,delay,order_placement,Order Placement,3,3,1.0,4.0,1.0,0.8
+checkoutservice,delay,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+checkoutservice,delay,currency_conversion,Currency Conversion,3,3,1.0,4.0,1.0,0.8
+checkoutservice,delay,cart_management,Cart Management,3,0,0.0,1.0,4.0,0.2
+checkoutservice,delay,shipping,Shipping,3,0,0.0,1.0,4.0,0.2
+checkoutservice,delay,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+checkoutservice,delay,product_browsing,Product Browsing,3,3,1.0,4.0,1.0,0.8
+checkoutservice,delay,product_recommendations,Product Recommendations,3,3,1.0,4.0,1.0,0.8
+checkoutservice,delay,advertisement_retrieval,Advertisement Retrieval,3,0,0.0,1.0,4.0,0.2
+checkoutservice,disk,order_placement,Order Placement,3,3,1.0,4.0,1.0,0.8
+checkoutservice,disk,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+checkoutservice,disk,currency_conversion,Currency Conversion,3,3,1.0,4.0,1.0,0.8
+checkoutservice,disk,cart_management,Cart Management,3,0,0.0,1.0,4.0,0.2
+checkoutservice,disk,shipping,Shipping,3,0,0.0,1.0,4.0,0.2
+checkoutservice,disk,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+checkoutservice,disk,product_browsing,Product Browsing,3,3,1.0,4.0,1.0,0.8
+checkoutservice,disk,product_recommendations,Product Recommendations,3,3,1.0,4.0,1.0,0.8
+checkoutservice,disk,advertisement_retrieval,Advertisement Retrieval,3,0,0.0,1.0,4.0,0.2
+checkoutservice,loss,order_placement,Order Placement,3,3,1.0,4.0,1.0,0.8
+checkoutservice,loss,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+checkoutservice,loss,currency_conversion,Currency Conversion,3,3,1.0,4.0,1.0,0.8
+checkoutservice,loss,cart_management,Cart Management,3,0,0.0,1.0,4.0,0.2
+checkoutservice,loss,shipping,Shipping,3,0,0.0,1.0,4.0,0.2
+checkoutservice,loss,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+checkoutservice,loss,product_browsing,Product Browsing,3,3,1.0,4.0,1.0,0.8
+checkoutservice,loss,product_recommendations,Product Recommendations,3,3,1.0,4.0,1.0,0.8
+checkoutservice,loss,advertisement_retrieval,Advertisement Retrieval,3,0,0.0,1.0,4.0,0.2
+checkoutservice,mem,order_placement,Order Placement,3,3,1.0,4.0,1.0,0.8
+checkoutservice,mem,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+checkoutservice,mem,currency_conversion,Currency Conversion,3,3,1.0,4.0,1.0,0.8
+checkoutservice,mem,cart_management,Cart Management,3,1,0.3333333333333333,2.0,3.0,0.4
+checkoutservice,mem,shipping,Shipping,3,0,0.0,1.0,4.0,0.2
+checkoutservice,mem,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+checkoutservice,mem,product_browsing,Product Browsing,3,3,1.0,4.0,1.0,0.8
+checkoutservice,mem,product_recommendations,Product Recommendations,3,3,1.0,4.0,1.0,0.8
+checkoutservice,mem,advertisement_retrieval,Advertisement Retrieval,3,1,0.3333333333333333,2.0,3.0,0.4
+checkoutservice,socket,order_placement,Order Placement,3,3,1.0,4.0,1.0,0.8
+checkoutservice,socket,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+checkoutservice,socket,currency_conversion,Currency Conversion,3,3,1.0,4.0,1.0,0.8
+checkoutservice,socket,cart_management,Cart Management,3,0,0.0,1.0,4.0,0.2
+checkoutservice,socket,shipping,Shipping,3,0,0.0,1.0,4.0,0.2
+checkoutservice,socket,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+checkoutservice,socket,product_browsing,Product Browsing,3,3,1.0,4.0,1.0,0.8
+checkoutservice,socket,product_recommendations,Product Recommendations,3,3,1.0,4.0,1.0,0.8
+checkoutservice,socket,advertisement_retrieval,Advertisement Retrieval,3,0,0.0,1.0,4.0,0.2
+currencyservice,cpu,order_placement,Order Placement,3,3,1.0,4.0,1.0,0.8
+currencyservice,cpu,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+currencyservice,cpu,currency_conversion,Currency Conversion,3,3,1.0,4.0,1.0,0.8
+currencyservice,cpu,cart_management,Cart Management,3,3,1.0,4.0,1.0,0.8
+currencyservice,cpu,shipping,Shipping,3,3,1.0,4.0,1.0,0.8
+currencyservice,cpu,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+currencyservice,cpu,product_browsing,Product Browsing,3,3,1.0,4.0,1.0,0.8
+currencyservice,cpu,product_recommendations,Product Recommendations,3,3,1.0,4.0,1.0,0.8
+currencyservice,cpu,advertisement_retrieval,Advertisement Retrieval,3,3,1.0,4.0,1.0,0.8
+currencyservice,delay,order_placement,Order Placement,3,3,1.0,4.0,1.0,0.8
+currencyservice,delay,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+currencyservice,delay,currency_conversion,Currency Conversion,3,3,1.0,4.0,1.0,0.8
+currencyservice,delay,cart_management,Cart Management,3,3,1.0,4.0,1.0,0.8
+currencyservice,delay,shipping,Shipping,3,3,1.0,4.0,1.0,0.8
+currencyservice,delay,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+currencyservice,delay,product_browsing,Product Browsing,3,3,1.0,4.0,1.0,0.8
+currencyservice,delay,product_recommendations,Product Recommendations,3,3,1.0,4.0,1.0,0.8
+currencyservice,delay,advertisement_retrieval,Advertisement Retrieval,3,3,1.0,4.0,1.0,0.8
+currencyservice,disk,order_placement,Order Placement,3,3,1.0,4.0,1.0,0.8
+currencyservice,disk,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+currencyservice,disk,currency_conversion,Currency Conversion,3,3,1.0,4.0,1.0,0.8
+currencyservice,disk,cart_management,Cart Management,3,3,1.0,4.0,1.0,0.8
+currencyservice,disk,shipping,Shipping,3,3,1.0,4.0,1.0,0.8
+currencyservice,disk,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+currencyservice,disk,product_browsing,Product Browsing,3,3,1.0,4.0,1.0,0.8
+currencyservice,disk,product_recommendations,Product Recommendations,3,3,1.0,4.0,1.0,0.8
+currencyservice,disk,advertisement_retrieval,Advertisement Retrieval,3,3,1.0,4.0,1.0,0.8
+currencyservice,loss,order_placement,Order Placement,3,3,1.0,4.0,1.0,0.8
+currencyservice,loss,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+currencyservice,loss,currency_conversion,Currency Conversion,3,3,1.0,4.0,1.0,0.8
+currencyservice,loss,cart_management,Cart Management,3,3,1.0,4.0,1.0,0.8
+currencyservice,loss,shipping,Shipping,3,3,1.0,4.0,1.0,0.8
+currencyservice,loss,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+currencyservice,loss,product_browsing,Product Browsing,3,3,1.0,4.0,1.0,0.8
+currencyservice,loss,product_recommendations,Product Recommendations,3,3,1.0,4.0,1.0,0.8
+currencyservice,loss,advertisement_retrieval,Advertisement Retrieval,3,3,1.0,4.0,1.0,0.8
+currencyservice,mem,order_placement,Order Placement,3,3,1.0,4.0,1.0,0.8
+currencyservice,mem,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+currencyservice,mem,currency_conversion,Currency Conversion,3,3,1.0,4.0,1.0,0.8
+currencyservice,mem,cart_management,Cart Management,3,3,1.0,4.0,1.0,0.8
+currencyservice,mem,shipping,Shipping,3,3,1.0,4.0,1.0,0.8
+currencyservice,mem,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+currencyservice,mem,product_browsing,Product Browsing,3,3,1.0,4.0,1.0,0.8
+currencyservice,mem,product_recommendations,Product Recommendations,3,3,1.0,4.0,1.0,0.8
+currencyservice,mem,advertisement_retrieval,Advertisement Retrieval,3,3,1.0,4.0,1.0,0.8
+currencyservice,socket,order_placement,Order Placement,3,2,0.6666666666666666,3.0,2.0,0.6
+currencyservice,socket,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+currencyservice,socket,currency_conversion,Currency Conversion,3,2,0.6666666666666666,3.0,2.0,0.6
+currencyservice,socket,cart_management,Cart Management,3,2,0.6666666666666666,3.0,2.0,0.6
+currencyservice,socket,shipping,Shipping,3,2,0.6666666666666666,3.0,2.0,0.6
+currencyservice,socket,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+currencyservice,socket,product_browsing,Product Browsing,3,2,0.6666666666666666,3.0,2.0,0.6
+currencyservice,socket,product_recommendations,Product Recommendations,3,2,0.6666666666666666,3.0,2.0,0.6
+currencyservice,socket,advertisement_retrieval,Advertisement Retrieval,3,2,0.6666666666666666,3.0,2.0,0.6
+emailservice,cpu,order_placement,Order Placement,3,2,0.6666666666666666,3.0,2.0,0.6
+emailservice,cpu,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+emailservice,cpu,currency_conversion,Currency Conversion,3,2,0.6666666666666666,3.0,2.0,0.6
+emailservice,cpu,cart_management,Cart Management,3,0,0.0,1.0,4.0,0.2
+emailservice,cpu,shipping,Shipping,3,0,0.0,1.0,4.0,0.2
+emailservice,cpu,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+emailservice,cpu,product_browsing,Product Browsing,3,2,0.6666666666666666,3.0,2.0,0.6
+emailservice,cpu,product_recommendations,Product Recommendations,3,2,0.6666666666666666,3.0,2.0,0.6
+emailservice,cpu,advertisement_retrieval,Advertisement Retrieval,3,0,0.0,1.0,4.0,0.2
+emailservice,delay,order_placement,Order Placement,3,3,1.0,4.0,1.0,0.8
+emailservice,delay,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+emailservice,delay,currency_conversion,Currency Conversion,3,3,1.0,4.0,1.0,0.8
+emailservice,delay,cart_management,Cart Management,3,0,0.0,1.0,4.0,0.2
+emailservice,delay,shipping,Shipping,3,0,0.0,1.0,4.0,0.2
+emailservice,delay,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+emailservice,delay,product_browsing,Product Browsing,3,3,1.0,4.0,1.0,0.8
+emailservice,delay,product_recommendations,Product Recommendations,3,3,1.0,4.0,1.0,0.8
+emailservice,delay,advertisement_retrieval,Advertisement Retrieval,3,0,0.0,1.0,4.0,0.2
+emailservice,disk,order_placement,Order Placement,3,2,0.6666666666666666,3.0,2.0,0.6
+emailservice,disk,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+emailservice,disk,currency_conversion,Currency Conversion,3,2,0.6666666666666666,3.0,2.0,0.6
+emailservice,disk,cart_management,Cart Management,3,0,0.0,1.0,4.0,0.2
+emailservice,disk,shipping,Shipping,3,0,0.0,1.0,4.0,0.2
+emailservice,disk,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+emailservice,disk,product_browsing,Product Browsing,3,2,0.6666666666666666,3.0,2.0,0.6
+emailservice,disk,product_recommendations,Product Recommendations,3,2,0.6666666666666666,3.0,2.0,0.6
+emailservice,disk,advertisement_retrieval,Advertisement Retrieval,3,0,0.0,1.0,4.0,0.2
+emailservice,loss,order_placement,Order Placement,3,3,1.0,4.0,1.0,0.8
+emailservice,loss,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+emailservice,loss,currency_conversion,Currency Conversion,3,3,1.0,4.0,1.0,0.8
+emailservice,loss,cart_management,Cart Management,3,0,0.0,1.0,4.0,0.2
+emailservice,loss,shipping,Shipping,3,0,0.0,1.0,4.0,0.2
+emailservice,loss,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+emailservice,loss,product_browsing,Product Browsing,3,3,1.0,4.0,1.0,0.8
+emailservice,loss,product_recommendations,Product Recommendations,3,3,1.0,4.0,1.0,0.8
+emailservice,loss,advertisement_retrieval,Advertisement Retrieval,3,0,0.0,1.0,4.0,0.2
+emailservice,mem,order_placement,Order Placement,3,3,1.0,4.0,1.0,0.8
+emailservice,mem,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+emailservice,mem,currency_conversion,Currency Conversion,3,3,1.0,4.0,1.0,0.8
+emailservice,mem,cart_management,Cart Management,3,0,0.0,1.0,4.0,0.2
+emailservice,mem,shipping,Shipping,3,0,0.0,1.0,4.0,0.2
+emailservice,mem,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+emailservice,mem,product_browsing,Product Browsing,3,3,1.0,4.0,1.0,0.8
+emailservice,mem,product_recommendations,Product Recommendations,3,3,1.0,4.0,1.0,0.8
+emailservice,mem,advertisement_retrieval,Advertisement Retrieval,3,0,0.0,1.0,4.0,0.2
+emailservice,socket,order_placement,Order Placement,3,1,0.3333333333333333,2.0,3.0,0.4
+emailservice,socket,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+emailservice,socket,currency_conversion,Currency Conversion,3,1,0.3333333333333333,2.0,3.0,0.4
+emailservice,socket,cart_management,Cart Management,3,0,0.0,1.0,4.0,0.2
+emailservice,socket,shipping,Shipping,3,0,0.0,1.0,4.0,0.2
+emailservice,socket,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+emailservice,socket,product_browsing,Product Browsing,3,1,0.3333333333333333,2.0,3.0,0.4
+emailservice,socket,product_recommendations,Product Recommendations,3,1,0.3333333333333333,2.0,3.0,0.4
+emailservice,socket,advertisement_retrieval,Advertisement Retrieval,3,0,0.0,1.0,4.0,0.2
+productcatalogservice,cpu,order_placement,Order Placement,3,2,0.6666666666666666,3.0,2.0,0.6
+productcatalogservice,cpu,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+productcatalogservice,cpu,currency_conversion,Currency Conversion,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,cpu,cart_management,Cart Management,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,cpu,shipping,Shipping,3,2,0.6666666666666666,3.0,2.0,0.6
+productcatalogservice,cpu,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+productcatalogservice,cpu,product_browsing,Product Browsing,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,cpu,product_recommendations,Product Recommendations,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,cpu,advertisement_retrieval,Advertisement Retrieval,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,delay,order_placement,Order Placement,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,delay,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+productcatalogservice,delay,currency_conversion,Currency Conversion,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,delay,cart_management,Cart Management,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,delay,shipping,Shipping,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,delay,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+productcatalogservice,delay,product_browsing,Product Browsing,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,delay,product_recommendations,Product Recommendations,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,delay,advertisement_retrieval,Advertisement Retrieval,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,disk,order_placement,Order Placement,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,disk,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+productcatalogservice,disk,currency_conversion,Currency Conversion,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,disk,cart_management,Cart Management,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,disk,shipping,Shipping,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,disk,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+productcatalogservice,disk,product_browsing,Product Browsing,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,disk,product_recommendations,Product Recommendations,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,disk,advertisement_retrieval,Advertisement Retrieval,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,loss,order_placement,Order Placement,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,loss,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+productcatalogservice,loss,currency_conversion,Currency Conversion,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,loss,cart_management,Cart Management,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,loss,shipping,Shipping,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,loss,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+productcatalogservice,loss,product_browsing,Product Browsing,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,loss,product_recommendations,Product Recommendations,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,loss,advertisement_retrieval,Advertisement Retrieval,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,mem,order_placement,Order Placement,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,mem,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+productcatalogservice,mem,currency_conversion,Currency Conversion,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,mem,cart_management,Cart Management,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,mem,shipping,Shipping,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,mem,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+productcatalogservice,mem,product_browsing,Product Browsing,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,mem,product_recommendations,Product Recommendations,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,mem,advertisement_retrieval,Advertisement Retrieval,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,socket,order_placement,Order Placement,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,socket,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+productcatalogservice,socket,currency_conversion,Currency Conversion,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,socket,cart_management,Cart Management,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,socket,shipping,Shipping,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,socket,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+productcatalogservice,socket,product_browsing,Product Browsing,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,socket,product_recommendations,Product Recommendations,3,3,1.0,4.0,1.0,0.8
+productcatalogservice,socket,advertisement_retrieval,Advertisement Retrieval,3,2,0.6666666666666666,3.0,2.0,0.6
+recommendationservice,cpu,order_placement,Order Placement,3,1,0.3333333333333333,2.0,3.0,0.4
+recommendationservice,cpu,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+recommendationservice,cpu,currency_conversion,Currency Conversion,3,3,1.0,4.0,1.0,0.8
+recommendationservice,cpu,cart_management,Cart Management,3,3,1.0,4.0,1.0,0.8
+recommendationservice,cpu,shipping,Shipping,3,3,1.0,4.0,1.0,0.8
+recommendationservice,cpu,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+recommendationservice,cpu,product_browsing,Product Browsing,3,3,1.0,4.0,1.0,0.8
+recommendationservice,cpu,product_recommendations,Product Recommendations,3,3,1.0,4.0,1.0,0.8
+recommendationservice,cpu,advertisement_retrieval,Advertisement Retrieval,3,3,1.0,4.0,1.0,0.8
+recommendationservice,delay,order_placement,Order Placement,3,3,1.0,4.0,1.0,0.8
+recommendationservice,delay,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+recommendationservice,delay,currency_conversion,Currency Conversion,3,3,1.0,4.0,1.0,0.8
+recommendationservice,delay,cart_management,Cart Management,3,3,1.0,4.0,1.0,0.8
+recommendationservice,delay,shipping,Shipping,3,3,1.0,4.0,1.0,0.8
+recommendationservice,delay,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+recommendationservice,delay,product_browsing,Product Browsing,3,3,1.0,4.0,1.0,0.8
+recommendationservice,delay,product_recommendations,Product Recommendations,3,3,1.0,4.0,1.0,0.8
+recommendationservice,delay,advertisement_retrieval,Advertisement Retrieval,3,3,1.0,4.0,1.0,0.8
+recommendationservice,disk,order_placement,Order Placement,3,2,0.6666666666666666,3.0,2.0,0.6
+recommendationservice,disk,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+recommendationservice,disk,currency_conversion,Currency Conversion,3,3,1.0,4.0,1.0,0.8
+recommendationservice,disk,cart_management,Cart Management,3,3,1.0,4.0,1.0,0.8
+recommendationservice,disk,shipping,Shipping,3,2,0.6666666666666666,3.0,2.0,0.6
+recommendationservice,disk,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+recommendationservice,disk,product_browsing,Product Browsing,3,3,1.0,4.0,1.0,0.8
+recommendationservice,disk,product_recommendations,Product Recommendations,3,3,1.0,4.0,1.0,0.8
+recommendationservice,disk,advertisement_retrieval,Advertisement Retrieval,3,3,1.0,4.0,1.0,0.8
+recommendationservice,loss,order_placement,Order Placement,3,3,1.0,4.0,1.0,0.8
+recommendationservice,loss,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+recommendationservice,loss,currency_conversion,Currency Conversion,3,3,1.0,4.0,1.0,0.8
+recommendationservice,loss,cart_management,Cart Management,3,3,1.0,4.0,1.0,0.8
+recommendationservice,loss,shipping,Shipping,3,3,1.0,4.0,1.0,0.8
+recommendationservice,loss,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+recommendationservice,loss,product_browsing,Product Browsing,3,3,1.0,4.0,1.0,0.8
+recommendationservice,loss,product_recommendations,Product Recommendations,3,3,1.0,4.0,1.0,0.8
+recommendationservice,loss,advertisement_retrieval,Advertisement Retrieval,3,3,1.0,4.0,1.0,0.8
+recommendationservice,mem,order_placement,Order Placement,3,3,1.0,4.0,1.0,0.8
+recommendationservice,mem,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+recommendationservice,mem,currency_conversion,Currency Conversion,3,3,1.0,4.0,1.0,0.8
+recommendationservice,mem,cart_management,Cart Management,3,3,1.0,4.0,1.0,0.8
+recommendationservice,mem,shipping,Shipping,3,3,1.0,4.0,1.0,0.8
+recommendationservice,mem,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+recommendationservice,mem,product_browsing,Product Browsing,3,3,1.0,4.0,1.0,0.8
+recommendationservice,mem,product_recommendations,Product Recommendations,3,3,1.0,4.0,1.0,0.8
+recommendationservice,mem,advertisement_retrieval,Advertisement Retrieval,3,3,1.0,4.0,1.0,0.8
+recommendationservice,socket,order_placement,Order Placement,3,1,0.3333333333333333,2.0,3.0,0.4
+recommendationservice,socket,payment_processing,Payment Processing,3,0,0.0,1.0,4.0,0.2
+recommendationservice,socket,currency_conversion,Currency Conversion,3,1,0.3333333333333333,2.0,3.0,0.4
+recommendationservice,socket,cart_management,Cart Management,3,1,0.3333333333333333,2.0,3.0,0.4
+recommendationservice,socket,shipping,Shipping,3,1,0.3333333333333333,2.0,3.0,0.4
+recommendationservice,socket,order_confirmation,Order Confirmation,3,0,0.0,1.0,4.0,0.2
+recommendationservice,socket,product_browsing,Product Browsing,3,1,0.3333333333333333,2.0,3.0,0.4
+recommendationservice,socket,product_recommendations,Product Recommendations,3,1,0.3333333333333333,2.0,3.0,0.4
+recommendationservice,socket,advertisement_retrieval,Advertisement Retrieval,3,1,0.3333333333333333,2.0,3.0,0.4

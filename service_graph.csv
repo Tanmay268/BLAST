@@ -1,0 +1,10 @@
+source,target,calls
+frontendservice,currencyservice,53966
+frontendservice,productcatalogservice,87217
+frontendservice,recommendationservice,13421
+frontendservice,checkoutservice,714
+recommendationservice,productcatalogservice,13421
+checkoutservice,productcatalogservice,1697
+checkoutservice,currencyservice,2409
+checkoutservice,paymentservice,713
+checkoutservice,emailservice,713

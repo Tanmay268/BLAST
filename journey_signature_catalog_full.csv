@@ -1,0 +1,77 @@
+journey_type_id,journey_label,signature_str,n_traces
+frontend::Convert+GetAds+GetCart+GetProduct+GetSupportedCurrencies+ListRecommendations,Product Detail View,Convert+GetAds+GetCart+GetProduct+GetSupportedCurrencies+ListRecommendations,740669
+frontend::Convert+GetCart+GetProduct+GetQuote+GetSupportedCurrencies+ListRecommendations,Cart View,Convert+GetCart+GetProduct+GetQuote+GetSupportedCurrencies+ListRecommendations,341340
+orphaned::hipstershop.CurrencyService/Convert,hipstershop.CurrencyService/Convert (orphaned root),Convert,197064
+frontend::AddItem+GetProduct,Add To Cart,AddItem+GetProduct,171727
+frontend::Convert+GetAds+GetCart+GetSupportedCurrencies+ListProducts,Home Page View,Convert+GetAds+GetCart+GetSupportedCurrencies+ListProducts,171019
+frontend::empty,frontend::empty,(empty),140339
+frontend::GetProduct+GetSupportedCurrencies+ListRecommendations+PlaceOrder,Place Order,GetProduct+GetSupportedCurrencies+ListRecommendations+PlaceOrder,56752
+frontend::GetProduct+GetSupportedCurrencies,frontend::GetProduct+GetSupportedCurrencies,GetProduct+GetSupportedCurrencies,1657
+frontend::GetSupportedCurrencies,frontend::GetSupportedCurrencies,GetSupportedCurrencies,1113
+frontend::GetProduct,frontend::GetProduct,GetProduct,459
+frontend::Convert+GetCart+GetProduct+GetSupportedCurrencies+ListRecommendations,frontend::Convert+GetCart+GetProduct+GetSupportedCurrencies+ListRecommendations,Convert+GetCart+GetProduct+GetSupportedCurrencies+ListRecommendations,280
+frontend::PlaceOrder,frontend::PlaceOrder,PlaceOrder,241
+frontend::Convert+GetCart+GetQuote+GetSupportedCurrencies+ListRecommendations,frontend::Convert+GetCart+GetQuote+GetSupportedCurrencies+ListRecommendations,Convert+GetCart+GetQuote+GetSupportedCurrencies+ListRecommendations,227
+frontend::GetSupportedCurrencies+ListRecommendations+PlaceOrder,frontend::GetSupportedCurrencies+ListRecommendations+PlaceOrder,GetSupportedCurrencies+ListRecommendations+PlaceOrder,227
+frontend::GetCart+GetProduct+GetSupportedCurrencies,frontend::GetCart+GetProduct+GetSupportedCurrencies,GetCart+GetProduct+GetSupportedCurrencies,147
+frontend::Convert+GetCart+GetProduct+GetSupportedCurrencies,frontend::Convert+GetCart+GetProduct+GetSupportedCurrencies,Convert+GetCart+GetProduct+GetSupportedCurrencies,125
+frontend::Convert+GetAds+GetCart+GetProduct+GetSupportedCurrencies,frontend::Convert+GetAds+GetCart+GetProduct+GetSupportedCurrencies,Convert+GetAds+GetCart+GetProduct+GetSupportedCurrencies,108
+frontend::Convert+GetCart+GetSupportedCurrencies+ListProducts,frontend::Convert+GetCart+GetSupportedCurrencies+ListProducts,Convert+GetCart+GetSupportedCurrencies+ListProducts,106
+frontend::GetAds+GetCart+GetProduct+GetSupportedCurrencies+ListRecommendations,frontend::GetAds+GetCart+GetProduct+GetSupportedCurrencies+ListRecommendations,GetAds+GetCart+GetProduct+GetSupportedCurrencies+ListRecommendations,96
+frontend::GetSupportedCurrencies+ListProducts,frontend::GetSupportedCurrencies+ListProducts,GetSupportedCurrencies+ListProducts,91
+frontend::Convert+GetAds+GetCart+GetProduct+ListRecommendations,frontend::Convert+GetAds+GetCart+GetProduct+ListRecommendations,Convert+GetAds+GetCart+GetProduct+ListRecommendations,88
+frontend::Convert+GetAds+GetProduct+GetSupportedCurrencies+ListRecommendations,frontend::Convert+GetAds+GetProduct+GetSupportedCurrencies+ListRecommendations,Convert+GetAds+GetProduct+GetSupportedCurrencies+ListRecommendations,82
+frontend::GetCart+GetSupportedCurrencies,frontend::GetCart+GetSupportedCurrencies,GetCart+GetSupportedCurrencies,69
+frontend::Convert+GetProduct+GetQuote+GetSupportedCurrencies+ListRecommendations,frontend::Convert+GetProduct+GetQuote+GetSupportedCurrencies+ListRecommendations,Convert+GetProduct+GetQuote+GetSupportedCurrencies+ListRecommendations,60
+frontend::Convert+GetCart+GetProduct+GetQuote+ListRecommendations,frontend::Convert+GetCart+GetProduct+GetQuote+ListRecommendations,Convert+GetCart+GetProduct+GetQuote+ListRecommendations,56
+frontend::Convert+GetCart+GetProduct+GetQuote+GetSupportedCurrencies,frontend::Convert+GetCart+GetProduct+GetQuote+GetSupportedCurrencies,Convert+GetCart+GetProduct+GetQuote+GetSupportedCurrencies,43
+frontend::GetCart+GetProduct+GetSupportedCurrencies+ListRecommendations,frontend::GetCart+GetProduct+GetSupportedCurrencies+ListRecommendations,GetCart+GetProduct+GetSupportedCurrencies+ListRecommendations,43
+frontend::AddItem,frontend::AddItem,AddItem,41
+frontend::Convert+GetAds+GetCart+ListProducts,frontend::Convert+GetAds+GetCart+ListProducts,Convert+GetAds+GetCart+ListProducts,38
+frontend::Convert+GetCart+GetProduct+ListRecommendations,frontend::Convert+GetCart+GetProduct+ListRecommendations,Convert+GetCart+GetProduct+ListRecommendations,37
+frontend::Convert+GetProduct+GetSupportedCurrencies+ListRecommendations,frontend::Convert+GetProduct+GetSupportedCurrencies+ListRecommendations,Convert+GetProduct+GetSupportedCurrencies+ListRecommendations,36
+frontend::GetCart+GetSupportedCurrencies+ListProducts,frontend::GetCart+GetSupportedCurrencies+ListProducts,GetCart+GetSupportedCurrencies+ListProducts,33
+frontend::Convert+GetAds+GetSupportedCurrencies+ListProducts,frontend::Convert+GetAds+GetSupportedCurrencies+ListProducts,Convert+GetAds+GetSupportedCurrencies+ListProducts,30
+frontend::GetAds+GetProduct,frontend::GetAds+GetProduct,GetAds+GetProduct,30
+frontend::Convert+GetAds+GetCart+GetSupportedCurrencies,frontend::Convert+GetAds+GetCart+GetSupportedCurrencies,Convert+GetAds+GetCart+GetSupportedCurrencies,26
+frontend::GetAds+GetCart+GetProduct+ListRecommendations,frontend::GetAds+GetCart+GetProduct+ListRecommendations,GetAds+GetCart+GetProduct+ListRecommendations,24
+frontend::GetAds+GetProduct+GetSupportedCurrencies+ListRecommendations,frontend::GetAds+GetProduct+GetSupportedCurrencies+ListRecommendations,GetAds+GetProduct+GetSupportedCurrencies+ListRecommendations,23
+frontend::Convert+GetAds+GetProduct+ListRecommendations,frontend::Convert+GetAds+GetProduct+ListRecommendations,Convert+GetAds+GetProduct+ListRecommendations,22
+frontend::Convert+GetAds+GetProduct+GetSupportedCurrencies,frontend::Convert+GetAds+GetProduct+GetSupportedCurrencies,Convert+GetAds+GetProduct+GetSupportedCurrencies,21
+frontend::Convert+GetAds+GetCart+GetProduct,frontend::Convert+GetAds+GetCart+GetProduct,Convert+GetAds+GetCart+GetProduct,21
+frontend::GetCart+GetSupportedCurrencies+ListRecommendations,frontend::GetCart+GetSupportedCurrencies+ListRecommendations,GetCart+GetSupportedCurrencies+ListRecommendations,18
+frontend::GetAds+GetCart+GetProduct+GetSupportedCurrencies,frontend::GetAds+GetCart+GetProduct+GetSupportedCurrencies,GetAds+GetCart+GetProduct+GetSupportedCurrencies,17
+frontend::GetProduct+GetSupportedCurrencies+ListRecommendations,frontend::GetProduct+GetSupportedCurrencies+ListRecommendations,GetProduct+GetSupportedCurrencies+ListRecommendations,16
+frontend::GetAds+GetProduct+ListRecommendations,frontend::GetAds+GetProduct+ListRecommendations,GetAds+GetProduct+ListRecommendations,15
+frontend::Convert+GetProduct+GetQuote+ListRecommendations,frontend::Convert+GetProduct+GetQuote+ListRecommendations,Convert+GetProduct+GetQuote+ListRecommendations,13
+frontend::Convert+GetProduct+GetQuote,frontend::Convert+GetProduct+GetQuote,Convert+GetProduct+GetQuote,13
+frontend::GetProduct+GetSupportedCurrencies+PlaceOrder,frontend::GetProduct+GetSupportedCurrencies+PlaceOrder,GetProduct+GetSupportedCurrencies+PlaceOrder,12
+frontend::GetCart+GetProduct+GetQuote+GetSupportedCurrencies+ListRecommendations,frontend::GetCart+GetProduct+GetQuote+GetSupportedCurrencies+ListRecommendations,GetCart+GetProduct+GetQuote+GetSupportedCurrencies+ListRecommendations,10
+frontend::Convert+GetProduct,frontend::Convert+GetProduct,Convert+GetProduct,9
+frontend::GetProduct+ListRecommendations+PlaceOrder,frontend::GetProduct+ListRecommendations+PlaceOrder,GetProduct+ListRecommendations+PlaceOrder,9
+frontend::Convert+GetProduct+GetQuote+GetSupportedCurrencies,frontend::Convert+GetProduct+GetQuote+GetSupportedCurrencies,Convert+GetProduct+GetQuote+GetSupportedCurrencies,8
+frontend::Convert+GetProduct+ListRecommendations,frontend::Convert+GetProduct+ListRecommendations,Convert+GetProduct+ListRecommendations,8
+frontend::Convert+GetAds+GetSupportedCurrencies,frontend::Convert+GetAds+GetSupportedCurrencies,Convert+GetAds+GetSupportedCurrencies,7
+frontend::ListRecommendations+PlaceOrder,frontend::ListRecommendations+PlaceOrder,ListRecommendations+PlaceOrder,7
+frontend::Convert+GetCart+GetProduct+GetQuote,frontend::Convert+GetCart+GetProduct+GetQuote,Convert+GetCart+GetProduct+GetQuote,6
+frontend::Convert+GetAds+GetCart,frontend::Convert+GetAds+GetCart,Convert+GetAds+GetCart,5
+frontend::GetAds+GetProduct+GetSupportedCurrencies,frontend::GetAds+GetProduct+GetSupportedCurrencies,GetAds+GetProduct+GetSupportedCurrencies,5
+frontend::Convert+GetCart+GetProduct,frontend::Convert+GetCart+GetProduct,Convert+GetCart+GetProduct,5
+frontend::Convert+GetCart+GetSupportedCurrencies,frontend::Convert+GetCart+GetSupportedCurrencies,Convert+GetCart+GetSupportedCurrencies,5
+frontend::Convert+GetAds,frontend::Convert+GetAds,Convert+GetAds,4
+frontend::GetProduct+ListRecommendations,frontend::GetProduct+ListRecommendations,GetProduct+ListRecommendations,4
+frontend::Convert+GetCart+ListProducts,frontend::Convert+GetCart+ListProducts,Convert+GetCart+ListProducts,4
+frontend::GetAds+GetCart+GetProduct,frontend::GetAds+GetCart+GetProduct,GetAds+GetCart+GetProduct,4
+frontend::Convert,frontend::Convert,Convert,3
+frontend::Convert+GetProduct+GetSupportedCurrencies,frontend::Convert+GetProduct+GetSupportedCurrencies,Convert+GetProduct+GetSupportedCurrencies,3
+frontend::Convert+GetSupportedCurrencies+ListProducts,frontend::Convert+GetSupportedCurrencies+ListProducts,Convert+GetSupportedCurrencies+ListProducts,3
+frontend::Convert+GetAds+GetProduct,frontend::Convert+GetAds+GetProduct,Convert+GetAds+GetProduct,3
+frontend::GetCart+GetProduct+GetQuote+ListRecommendations,frontend::GetCart+GetProduct+GetQuote+ListRecommendations,GetCart+GetProduct+GetQuote+ListRecommendations,3
+frontend::GetProduct+GetQuote+GetSupportedCurrencies+ListRecommendations,frontend::GetProduct+GetQuote+GetSupportedCurrencies+ListRecommendations,GetProduct+GetQuote+GetSupportedCurrencies+ListRecommendations,3
+frontend::GetCart+GetProduct+ListRecommendations,frontend::GetCart+GetProduct+ListRecommendations,GetCart+GetProduct+ListRecommendations,3
+frontend::Convert+GetAds+ListProducts,frontend::Convert+GetAds+ListProducts,Convert+GetAds+ListProducts,2
+frontend::Convert+GetQuote,frontend::Convert+GetQuote,Convert+GetQuote,1
+frontend::GetAds,frontend::GetAds,GetAds,1
+frontend::Convert+ListProducts,frontend::Convert+ListProducts,Convert+ListProducts,1
+frontend::GetCart+GetProduct+GetQuote+GetSupportedCurrencies,frontend::GetCart+GetProduct+GetQuote+GetSupportedCurrencies,GetCart+GetProduct+GetQuote+GetSupportedCurrencies,1
+frontend::GetProduct+PlaceOrder,frontend::GetProduct+PlaceOrder,GetProduct+PlaceOrder,1

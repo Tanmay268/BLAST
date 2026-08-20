@@ -1,0 +1,7 @@
+case,fault_type,faulty_service,n_impaired_services,union_size,saturation_fraction,dominant_service,dominant_capabilities,dominance_fraction,is_dominated,target_is_dominant
+re2ob_checkoutservice_cpu_1,cpu,checkoutservice,2,9,1.0,frontendservice,7,0.7777777777777778,True,False
+re2ob_checkoutservice_cpu_2,cpu,checkoutservice,2,8,0.8888888888888888,checkoutservice,7,0.875,True,True
+re2ob_checkoutservice_cpu_3,cpu,checkoutservice,1,7,0.7777777777777778,checkoutservice,7,1.0,True,True
+re2ob_checkoutservice_delay_1,delay,checkoutservice,2,7,0.7777777777777778,checkoutservice,7,1.0,True,True
+re2ob_checkoutservice_delay_2,delay,checkoutservice,1,7,0.7777777777777778,checkoutservice,7,1.0,True,True
+re2ob_checkoutservice_delay_3,delay,checkoutservice,1,7,0.7777777777777778,checkoutservice,7,1.0,True,True

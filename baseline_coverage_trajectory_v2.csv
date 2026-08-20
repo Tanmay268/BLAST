@@ -1,0 +1,7 @@
+selection_step,selected_incident,cumulative_coverage,unique_capabilities_covered,coverage_fraction
+1,re2ob_checkoutservice_cpu_3,245.0,6,0.6666666666666666
+2,re2ob_checkoutservice_delay_1,245.0,6,0.6666666666666666
+3,re2ob_checkoutservice_delay_2,245.0,6,0.6666666666666666
+4,re2ob_checkoutservice_delay_3,245.0,6,0.6666666666666666
+5,re2ob_checkoutservice_cpu_1,245.0,6,0.6666666666666666
+6,re2ob_checkoutservice_cpu_2,245.0,6,0.6666666666666666

@@ -1,0 +1,31 @@
+service,fault_type,capabilities_covered,capability_list
+checkoutservice,cpu,6,Advertisement Retrieval;Cart Management;Currency Conversion;Order Placement;Product Browsing;Product Recommendations
+checkoutservice,delay,4,Currency Conversion;Order Placement;Product Browsing;Product Recommendations
+checkoutservice,disk,4,Currency Conversion;Order Placement;Product Browsing;Product Recommendations
+checkoutservice,loss,4,Currency Conversion;Order Placement;Product Browsing;Product Recommendations
+checkoutservice,mem,6,Advertisement Retrieval;Cart Management;Currency Conversion;Order Placement;Product Browsing;Product Recommendations
+checkoutservice,socket,4,Currency Conversion;Order Placement;Product Browsing;Product Recommendations
+currencyservice,cpu,7,Advertisement Retrieval;Cart Management;Currency Conversion;Order Placement;Product Browsing;Product Recommendations;Shipping
+currencyservice,delay,7,Advertisement Retrieval;Cart Management;Currency Conversion;Order Placement;Product Browsing;Product Recommendations;Shipping
+currencyservice,disk,7,Advertisement Retrieval;Cart Management;Currency Conversion;Order Placement;Product Browsing;Product Recommendations;Shipping
+currencyservice,loss,7,Advertisement Retrieval;Cart Management;Currency Conversion;Order Placement;Product Browsing;Product Recommendations;Shipping
+currencyservice,mem,7,Advertisement Retrieval;Cart Management;Currency Conversion;Order Placement;Product Browsing;Product Recommendations;Shipping
+currencyservice,socket,7,Advertisement Retrieval;Cart Management;Currency Conversion;Order Placement;Product Browsing;Product Recommendations;Shipping
+emailservice,cpu,4,Currency Conversion;Order Placement;Product Browsing;Product Recommendations
+emailservice,delay,4,Currency Conversion;Order Placement;Product Browsing;Product Recommendations
+emailservice,disk,4,Currency Conversion;Order Placement;Product Browsing;Product Recommendations
+emailservice,loss,4,Currency Conversion;Order Placement;Product Browsing;Product Recommendations
+emailservice,mem,4,Currency Conversion;Order Placement;Product Browsing;Product Recommendations
+emailservice,socket,4,Currency Conversion;Order Placement;Product Browsing;Product Recommendations
+productcatalogservice,cpu,7,Advertisement Retrieval;Cart Management;Currency Conversion;Order Placement;Product Browsing;Product Recommendations;Shipping
+productcatalogservice,delay,7,Advertisement Retrieval;Cart Management;Currency Conversion;Order Placement;Product Browsing;Product Recommendations;Shipping
+productcatalogservice,disk,7,Advertisement Retrieval;Cart Management;Currency Conversion;Order Placement;Product Browsing;Product Recommendations;Shipping
+productcatalogservice,loss,7,Advertisement Retrieval;Cart Management;Currency Conversion;Order Placement;Product Browsing;Product Recommendations;Shipping
+productcatalogservice,mem,7,Advertisement Retrieval;Cart Management;Currency Conversion;Order Placement;Product Browsing;Product Recommendations;Shipping
+productcatalogservice,socket,7,Advertisement Retrieval;Cart Management;Currency Conversion;Order Placement;Product Browsing;Product Recommendations;Shipping
+recommendationservice,cpu,7,Advertisement Retrieval;Cart Management;Currency Conversion;Order Placement;Product Browsing;Product Recommendations;Shipping
+recommendationservice,delay,7,Advertisement Retrieval;Cart Management;Currency Conversion;Order Placement;Product Browsing;Product Recommendations;Shipping
+recommendationservice,disk,7,Advertisement Retrieval;Cart Management;Currency Conversion;Order Placement;Product Browsing;Product Recommendations;Shipping
+recommendationservice,loss,7,Advertisement Retrieval;Cart Management;Currency Conversion;Order Placement;Product Browsing;Product Recommendations;Shipping
+recommendationservice,mem,7,Advertisement Retrieval;Cart Management;Currency Conversion;Order Placement;Product Browsing;Product Recommendations;Shipping
+recommendationservice,socket,7,Advertisement Retrieval;Cart Management;Currency Conversion;Order Placement;Product Browsing;Product Recommendations;Shipping

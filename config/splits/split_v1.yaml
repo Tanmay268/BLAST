@@ -1,0 +1,68 @@
+version: 1
+seed: 20260820
+split_unit: (service, fault_type)
+rationale: Stratified by service and fault type, at the (service, fault) combination
+  level, not the case level -- repetitions of the same combination stay together to
+  prevent leakage (ADR-012).
+train:
+- service: checkoutservice
+  fault_type: delay
+- service: checkoutservice
+  fault_type: disk
+- service: checkoutservice
+  fault_type: loss
+- service: checkoutservice
+  fault_type: mem
+- service: currencyservice
+  fault_type: disk
+- service: currencyservice
+  fault_type: loss
+- service: currencyservice
+  fault_type: mem
+- service: currencyservice
+  fault_type: socket
+- service: emailservice
+  fault_type: cpu
+- service: emailservice
+  fault_type: delay
+- service: emailservice
+  fault_type: mem
+- service: emailservice
+  fault_type: socket
+- service: productcatalogservice
+  fault_type: delay
+- service: productcatalogservice
+  fault_type: disk
+- service: productcatalogservice
+  fault_type: loss
+- service: productcatalogservice
+  fault_type: mem
+- service: recommendationservice
+  fault_type: cpu
+- service: recommendationservice
+  fault_type: disk
+- service: recommendationservice
+  fault_type: loss
+- service: recommendationservice
+  fault_type: socket
+test:
+- service: checkoutservice
+  fault_type: cpu
+- service: checkoutservice
+  fault_type: socket
+- service: currencyservice
+  fault_type: cpu
+- service: currencyservice
+  fault_type: delay
+- service: emailservice
+  fault_type: disk
+- service: emailservice
+  fault_type: loss
+- service: productcatalogservice
+  fault_type: cpu
+- service: productcatalogservice
+  fault_type: socket
+- service: recommendationservice
+  fault_type: delay
+- service: recommendationservice
+  fault_type: mem

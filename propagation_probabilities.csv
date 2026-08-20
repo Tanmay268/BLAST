@@ -1,0 +1,9 @@
+fault_type,source,target,observations,propagated,raw_probability,posterior_alpha,posterior_beta,smoothed_probability,posterior_variance,posterior_std,ci_lower_approx,ci_upper_approx,evidence_level
+cpu,checkoutservice,paymentservice,3,2,0.6666666666666666,3.0,2.0,0.6,0.04,0.2,0.20799999999999996,0.992,very_limited
+cpu,checkoutservice,emailservice,3,1,0.3333333333333333,2.0,3.0,0.4,0.04,0.2,0.008000000000000007,0.792,very_limited
+cpu,checkoutservice,currencyservice,3,0,0.0,1.0,4.0,0.2,0.02666666666666667,0.16329931618554522,0.0,0.5200666597236686,very_limited
+cpu,checkoutservice,productcatalogservice,3,0,0.0,1.0,4.0,0.2,0.02666666666666667,0.16329931618554522,0.0,0.5200666597236686,very_limited
+delay,checkoutservice,emailservice,3,1,0.3333333333333333,2.0,3.0,0.4,0.04,0.2,0.008000000000000007,0.792,very_limited
+delay,checkoutservice,currencyservice,3,0,0.0,1.0,4.0,0.2,0.02666666666666667,0.16329931618554522,0.0,0.5200666597236686,very_limited
+delay,checkoutservice,paymentservice,3,0,0.0,1.0,4.0,0.2,0.02666666666666667,0.16329931618554522,0.0,0.5200666597236686,very_limited
+delay,checkoutservice,productcatalogservice,3,0,0.0,1.0,4.0,0.2,0.02666666666666667,0.16329931618554522,0.0,0.5200666597236686,very_limited

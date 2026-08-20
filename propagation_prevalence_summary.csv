@@ -1,0 +1,3 @@
+fault_type,edges_tested,edges_propagated,prevalence
+cpu,8,0,0.0
+delay,12,0,0.0
