@@ -204,7 +204,21 @@ def extract_journeys(case, case_dir, faulty_service, fault_type):
         # this label is deliberately neutral across systems).
         type_id = f"direct::{row['operationName']}"
         label = f"{row['operationName']} (direct)"
-        own_method = (row["methodName"],) if pd.notna(row["methodName"]) else tuple()
+
+        # The capability-attribution signature needs SOME operation
+        # identifier here. methodName is the default (Online Boutique's
+        # orphaned Convert calls carry it), but Train Ticket's roots
+        # have methodName == NA for every case -- silently falling
+        # through to an empty signature there would mean NO capability
+        # ever gets attributed to any Train Ticket journey. Fall back
+        # to the root's own operationName (already the distinguishing
+        # REST path) when methodName is unavailable.
+        if pd.notna(row["methodName"]):
+            own_method = (row["methodName"],)
+        elif pd.notna(row["operationName"]):
+            own_method = (row["operationName"],)
+        else:
+            own_method = tuple()
 
         return type_id, label, own_method
 

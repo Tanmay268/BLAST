@@ -1,0 +1,145 @@
+# BLAST — Business Overlay v1 (Train Ticket / RE2-TT)
+#
+# The cross-system expansion identified in ADR-019 as the
+# recommended next step. Maps OPERATIONS to business
+# capabilities, same convention as online_boutique_v2.yaml:
+# realised_by matches elements of a journey's `signature`
+# (see blast_journey_lib.py). Train Ticket has NO generic
+# root wrapper (unlike Online Boutique's "frontend") -- every
+# root span's own operationName is already a distinguishing
+# REST endpoint (e.g. "POST /api/v1/users/login"), and
+# methodName is null for every root in this system, so
+# `realised_by` here lists full operationName paths, not
+# short RPC method names.
+#
+# Derived from an inventory of real root-span operationNames
+# observed across sample traces (re2tt_ts-order-service_cpu_1,
+# re2tt_ts-travel-service_cpu_1) -- same methodology as the
+# original Online Boutique overlay: grounded in what the app
+# actually does, not invented.
+#
+# value_per_min is a RELATIVE unit, never currency (ADR-002).
+# Weights are a DECLARED assumption (qualitative criticality
+# ranking), not measured -- same status as
+# online_boutique_v2.yaml's primary model. A >=5-model
+# sensitivity sweep (see business_overlay/sensitivity_sweep/
+# for the Online Boutique precedent) should be built for this
+# system too before any cross-system claim leans on these
+# specific weights.
+
+version: 1
+system: train-ticket
+value_model: revenue_weighted
+
+capabilities:
+
+  - id: ticket_reservation
+    display: "Ticket Reservation"
+    value_per_min: 100.0
+    realised_by:
+      - "POST /api/v1/preserveservice/preserve"
+      - "POST /api/v1/preserveotherservice/preserveOther"
+    rationale: >
+      The core transaction -- booking a ticket. Direct analogue of
+      Online Boutique's order_placement. Two operations because Train
+      Ticket splits domestic ("preserve") and international/other
+      ("preserveOther") reservations into separate services.
+
+  - id: payment_processing
+    display: "Payment Processing"
+    value_per_min: 100.0
+    realised_by: ["POST /api/v1/inside_pay_service/inside_payment"]
+    rationale: >
+      Directly gates revenue capture, same tier as reservation.
+
+  - id: user_authentication
+    display: "User Authentication"
+    value_per_min: 70.0
+    realised_by: ["POST /api/v1/users/login"]
+    rationale: >
+      Gates every other capability in the app -- nothing downstream
+      works for a user who cannot log in -- but valued below the two
+      direct-transaction capabilities since it is a precondition, not
+      the transaction itself.
+
+  - id: trip_search
+    display: "Trip Search"
+    value_per_min: 60.0
+    realised_by:
+      - "POST /api/v1/travelservice/trips/left"
+      - "POST /api/v1/travel2service/trips/left"
+    rationale: >
+      Necessary precursor to booking -- the highest-traffic operation
+      in this system (see the observed root-span inventory). Two
+      operations for the same reason as reservation: Train Ticket
+      versions this service as travelservice/travel2service.
+
+  - id: order_management
+    display: "Order Management"
+    value_per_min: 40.0
+    realised_by:
+      - "POST /api/v1/orderservice/order/refresh"
+      - "POST /api/v1/orderOtherService/orderOther/refresh"
+    rationale: >
+      Viewing/managing an already-placed booking -- post-purchase,
+      valued below the pre-purchase funnel capabilities, same
+      reasoning as Online Boutique's order_confirmation tier.
+
+  - id: baggage_consignment
+    display: "Baggage Consignment"
+    value_per_min: 30.0
+    realised_by: ["PUT /api/v1/consignservice/consigns"]
+    rationale: >
+      An add-on completing full trip preparation, not required to
+      complete the core purchase.
+
+  - id: travel_insurance
+    display: "Travel Insurance / Assurance"
+    value_per_min: 25.0
+    realised_by: ["GET /api/v1/assuranceservice/assurances/types"]
+    rationale: >
+      Optional add-on service, browsed but not blocking.
+
+  - id: contact_management
+    display: "Contact Management"
+    value_per_min: 20.0
+    realised_by: ["GET /api/v1/contactservice/contacts/account/{accountId}"]
+    rationale: >
+      Supporting account/passenger-info management, not itself
+      revenue-generating.
+
+  - id: food_ordering
+    display: "Food Ordering"
+    value_per_min: 15.0
+    realised_by:
+      - "GET /api/v1/foodservice/foods/{date}/{startStation}/{endStation}/{tripId}"
+    rationale: >
+      On-board convenience feature, lowest customer-facing
+      criticality -- direct analogue of Online Boutique's
+      advertisement_retrieval tier.
+
+  - id: admin_configuration
+    display: "Admin Configuration"
+    value_per_min: 5.0
+    realised_by:
+      - "GET /api/v1/adminbasicservice/adminbasic/configs"
+      - "GET /api/v1/admintravelservice/admintravel"
+      - "GET /api/v1/adminbasicservice/adminbasic/prices"
+    rationale: >
+      Internal/admin-facing configuration and pricing management --
+      not customer-facing at all, lowest tier by construction (no
+      paying customer is ever blocked by this being slow).
+
+# ------------------------------------------------------
+# Known coverage gaps, recorded rather than hidden:
+#
+# - This inventory comes from 2 of the 5 target services'
+#   sample traces (ts-order-service, ts-travel-service).
+#   The other 3 targets (ts-auth-service, ts-route-service,
+#   ts-train-service) were not separately inventoried before
+#   this overlay was written -- if the full corpus run
+#   surfaces root operations not listed here, they will show
+#   up as "no capability mapped" in the pipeline output and
+#   need this file updated, the same self-correcting pattern
+#   used for Online Boutique's overlay.
+# ------------------------------------------------------
