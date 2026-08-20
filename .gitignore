@@ -1,0 +1,20 @@
+# Raw trace data — deleted after distillation per ADR-004.
+# Never committed: RCAEval traces run into the hundreds of MB
+# per case and are re-downloadable from the source dataset.
+# Anchored to repo root only (leading slash) — otherwise this
+# pattern also matches results/data/, which must be tracked.
+/data/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/secrets.toml

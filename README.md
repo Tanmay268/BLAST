@@ -1,97 +1,112 @@
-# BLAST — Context Folder
+# BLAST — Business-Loss Aware Structural Triage
 
-**Final-year research project · Tanmay · VIT Vellore**
-Generated 2026-08-17. This folder is the complete context for the project. `../CLAUDE.md` points here.
+Final-year B.Tech CS research project (VIT Vellore). BLAST ranks **concurrent** microservice
+incidents by expected business-capability loss, treating prioritization as a *set-selection*
+problem rather than a per-incident scoring problem — because concurrent incidents have
+overlapping blast radii, and scoring each independently double-counts the overlap.
 
-> **Problem.** Microservice AIOps tells you *what broke and where*. It does not tell you *what to fix first*.
-> **Contribution.** Frame incident prioritization as **greedy submodular coverage of business capabilities under stochastic failure propagation**, over a business-dependency graph with **learned per-edge failure-transmission probabilities**.
-> **Why it's novel.** Every existing method scores incidents independently, and therefore double-counts overlapping blast radii. Prioritization is a *set-selection* problem, not a scoring problem.
+Formally: rank incidents by expected business-capability coverage under an independent-cascade
+failure-propagation model over a business-dependency graph, with a submodular objective —
+greedy ordering admits a (1 − 1/e) approximation guarantee.
 
----
-
-## Contents
-
-| File | What it's for | Read when |
-|---|---|---|
-| **[07_NEXT_PHASE_PLAN.md](07_NEXT_PHASE_PLAN.md)** | **Post-pilot plan — authoritative for the next ~4 weeks.** Diagnoses the pilot null result, corrects the task order, sets Gates 1a/2a/3a/4 | **Start here now.** Supersedes the Phase 2-4 ordering in the master plan. |
-| **[00_MASTER_PLAN.md](00_MASTER_PLAN.md)** | Six phases, gates, risk register | Overall arc. Re-read at every phase boundary. |
-| **[03_RESEARCH_DESIGN.md](03_RESEARCH_DESIGN.md)** | RQs, formal model, **ground truth methodology**, baselines, metrics, ablations, threats to validity | Before any implementation. §3 is the most important section in the whole set. |
-| **[02_ARCHITECTURE.md](02_ARCHITECTURE.md)** | Pipeline, 10 modules, interfaces, repo layout, resource budget | Before writing code. |
-| **[01_DECISION_LOG.md](01_DECISION_LOG.md)** | 13 ADRs — every decision, its rationale, what was rejected and why | When you wonder "why did we do it this way?" or want to change something. |
-| **[04_LITERATURE_GAP.md](04_LITERATURE_GAP.md)** | Related-work map, the gap, paste-ready positioning statement, reading list | Week 1, and monthly thereafter. |
-| **[05_SESSION_LOG.md](05_SESSION_LOG.md)** | How this plan was derived; stated constraints; what was verified vs assumed; open questions for the supervisor | To understand *why* the other docs say what they say. |
-| **[06_BOOTSTRAP_PROMPTS.md](06_BOOTSTRAP_PROMPTS.md)** | Paste-ready prompts for Claude Code sessions | Every time you start a session. |
-| **[source/PROJECT_CONTEXT.pdf](source/PROJECT_CONTEXT.pdf)** | The original 14-page project brief | Reference. |
-
-Also: **[../CLAUDE.md](../CLAUDE.md)** — repo-root instructions Claude Code loads automatically. Hard rules, tech stack, frozen interfaces, current position, and the "known temptations" list.
+**Scope boundary.** BLAST starts *after* incident detection and root-cause localization. It does
+no anomaly detection, no RCA, no log parsing — upstream systems hand it incident candidates.
 
 ---
 
-## Status — post-pilot (2026-08-17)
+## Current status
 
-**Gate 0 PASSED** — traces validated: 405,229 spans, 24,812 traces, 9 bad parent refs, no cross-trace corruption.
-**Gate 1 PASSED** — data pipeline works end to end; faults measurable (checkout delay = 51x median latency) and repeatable (sigma = 0.062 over 3 reps).
-**Gate 4 attempted → diagnostic null result.** BLAST - baseline = 0 at every K, because incident 1 covered 9/9 capabilities.
+The full evaluation pipeline is built and run against RCAEval's Online Boutique benchmark
+(RE2-OB, 90 fault-injection cases: 5 target services × 6 fault types × 3 repetitions).
 
-**Diagnosis:** this is an **attribution bug**, not merely dataset homogeneity. Service-level
-attribution routes every incident through `frontendservice`, which maps to all 9 capabilities.
-The fix is journey/operation-level attribution — which is what ADR-002 originally specified.
-Full analysis and the corrected plan: **[07_NEXT_PHASE_PLAN.md](07_NEXT_PHASE_PLAN.md)**.
+**Headline result (Gate 4): MIXED, reported honestly rather than forced into a clean pass.**
 
-**Verified dataset ceiling:** RE2-OB = 6 fault types x 5 services x 3 reps = 90 cases, i.e. only
-**30 distinct (service, fault) incident types**.
+- BLAST beats its own independent-scoring ablation on **ranking quality** (NDCG@5: 0.954 vs
+  0.916, Cliff's δ=0.277, a genuine small effect) — set-selection measurably improves the
+  accuracy of *which incident to fix first*.
+- It does **not** show a practically meaningful advantage on **Cumulative Business Loss** — the
+  metric that most directly matters for triage — despite reaching statistical significance
+  (p<0.001, Cliff's δ=-0.023, deep in "negligible" territory; n=90 scenarios gives the test
+  power to detect a trivial effect on its own).
+- A follow-up synthetic heterogeneity sweep tested a natural explanation (maybe the real
+  benchmark's capability footprints are too structurally homogeneous for set-selection's CBL
+  advantage to show up) and **did not confirm it** — a simple independent-scoring baseline
+  outperforms greedy set-selection on CBL across the *entire* synthetic heterogeneity range
+  tested. The likely reason: CBL under uniform repair cost is closer to a weighted-completion-
+  time *scheduling* problem than to the *coverage-maximization* problem the submodular greedy
+  provably solves well — these were assumed synonymous and turned out not to be.
+- A separate, unrelated finding: propagation across the service graph is essentially absent in
+  this benchmark (0/20 tested edges show significant propagation) — faults stay largely
+  contained to the target service.
 
-## The three things most likely to kill this project
+Every non-obvious decision behind these results — including the two that didn't confirm the
+working hypothesis — is recorded as an ADR in [`context/01_DECISION_LOG.md`](context/01_DECISION_LOG.md).
+Start there for the full reasoning; `README.md` here is the orientation, not the record.
 
-1. ~~Ground truth viability~~ → **resolved at Gate 0**, but the *independent* ground-truth
-   computation (measured journey loss, not `F(S)`) still has to be built. See 07 Step 5.
-2. **Attribution saturation.** Currently blocking the central experiment. See 07 Steps 1-3.
-3. **Propagation may be rare.** Pilot hints delay faults propagate to nothing. If that
-   generalises, the structural half of the contribution needs reframing — decided on evidence
-   at 07 Step 3.5, not in week 20.
+## Read this first
 
----
-
-## Four places this plan deliberately contradicts the original brief
-
-Each has an ADR with full reasoning. Summarised so the disagreements are visible up front:
-
-| Brief proposed | Plan says | ADR |
-|---|---|---|
-| GNN / GAT / graph transformer as the novel core | **Interpretable probabilistic propagation as the core; GAT demoted to a baseline.** A GNN on a 12-node graph with ~270 cases overfits and isn't novel in 2026. If BLAST beats the GAT, that's a *result*. | ADR-005 |
-| Reinforcement learning for weight tuning | **Excluded.** No environment, no reward signal, no data. High risk, low payoff. | ADR-006 |
-| 10 node types, ~20 node attributes | **4 node types.** You can only include what data can populate — teams, MTTR, recovery cost and revenue aren't in any available dataset. Including them means inventing values. | ADR-007 |
-| 5 RQs including "reduce incident response time" | **4 RQs.** Response-time reduction needs a longitudinal production deployment. Claiming it from simulation is an overclaim reviewers punish. | ADR-010 |
-
-Nothing from the brief's *deliverables* list was dropped — see `00_MASTER_PLAN.md` §3.
-
----
-
-## Do these things this week
-
-Full detail in **[07_NEXT_PHASE_PLAN.md](07_NEXT_PHASE_PLAN.md)** §5. In order — the first four are cheap and decisive:
-
-1. `diagnose_saturation.py` — test the frontend-amplifier hypothesis empirically. **Gate 1a.**
-2. `build_journey_impairment.py` — rebuild attribution at journey/operation level. The critical fix.
-3. `business_overlay/online_boutique_v2.yaml` — operation→capability, **non-uniform** weights.
-4. Re-run the 6-case pilot. **Gate 2a** — do footprints now differ? If they still saturate, stop and re-plan.
-5. `audit_propagation_prevalence.py` — how often do faults propagate at all?
-
-Still outstanding from Phase 0, unrelated to the above:
-
-- Verify **TrioXpert** and **ART** exist as citable, code-released prioritization systems.
-- **Ethics/IRB** enquiry for the human study — 4–8 week lead time, silently blocks Phase 6.
-- Read **AlertRank (ISSRE 2020)** end to end.
-
-Do #1 first. Do **not** expand the dataset before Gate 2a passes.
+| File | Why |
+|---|---|
+| [`CLAUDE.md`](CLAUDE.md) | Project instructions, current position, hard rules |
+| [`context/07_NEXT_PHASE_PLAN.md`](context/07_NEXT_PHASE_PLAN.md) | The post-pilot diagnosis and the plan that produced the current results |
+| [`context/01_DECISION_LOG.md`](context/01_DECISION_LOG.md) | Every accepted decision (20 ADRs), including the honest negative/mixed findings |
+| [`context/03_RESEARCH_DESIGN.md`](context/03_RESEARCH_DESIGN.md) | Research questions, formal model, ground-truth methodology, baselines, metrics |
+| [`context/02_ARCHITECTURE.md`](context/02_ARCHITECTURE.md) | Module specs, pipeline stages, repo layout rationale |
+| [`JOURNEY_TYPING_RULE.md`](JOURNEY_TYPING_RULE.md) | How individual traces are classified into journey types |
 
 ---
 
-## Using this with Claude Code
+## Repository layout
 
-```bash
-cd "D:\Downloads\PROJECTS\Project 1"
-claude
+```
+scripts/
+  pipeline/       reproducible pipeline, in dependency order (data -> journeys ->
+                  capability model -> ground truth -> evaluation -> heterogeneity sweep)
+  exploration/    one-off inspection/download scripts, not part of a dependency chain
+business_overlay/ declared business-value YAML (relative units, never currency — ADR-002)
+config/splits/    frozen train/test manifest (ADR-012)
+results/
+  data/           every CSV/JSON artifact the pipeline produces
+  tables/         LaTeX tables
+  figures/        plots (incl. the heterogeneity-sweep figure)
+dashboard/        the Streamlit app (results explorer + interactive ranker)
+context/          full research documentation: master plan, decision log, architecture,
+                  research design, literature review, session history
+data/             gitignored — raw traces, deleted after distillation per ADR-004
 ```
 
-`CLAUDE.md` loads automatically. Then paste the cold-start prompt from `06_BOOTSTRAP_PROMPTS.md`.
+## Reproducing the pipeline
+
+```bash
+pip install -r requirements.txt
+
+# Full pipeline, in order (each stage checkpoints to results/data/):
+python scripts/pipeline/run_full_re2ob_pipeline.py       # download -> distill -> delete raw traces
+python scripts/pipeline/verify_service_graph.py
+python scripts/pipeline/build_train_test_split.py
+python scripts/pipeline/build_incident_capability_model.py
+python scripts/pipeline/run_probabilistic_blast.py
+python scripts/pipeline/build_ground_truth_scenarios.py
+python scripts/pipeline/run_evaluation.py                 # Gate 4
+python scripts/pipeline/run_heterogeneity_sweep.py
+python scripts/pipeline/audit_propagation_prevalence.py
+```
+
+All scripts assume the repository root as the working directory.
+
+## Running the dashboard
+
+```bash
+streamlit run dashboard/app.py
+```
+
+---
+
+## Hard rules (see `CLAUDE.md` for the full list)
+
+- Never fabricate data — a value not derivable from RCAEval or a declared overlay file does
+  not go in the graph.
+- Never leak train into test — enforced by an explicit split manifest, not convention.
+- Business values are relative units, never currency.
+- Every non-obvious decision gets an ADR, including negative results.
+- Determinism is mandatory — every RNG is seeded.
